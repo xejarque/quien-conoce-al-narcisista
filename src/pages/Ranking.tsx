@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/UI/Button';
 import { ArrowLeft, Trophy, Crown } from 'lucide-react';
 import { Player } from '../types';
+import { motion } from 'framer-motion';
+import { useSoundManager } from '../hooks/useSoundManager';
 
 export const Ranking = () => {
   const navigate = useNavigate();
   const [scores, setScores] = useState<Player[]>([]);
+  const { playSound } = useSoundManager();
 
   useEffect(() => {
     // Load from local storage for MVP
@@ -16,12 +19,17 @@ export const Ranking = () => {
     setScores(sorted);
   }, []);
 
+  const handleBack = () => {
+    playSound('click');
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
         <Button 
           variant="ghost" 
-          onClick={() => navigate('/')}
+          onClick={handleBack}
           className="mb-8"
         >
           <ArrowLeft className="mr-2" /> Volver al Inicio
@@ -94,5 +102,3 @@ export const Ranking = () => {
     </div>
   );
 };
-
-import { motion } from 'framer-motion';

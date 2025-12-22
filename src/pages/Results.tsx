@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import { Button } from '../components/UI/Button';
 import { motion } from 'framer-motion';
-import { Trophy, Home as HomeIcon, RefreshCw, AlertCircle } from 'lucide-react';
+import { Trophy, Home as HomeIcon, RefreshCw, AlertCircle, Volume2, VolumeX } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { useSoundManager } from '../hooks/useSoundManager';
 
 export const Results = () => {
   const { score, isGameWon, startGame, currentQuestionIndex, lastAnswer } = useGame();
@@ -12,9 +13,11 @@ export const Results = () => {
   const [name, setName] = useState('');
   const [saved, setSaved] = useState(false);
   const { questions } = useGame(); // Need questions to find options text
+  const { playSound, isMuted, toggleMute } = useSoundManager();
 
   useEffect(() => {
     if (isGameWon) {
+      playSound('win');
       const duration = 5 * 1000;
       const animationEnd = Date.now() + duration;
       const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -36,7 +39,8 @@ export const Results = () => {
 
       return () => clearInterval(interval);
     }
-  }, [isGameWon]);
+    // Removed 'wrong' sound from here because it's already triggered in Game.tsx during transition
+  }, [isGameWon, playSound]);
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,6 +59,7 @@ export const Results = () => {
   };
 
   const handlePlayAgain = () => {
+    playSound('click');
     startGame();
     navigate('/game');
   };
@@ -87,6 +92,13 @@ export const Results = () => {
         className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[2.5rem] max-w-lg w-full text-center shadow-2xl backdrop-blur-xl relative overflow-hidden"
       >
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"></div>
+
+        <button 
+          onClick={toggleMute}
+          className="absolute top-6 right-6 p-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 transition-all z-20"
+        >
+          {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+        </button>
 
         <div className="mb-8 flex justify-center">
           {isGameWon ? (
@@ -197,7 +209,7 @@ export const Results = () => {
           <Button onClick={handlePlayAgain} variant="primary" className="flex-1">
             <RefreshCw className="mr-2" size={18} /> Intentar de nuevo
           </Button>
-          <Button onClick={() => navigate('/')} variant="secondary" className="flex-1">
+          <Button onClick={() => { playSound('click'); navigate('/'); }} variant="secondary" className="flex-1">
             <HomeIcon className="mr-2" size={18} /> Inicio
           </Button>
         </div>

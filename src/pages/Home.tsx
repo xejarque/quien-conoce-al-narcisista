@@ -2,19 +2,64 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import { Button } from '../components/UI/Button';
 import { motion } from 'framer-motion';
-import { Play, Trophy, Sparkles } from 'lucide-react';
+import { Play, Trophy, Sparkles, Volume2, VolumeX } from 'lucide-react';
+import { useSoundManager } from '../hooks/useSoundManager';
+import { useEffect } from 'react';
 
 export const Home = () => {
   const navigate = useNavigate();
   const { startGame } = useGame();
+  const { playSound, stopSound, isMuted, toggleMute } = useSoundManager();
+
+  useEffect(() => {
+    // Start background music
+    playSound('bgMusic');
+
+    // Also retry when audio is unlocked
+    const handleUnlock = () => {
+      playSound('bgMusic');
+    };
+    window.addEventListener('audio_unlocked', handleUnlock);
+    
+    return () => {
+      window.removeEventListener('audio_unlocked', handleUnlock);
+      stopSound('bgMusic');
+    };
+  }, [playSound]);
 
   const handleStart = () => {
+    playSound('click');
     startGame();
     navigate('/game');
   };
 
+  const handleRanking = () => {
+    playSound('click');
+    navigate('/ranking');
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center overflow-hidden relative">
+      {/* Test Sound Button (Debug) */}
+      <button 
+        onClick={() => playSound('click')}
+        className="fixed top-4 right-4 text-[10px] opacity-20 hover:opacity-100 bg-white/10 px-2 py-1 rounded"
+      >
+        Test Sound
+      </button>
+
+      {/* Mute Toggle */}
+      <div className="absolute top-6 right-6 z-50">
+        <Button 
+          variant="ghost" 
+          size="md" 
+          onClick={toggleMute}
+          className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full w-12 h-12 p-0 flex items-center justify-center hover:bg-white/10 transition-all"
+        >
+          {isMuted ? <VolumeX className="text-red-400" /> : <Volume2 className="text-accent" />}
+        </Button>
+      </div>
+
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600 rounded-full blur-[128px] opacity-30 animate-pulse"></div>
@@ -57,7 +102,7 @@ export const Home = () => {
           <Button 
             variant="secondary" 
             size="lg" 
-            onClick={() => navigate('/ranking')}
+            onClick={handleRanking}
             className="w-full md:w-auto"
           >
             <Trophy className="mr-2 w-5 h-5" /> Ver Ranking
