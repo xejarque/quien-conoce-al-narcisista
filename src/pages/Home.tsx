@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useGame } from '../context/GameContext';
+import { useGame } from '../hooks/useGame';
 import { Button } from '../components/UI/Button';
 import { motion } from 'framer-motion';
 import { Play, Trophy, Sparkles, Volume2, VolumeX } from 'lucide-react';
@@ -25,7 +25,7 @@ export const Home = () => {
       window.removeEventListener('audio_unlocked', handleUnlock);
       stopSound('bgMusic');
     };
-  }, [playSound]);
+  }, [playSound, stopSound]);
 
   const handleStart = () => {
     playSound('click');

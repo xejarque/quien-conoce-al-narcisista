@@ -34,6 +34,7 @@ export interface GameState {
     audience: boolean;
   };
   timeLeft: number;
+  hiddenOptions: number[];
 }
 
 export type LifelineType = 'fiftyFifty' | 'phoneFriend' | 'audience';

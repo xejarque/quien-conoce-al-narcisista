@@ -1,16 +1,8 @@
-import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
+import React, { useReducer, useEffect, ReactNode } from 'react';
 import { GameState, LifelineType } from '../types';
 import { questions as allQuestions } from '../data/questions';
 import { calculateScore } from '../utils/formatTime';
-
-interface GameContextType extends GameState {
-  startGame: () => void;
-  answerQuestion: (answerIndex: number) => void;
-  useLifeline: (type: LifelineType) => void;
-  hiddenOptions: number[]; // Indices of options hidden by 50/50
-}
-
-const GameContext = createContext<GameContextType | undefined>(undefined);
+import { GameContext } from './GameContextObject';
 
 type Action =
   | { type: 'START_GAME' }
@@ -41,11 +33,12 @@ const initialState: GameState = {
   },
   timeLeft: TIME_PER_QUESTION,
   questions: [],
+  hiddenOptions: [],
 };
 
 const gameReducer = (state: GameState, action: Action): GameState => {
   switch (action.type) {
-    case 'START_GAME':
+    case 'START_GAME': {
       const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
       const selectedQuestions = shuffled.slice(0, 15).sort((a, b) => a.difficulty - b.difficulty)
         .map(q => {
@@ -67,8 +60,10 @@ const gameReducer = (state: GameState, action: Action): GameState => {
         ...initialState,
         questions: selectedQuestions,
         timeLeft: TIME_PER_QUESTION,
+        hiddenOptions: [],
       };
-    case 'ANSWER_QUESTION':
+    }
+    case 'ANSWER_QUESTION': {
       const currentQuestion = state.questions[state.currentQuestionIndex];
       if (action.payload.correct) {
         return {
@@ -90,7 +85,8 @@ const gameReducer = (state: GameState, action: Action): GameState => {
           },
         };
       }
-    case 'NEXT_QUESTION':
+    }
+    case 'NEXT_QUESTION': {
       const nextIndex = state.currentQuestionIndex + 1;
       const isWon = nextIndex >= state.questions.length;
       return {
@@ -102,11 +98,18 @@ const gameReducer = (state: GameState, action: Action): GameState => {
         isTransitioning: false,
         isRevealing: false,
         selectedAnswer: null,
+        hiddenOptions: [],
       };
+    }
     case 'SELECT_ANSWER':
       return {
         ...state,
         selectedAnswer: action.payload,
+      };
+    case 'SET_HIDDEN_OPTIONS':
+      return {
+        ...state,
+        hiddenOptions: action.payload,
       };
     case 'SET_TRANSITION':
       return {
@@ -131,7 +134,7 @@ const gameReducer = (state: GameState, action: Action): GameState => {
         ...state,
         timeLeft: state.timeLeft - 1,
       };
-    case 'TIME_UP':
+    case 'TIME_UP': {
       const timeoutQuestion = state.questions[state.currentQuestionIndex];
       return {
         ...state,
@@ -144,6 +147,7 @@ const gameReducer = (state: GameState, action: Action): GameState => {
           questionText: timeoutQuestion.text,
         },
       };
+    }
     default:
       return state;
   }
@@ -151,24 +155,20 @@ const gameReducer = (state: GameState, action: Action): GameState => {
 
 export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(gameReducer, initialState);
-  const [hiddenOptions, setHiddenOptions] = React.useState<number[]>([]);
 
   useEffect(() => {
-    let timer: any;
-    if (!state.isGameOver && state.questions.length > 0 && state.timeLeft > 0) {
+    let timer: ReturnType<typeof setInterval>;
+    if (!state.isGameOver && !state.isRevealing && !state.isTransitioning && state.questions.length > 0 && state.timeLeft > 0) {
       timer = setInterval(() => {
         dispatch({ type: 'TICK_TIMER' });
       }, 1000);
-    } else if (state.timeLeft === 0 && !state.isGameOver) {
+    } else if (state.timeLeft === 0 && !state.isGameOver && !state.isRevealing && !state.isTransitioning) {
       dispatch({ type: 'TIME_UP' });
     }
-    return () => clearInterval(timer);
-  }, [state.timeLeft, state.isGameOver, state.questions.length]);
-
-  // Reset hidden options when question changes
-  useEffect(() => {
-    setHiddenOptions([]);
-  }, [state.currentQuestionIndex]);
+    return () => {
+      if (timer) clearInterval(timer);
+    };
+  }, [state.timeLeft, state.isGameOver, state.isRevealing, state.isTransitioning, state.questions.length]);
 
   const startGame = () => {
     dispatch({ type: 'START_GAME' });
@@ -204,7 +204,7 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, 2000); // 2 segundos de suspense
   };
 
-  const useLifeline = (type: LifelineType) => {
+  const applyLifeline = (type: LifelineType) => {
     if (!state.lifelines[type]) return;
 
     if (type === 'fiftyFifty') {
@@ -214,16 +214,12 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         .map((_, idx) => idx)
         .filter(idx => idx !== correct);
       
-      // Randomly pick 2 to hide (so 1 incorrect remains + 1 correct)
-      // Wait, 50/50 removes 2 incorrect options.
-      // So we pick 2 from incorrectOptions to HIDE.
-      const shuffled = incorrectOptions.sort(() => 0.5 - Math.random());
+      const shuffled = [...incorrectOptions].sort(() => 0.5 - Math.random());
       const toHide = shuffled.slice(0, 2);
       
-      setHiddenOptions(toHide);
+      dispatch({ type: 'SET_HIDDEN_OPTIONS', payload: toHide });
     }
     
-    // For other lifelines, we might show a modal or alert, handled in UI
     dispatch({ type: 'USE_LIFELINE', payload: type });
   };
 
@@ -233,19 +229,10 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         ...state,
         startGame,
         answerQuestion,
-        useLifeline,
-        hiddenOptions,
+        applyLifeline,
       }}
     >
       {children}
     </GameContext.Provider>
   );
-};
-
-export const useGame = () => {
-  const context = useContext(GameContext);
-  if (context === undefined) {
-    throw new Error('useGame must be used within a GameProvider');
-  }
-  return context;
 };

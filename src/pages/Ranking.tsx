@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/UI/Button';
 import { ArrowLeft, Trophy, Crown } from 'lucide-react';
@@ -8,16 +8,13 @@ import { useSoundManager } from '../hooks/useSoundManager';
 
 export const Ranking = () => {
   const navigate = useNavigate();
-  const [scores, setScores] = useState<Player[]>([]);
-  const { playSound } = useSoundManager();
-
-  useEffect(() => {
+  const [scores] = useState<Player[]>(() => {
     // Load from local storage for MVP
     const savedScores = JSON.parse(localStorage.getItem('trivia_scores') || '[]');
     // Sort by score desc
-    const sorted = savedScores.sort((a: Player, b: Player) => b.score - a.score).slice(0, 10);
-    setScores(sorted);
-  }, []);
+    return savedScores.sort((a: Player, b: Player) => b.score - a.score).slice(0, 10);
+  });
+  const { playSound } = useSoundManager();
 
   const handleBack = () => {
     playSound('click');

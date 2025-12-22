@@ -45,7 +45,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           }
 
           let buttonStyle = "bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-pink-400/50";
-          let isActuallyCorrect = index === question.correctAnswer;
+          const isActuallyCorrect = index === question.correctAnswer;
           
           if (selectedAnswer === index) {
             if (isRevealing) {

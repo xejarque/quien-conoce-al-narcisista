@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGame } from '../context/GameContext';
+import { useGame } from '../hooks/useGame';
 import { Button } from '../components/UI/Button';
 import { motion } from 'framer-motion';
 import { Trophy, Home as HomeIcon, RefreshCw, AlertCircle, Volume2, VolumeX } from 'lucide-react';
@@ -24,7 +24,7 @@ export const Results = () => {
 
       const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
-      const interval: any = setInterval(function() {
+      const interval: ReturnType<typeof setInterval> = setInterval(function() {
         const timeLeft = animationEnd - Date.now();
 
         if (timeLeft <= 0) {

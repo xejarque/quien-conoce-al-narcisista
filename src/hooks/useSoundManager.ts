@@ -1,5 +1,5 @@
 import { Howl, Howler } from 'howler';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 // Force global unlock settings
 Howler.autoUnlock = true;
@@ -60,7 +60,7 @@ export const useSoundManager = () => {
         });
       }
     });
-  }, []);
+  }, [isMuted]);
 
   useEffect(() => {
     // Update mute state for all global sounds
@@ -68,7 +68,7 @@ export const useSoundManager = () => {
     localStorage.setItem('game_muted', String(isMuted));
   }, [isMuted]);
 
-  const playSound = (name: keyof typeof SOUNDS) => {
+  const playSound = useCallback((name: keyof typeof SOUNDS) => {
     const sound = globalSounds[name];
     console.log(`[SoundManager] Request to play: ${name}`, {
       exists: !!sound,
@@ -96,22 +96,22 @@ export const useSoundManager = () => {
     } else {
       console.warn(`Sound not found: ${name}`);
     }
-  };
+  }, [isMuted]);
 
-  const stopSound = (name: keyof typeof SOUNDS) => {
+  const stopSound = useCallback((name: keyof typeof SOUNDS) => {
     const sound = globalSounds[name];
     if (sound) {
       sound.stop();
     }
-  };
+  }, []);
 
-  const stopAll = () => {
+  const stopAll = useCallback(() => {
     Object.values(globalSounds).forEach(sound => sound.stop());
-  };
+  }, []);
 
-  const toggleMute = () => {
+  const toggleMute = useCallback(() => {
     setIsMuted(prev => !prev);
-  };
+  }, []);
 
   return { playSound, stopSound, stopAll, isMuted, toggleMute };
 };

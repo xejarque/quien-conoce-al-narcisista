@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useGame } from '../context/GameContext';
+import { useGame } from '../hooks/useGame';
 import { Button } from '../components/UI/Button';
 import { QuestionCard } from '../components/Game/QuestionCard';
 import { Timer } from '../components/Game/Timer';
@@ -12,24 +12,24 @@ import { clsx } from 'clsx';
 
 export const Game = () => {
   const { 
-    questions, 
-    currentQuestionIndex, 
-    timeLeft, 
-    lifelines, 
-    useLifeline, 
-    answerQuestion, 
-    hiddenOptions,
-    isGameOver,
-    isGameWon,
-    score,
-    isTransitioning,
-    isRevealing,
-    selectedAnswer: stateSelectedAnswer
-  } = useGame();
-  
-  const [showModal, setShowModal] = useState<{title: string, message: string} | null>(null);
-  const navigate = useNavigate();
-  const { playSound, stopSound, isMuted, toggleMute } = useSoundManager();
+      currentQuestionIndex, 
+      score, 
+      isGameOver, 
+       isGameWon,
+       timeLeft, 
+      lifelines, 
+      applyLifeline, 
+      answerQuestion, 
+      hiddenOptions,
+      questions,
+      isTransitioning,
+      isRevealing,
+      selectedAnswer: stateSelectedAnswer
+    } = useGame();
+    
+    const [showModal, setShowModal] = useState<{title: string, message: string} | null>(null);
+    const navigate = useNavigate();
+    const { playSound, stopSound, isMuted, toggleMute } = useSoundManager();
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -37,7 +37,7 @@ export const Game = () => {
   useEffect(() => {
     playSound('suspense');
     return () => stopSound('suspense');
-  }, []);
+  }, [playSound, stopSound]);
 
   useEffect(() => {
     if (isGameOver) {
@@ -71,7 +71,7 @@ export const Game = () => {
 
   const handleLifeline = (type: 'fiftyFifty' | 'phoneFriend' | 'audience') => {
     playSound('lifeline');
-    useLifeline(type);
+    applyLifeline(type);
     
     if (type === 'phoneFriend') {
       const correctIndex = currentQuestion.correctAnswer;
@@ -109,10 +109,10 @@ export const Game = () => {
 
   // Effect for timer ticking
   useEffect(() => {
-    if (timeLeft <= 5 && timeLeft > 0 && !isGameOver && !isTransitioning) {
+    if (timeLeft <= 5 && timeLeft > 0 && !isGameOver && !isTransitioning && !isRevealing) {
       playSound('ticking');
     }
-  }, [timeLeft, isGameOver, isTransitioning, playSound]);
+  }, [timeLeft, isGameOver, isTransitioning, isRevealing, playSound]);
 
   if (!currentQuestion) return <div>Loading...</div>;
 
