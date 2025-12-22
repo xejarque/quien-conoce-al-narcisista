@@ -11,7 +11,7 @@ export const Timer: React.FC<TimerProps> = ({ timeLeft, totalTime }) => {
   const percentage = (timeLeft / totalTime) * 100;
   
   return (
-    <div className="w-full max-w-4xl mx-auto mb-8 px-4">
+    <div className="w-full max-w-4xl mx-auto px-4">
       <div className="flex justify-between items-end text-white font-medium mb-2">
         <span className="text-sm uppercase tracking-widest text-pink-300">Tiempo Restante</span>
         <span className={clsx(

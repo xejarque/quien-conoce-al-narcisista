@@ -168,17 +168,17 @@ export const Results = () => {
             <label className="block text-left text-sm font-medium text-gray-300 mb-2 pl-1">
               Inmortaliza tu logro
             </label>
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Tu nombre"
-                className="flex-1 px-6 py-3 rounded-xl bg-black/20 border border-white/10 text-white focus:ring-2 focus:ring-pink-500 focus:outline-none transition-all"
+                className="flex-1 px-6 py-3 rounded-xl bg-black/20 border border-white/10 text-white focus:ring-2 focus:ring-pink-500 focus:outline-none transition-all w-full"
                 maxLength={20}
                 required
               />
-              <Button type="submit" variant="primary" size="md">
+              <Button type="submit" variant="primary" size="md" className="w-full sm:w-auto">
                 Guardar
               </Button>
             </div>

@@ -38,7 +38,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-0">
         {question.options.map((option, index) => {
           if (hiddenOptions.includes(index)) {
             return <div key={index} className="invisible h-20" />;
@@ -49,15 +49,15 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           
           if (selectedAnswer === index) {
             if (isRevealing) {
-              buttonStyle = "bg-accent text-black border-accent font-bold scale-105 shadow-[0_0_30px_rgba(251,191,36,0.6)] animate-pulse";
+              buttonStyle = "bg-accent text-black border-accent font-bold scale-[1.02] md:scale-105 shadow-[0_0_30px_rgba(251,191,36,0.6)] animate-pulse";
             } else if (isCorrect === true) {
-              buttonStyle = "bg-green-500 border-green-400 text-white shadow-[0_0_30px_rgba(34,197,94,0.6)] z-20 scale-105";
+              buttonStyle = "bg-green-500 border-green-400 text-white shadow-[0_0_30px_rgba(34,197,94,0.6)] z-20 scale-[1.02] md:scale-105";
             } else if (isCorrect === false) {
               buttonStyle = "bg-red-500/80 border-red-500 text-white shadow-[0_0_20px_rgba(239,68,68,0.4)]";
             }
           } else if (isCorrect !== null && isActuallyCorrect) {
             // Highlight the correct answer if the user failed
-            buttonStyle = "bg-green-500/40 border-green-500 text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] scale-105 z-10";
+            buttonStyle = "bg-green-500/40 border-green-500 text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] scale-[1.02] md:scale-105 z-10";
           }
 
           return (
@@ -65,7 +65,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               key={index}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ 
-                scale: selectedAnswer === index && isCorrect === true ? 1.1 : 1,
+                scale: selectedAnswer === index && isCorrect === true ? (window.innerWidth < 768 ? 1.02 : 1.1) : 1,
                 x: selectedAnswer === index && isCorrect === false ? [0, -10, 10, -10, 10, 0] : 0,
                 opacity: 1 
               }}
@@ -87,9 +87,9 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   <motion.div 
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="absolute -top-3 -right-3 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white z-30"
+                    className="absolute -top-2 -right-2 md:-top-3 md:-right-3 w-7 h-7 md:w-8 md:h-8 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white z-30"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </motion.div>

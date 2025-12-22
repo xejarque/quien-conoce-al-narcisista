@@ -100,6 +100,7 @@ const gameReducer = (state: GameState, action: Action): GameState => {
         isGameWon: isWon,
         timeLeft: TIME_PER_QUESTION,
         isTransitioning: false,
+        isRevealing: false,
         selectedAnswer: null,
       };
     case 'SELECT_ANSWER':

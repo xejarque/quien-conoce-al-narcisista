@@ -87,29 +87,34 @@ export const Game = () => {
   if (!currentQuestion) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen flex flex-col py-6 md:py-8 max-w-6xl mx-auto w-full">
-      {/* Header Info */}
-      <div className="flex justify-between items-center px-6 mb-8">
-        <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
-          <span className="text-purple-200 text-sm block">Nivel</span>
-          <span className="text-xl font-bold text-white">{currentQuestionIndex + 1}/15</span>
+    <div className="min-h-screen flex flex-col max-w-6xl mx-auto w-full relative">
+      {/* Header Info - Sticky on mobile and desktop */}
+      <div className="sticky top-0 z-40 bg-slate-900/60 backdrop-blur-xl border-b border-white/5 py-4 px-6 mb-4">
+        <div className="flex justify-between items-center mb-4">
+          <div className="bg-white/5 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
+            <span className="text-purple-200/70 text-xs block uppercase tracking-wider">Nivel</span>
+            <span className="text-xl font-bold text-white">{currentQuestionIndex + 1}/15</span>
+          </div>
+          <div className="bg-white/5 backdrop-blur-md px-6 py-2 rounded-xl border border-white/10 shadow-[0_0_15px_rgba(251,191,36,0.05)]">
+            <span className="text-accent/70 text-xs block text-right uppercase tracking-wider">Puntuación</span>
+            <span className="text-2xl font-bold text-accent">{score.toLocaleString()}</span>
+          </div>
         </div>
-        <div className="bg-white/10 backdrop-blur-md px-6 py-2 rounded-xl border border-white/10 shadow-[0_0_15px_rgba(251,191,36,0.1)]">
-          <span className="text-accent text-sm block text-right">Puntuación</span>
-          <span className="text-2xl font-bold text-accent">{score.toLocaleString()}</span>
-        </div>
-      </div>
 
-      <Timer timeLeft={timeLeft} totalTime={30} />
+        <Timer timeLeft={timeLeft} totalTime={30} />
+      </div>
       
-      <Lifelines 
-        lifelines={lifelines} 
-        onUseLifeline={handleLifeline} 
-        disabled={stateSelectedAnswer !== null}
-      />
+      <div className="px-6 py-2">
+        <Lifelines 
+          lifelines={lifelines} 
+          onUseLifeline={handleLifeline} 
+          disabled={stateSelectedAnswer !== null}
+        />
+      </div>
 
       <div className="flex-1 flex flex-col justify-center">
         <QuestionCard 
+          key={currentQuestionIndex}
           question={currentQuestion}
           onAnswer={handleAnswer}
           hiddenOptions={hiddenOptions}
