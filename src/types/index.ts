@@ -35,6 +35,11 @@ export interface GameState {
   };
   timeLeft: number;
   hiddenOptions: number[];
+  lifelineResult?: {
+    type: 'phoneFriend' | 'audience';
+    suggestion?: number;
+    votes?: number[];
+  };
 }
 
 export type LifelineType = 'fiftyFifty' | 'phoneFriend' | 'audience';

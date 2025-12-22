@@ -36,14 +36,13 @@ export const useSoundManager = () => {
   });
 
   useEffect(() => {
-    // Initialize global sounds if they don't exist
+    // Initialize global sounds once
     Object.entries(SOUNDS).forEach(([key, url]) => {
       if (!globalSounds[key]) {
         const isMusic = key === 'bgMusic' || key === 'suspense';
         globalSounds[key] = new Howl({
           src: [url],
-
-          html5: false, // Use Web Audio for better reliability
+          html5: false,
           preload: true,
           loop: isMusic,
           volume: SOUND_VOLUMES[key] || 0.5,
@@ -52,18 +51,27 @@ export const useSoundManager = () => {
           onloaderror: (_id, err) => console.error(`[SoundManager] Error loading ${key}:`, err),
           onplayerror: (_id, err) => {
             console.error(`[SoundManager] Error playing ${key}:`, err);
-            globalSounds[key].once('unlock', () => {
-              console.log(`[SoundManager] Unlocked and playing ${key}`);
-              globalSounds[key].play();
-            });
           }
         });
       }
     });
-  }, [isMuted]);
+
+    // Listen for the custom audio_unlocked event from App.tsx
+    const handleAudioUnlocked = () => {
+      console.log('[SoundManager] Received audio_unlocked event');
+      Object.values(globalSounds).forEach(s => {
+        if (s.state() === 'loaded' && s.loop() && !s.playing() && !isMuted) {
+          s.play();
+        }
+      });
+    };
+
+    window.addEventListener('audio_unlocked', handleAudioUnlocked);
+    return () => window.removeEventListener('audio_unlocked', handleAudioUnlocked);
+  }, []);
 
   useEffect(() => {
-    // Update mute state for all global sounds
+    // Update mute state for all global sounds when isMuted changes
     Object.values(globalSounds).forEach(sound => sound.mute(isMuted));
     localStorage.setItem('game_muted', String(isMuted));
   }, [isMuted]);

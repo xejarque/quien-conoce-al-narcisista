@@ -14,6 +14,7 @@ type Action =
   | { type: 'SET_TRANSITION'; payload: boolean }
   | { type: 'SET_REVEALING'; payload: boolean }
   | { type: 'SELECT_ANSWER'; payload: number | null }
+  | { type: 'SET_LIFELINE_RESULT'; payload: { type: 'phoneFriend' | 'audience'; suggestion?: number; votes?: number[] } | undefined }
   | { type: 'NEXT_QUESTION' };
 
 const TIME_PER_QUESTION = 30;
@@ -47,9 +48,9 @@ const gameReducer = (state: GameState, action: Action): GameState => {
             text: opt,
             isCorrect: idx === q.correctAnswer
           }));
-          
+
           const shuffledOptions = [...optionsWithMetadata].sort(() => 0.5 - Math.random());
-          
+
           return {
             ...q,
             options: shuffledOptions.map(o => o.text),
@@ -99,6 +100,7 @@ const gameReducer = (state: GameState, action: Action): GameState => {
         isRevealing: false,
         selectedAnswer: null,
         hiddenOptions: [],
+        lifelineResult: undefined,
       };
     }
     case 'SELECT_ANSWER':
@@ -120,6 +122,11 @@ const gameReducer = (state: GameState, action: Action): GameState => {
       return {
         ...state,
         isRevealing: action.payload,
+      };
+    case 'SET_LIFELINE_RESULT':
+      return {
+        ...state,
+        lifelineResult: action.payload,
       };
     case 'USE_LIFELINE':
       return {
@@ -180,7 +187,7 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const currentQuestion = state.questions[state.currentQuestionIndex];
     const isCorrect = currentQuestion.correctAnswer === answerIndex;
     const scoreEarned = isCorrect ? calculateScore(state.currentQuestionIndex + 1, state.timeLeft) : 0;
-    
+
     dispatch({ type: 'SELECT_ANSWER', payload: answerIndex });
     dispatch({ type: 'SET_REVEALING', payload: true });
 
@@ -213,13 +220,54 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       const incorrectOptions = currentQuestion.options
         .map((_, idx) => idx)
         .filter(idx => idx !== correct);
-      
+
       const shuffled = [...incorrectOptions].sort(() => 0.5 - Math.random());
       const toHide = shuffled.slice(0, 2);
-      
+
       dispatch({ type: 'SET_HIDDEN_OPTIONS', payload: toHide });
+    } else if (type === 'phoneFriend') {
+      const currentQuestion = state.questions[state.currentQuestionIndex];
+      const correct = currentQuestion.correctAnswer;
+      const isCorrect = Math.random() < 0.8;
+
+      let suggestion: number;
+      if (isCorrect) {
+        suggestion = correct;
+      } else {
+        const availableOptions = [0, 1, 2, 3].filter(idx => !state.hiddenOptions.includes(idx) && idx !== correct);
+        suggestion = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+      }
+
+      dispatch({ type: 'SET_LIFELINE_RESULT', payload: { type: 'phoneFriend', suggestion } });
+    } else if (type === 'audience') {
+      const currentQuestion = state.questions[state.currentQuestionIndex];
+      const correct = currentQuestion.correctAnswer;
+
+      // Generate votes distribution
+      const votes = [0, 0, 0, 0];
+      const totalVotes = 100;
+
+      // Give more weight to the correct answer
+      let remaining = totalVotes;
+      const correctWeight = 40 + Math.floor(Math.random() * 30); // 40-70%
+      votes[correct] = correctWeight;
+      remaining -= correctWeight;
+
+      const availableIndices = [0, 1, 2, 3].filter(idx => idx !== correct && !state.hiddenOptions.includes(idx));
+
+      availableIndices.forEach((idx, i) => {
+        if (i === availableIndices.length - 1) {
+          votes[idx] = remaining;
+        } else {
+          const v = Math.floor(Math.random() * remaining);
+          votes[idx] = v;
+          remaining -= v;
+        }
+      });
+
+      dispatch({ type: 'SET_LIFELINE_RESULT', payload: { type: 'audience', votes } });
     }
-    
+
     dispatch({ type: 'USE_LIFELINE', payload: type });
   };
 
