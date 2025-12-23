@@ -1,2608 +1,2608 @@
 import { Question } from '../types';
 
 export const questions: Question[] = [
-  // 1-50: Fase de Idealización y Love Bombing (Escenarios Reales)
+  // 1-50: Primeras señales y dinámicas iniciales
   {
     id: '1',
-    text: 'Llevas solo dos semanas saliendo con alguien y ya te dice que eres "el amor de su vida", que nunca había conectado así con nadie y te propone vivir juntos pronto. ¿Qué indica esta conducta?',
+    text: 'Llevas dos semanas saliendo con alguien y ya te dice que eres "el amor de su vida", que nunca había conectado así, y te propone iros a vivir juntos. Tú sientes...',
     options: [
-      'Romance intenso a primera vista',
-      'Love bombing para crear dependencia rápida',
-      'Persona muy intensa y apasionada',
-      'Quiere ir demasiado deprisa'
+      'Qué suerte, por fin alguien que sabe lo que quiere',
+      'Es intenso pero supongo que así es el amor de verdad',
+      'Me halaga, aunque algo en mí se siente un poco abrumada',
+      'Deberíamos esperar, pero quizá estoy siendo demasiado fría'
     ],
-    correctAnswer: 1,
-    difficulty: 1,
-    explanation: 'El "Love Bombing" o bombardeo de amor busca anular tus defensas lógicas mediante una intensidad abrumadora al principio. No es amor real, es una táctica para engancharte antes de mostrar su verdadera cara.'
+    correctAnswer: 2,
+    difficulty: 3,
+    explanation: 'Cuando algo te abruma en vez de hacerte sentir en paz, tu cuerpo ya te está avisando. No necesitas saber cómo se llama para notar que no te sienta del todo bien.'
   },
   {
     id: '2',
-    text: 'Tu nueva pareja te envía mensajes constantemente, te llama a todas horas y quiere saber dónde estás y con quién en todo momento, diciendo que es porque "se preocupa por ti". ¿Cómo interpretas esto?',
+    text: 'Tu nueva pareja te escribe constantemente, quiere saber dónde estás y con quién, y dice que es porque "se preocupa mucho por ti". ¿Cómo te hace sentir esto?',
     options: [
-      'Atención y cuidado constantes',
-      'Miedo a perderme porque me quiere',
-      'Control e aislamiento disfrazados de preocupación',
-      'Normal al inicio de una relación'
+      'Cuidada y querida, es bonito que piense tanto en mí',
+      'Un poco agobiada, pero es normal al principio',
+      'Incómoda, como si tuviera que dar explicaciones de todo',
+      'Es que tiene miedo de perderme, pobrecito'
     ],
     correctAnswer: 2,
-    difficulty: 1,
-    explanation: 'El control excesivo disfrazado de "preocupación" o "amor" es una bandera roja (Red Flag). Busca monitorear tus movimientos y reducir tu independencia poco a poco.'
+    difficulty: 3,
+    explanation: 'La preocupación genuina no te hace sentir vigilada. Si sientes que tienes que justificarte constantemente, algo no está funcionando como debería.'
   },
   {
     id: '3',
-    text: 'En una discusión, tu pareja niega haber dicho algo que tú recuerdas claramente que dijo, y te acusa de estar "loca" o de "inventarte cosas". ¿Qué está ocurriendo?',
+    text: 'En una discusión, tu pareja niega haber dicho algo que tú recuerdas perfectamente. Te mira como si estuvieras inventando cosas. Tú acabas pensando...',
     options: [
-      'Puede ser mala memoria',
-      'Gaslighting: duda de tu percepción y cordura',
-      'Malentendido sin importancia',
-      'Estrés que le hace olvidar'
+      'A lo mejor lo recuerdo mal, tampoco es para tanto',
+      'Quizá lo dijo sin querer y ya no se acuerda',
+      'Me siento confundida, pero confío en lo que escuché',
+      'Seguro que tiene razón, últimamente estoy muy dispersa'
     ],
-    correctAnswer: 1,
-    difficulty: 2,
-    explanation: 'El Gaslighting es una forma de abuso psicológico donde el agresor niega la realidad para confundir a la víctima, haciendo que esta deje de confiar en su propio juicio e intuición.'
+    correctAnswer: 2,
+    difficulty: 5,
+    explanation: 'Si después de hablar con alguien acabas dudando de tu propia memoria cuando antes estabas segura, algo raro está pasando. Confía en tu percepción.'
   },
   {
     id: '4',
-    text: 'Tu pareja te compara constantemente con su ex, diciendo que ella sí "lo entendía" o que "estaba más en forma", haciéndote sentir insegura. ¿Cuál es el objetivo de esto?',
+    text: 'Tu pareja menciona a menudo a su ex: "ella sí me entendía", "estaba más en forma que tú". ¿Cómo te sientes cuando lo hace?',
     options: [
-      'Motivarme a ser mejor persona',
-      'Triangulación para provocar celos e inseguridad',
-      'Honestidad sobre sus gustos',
-      'Aún extraña a su ex'
+      'Me motiva a mejorar para que esté más contento conmigo',
+      'Incómoda y como si nunca fuera suficiente',
+      'Es honesto, al menos sé lo que le gusta',
+      'Creo que aún la quiere y eso me preocupa'
     ],
     correctAnswer: 1,
-    difficulty: 2,
-    explanation: 'La triangulación consiste en introducir a una tercera persona (real o imaginaria) en la dinámica para provocar celos, bajar tu autoestima y hacerte sentir que debes esforzarte más para "ganarte" su amor.'
+    difficulty: 4,
+    explanation: 'Si las comparaciones te dejan sintiéndote "menos que", no te están ayudando a mejorar. Te están haciendo sentir insegura, y eso no es casualidad.'
   },
   {
     id: '5',
-    text: 'Después de una etapa maravillosa, de repente tu pareja se vuelve fría, distante y critica todo lo que haces sin motivo aparente. ¿En qué fase del ciclo estás?',
+    text: 'Después de unas semanas maravillosas, tu pareja se vuelve fría y crítica sin motivo aparente. ¿Qué piensas?',
     options: [
-      'Hice algo mal y está dolido',
-      'Mala racha laboral',
-      'Devaluación: retirar afecto para someterte',
-      'La pasión baja con el tiempo'
+      'Algo habré hecho mal sin darme cuenta',
+      'Estará pasando una mala racha en el trabajo',
+      'Me desconcierta, no entiendo qué ha cambiado',
+      'Es normal, la pasión inicial siempre baja'
     ],
     correctAnswer: 2,
-    difficulty: 2,
-    explanation: 'Tras el Love Bombing (Idealización), el narcisista pasa a la Devaluación. Empieza a criticarte y retirarte el afecto para que te desesperes intentando volver a la etapa dorada del principio.'
+    difficulty: 4,
+    explanation: 'El desconcierto es una señal válida. No tienes por qué encontrar explicaciones a un cambio que no tiene sentido. Escucha tu confusión.'
   },
   {
     id: '6',
-    text: 'Has decidido dejar la relación y cortar el contacto. De repente, él/ella reaparece con regalos, promesas de cambio y recordando los "buenos momentos". ¿Qué es esto?',
+    text: 'Has decidido terminar la relación. De repente, aparece con flores, promesas de cambio y recordando "lo bonito que teníamos". ¿Qué sientes?',
     options: [
-      'Se dio cuenta y cambió de verdad',
-      'Hoovering: succionarte de vuelta a la relación',
-      'El destino nos quiere juntos',
-      'Me echa de menos de forma genuina'
+      'Quizá me precipité, parece que de verdad quiere cambiar',
+      'Es muy romántico, igual le doy otra oportunidad',
+      'Desconfianza, porque esto ya lo he visto antes',
+      'Le echo de menos, a lo mejor es cosa del destino'
     ],
-    correctAnswer: 1,
-    difficulty: 2,
-    explanation: 'El Hoovering es un intento desesperado del narcisista por recuperar su "suministro" (tú) cuando siente que pierde el control. Las promesas son vacías y el abuso volverá (y empeorará) si regresas.'
+    correctAnswer: 2,
+    difficulty: 5,
+    explanation: 'Si ya has visto este patrón antes, tu desconfianza está bien fundamentada. Los cambios reales se ven con el tiempo, no con gestos puntuales.'
   },
   {
     id: '7',
-    text: 'Tu pareja suele hacer "bromas" hirientes sobre tu aspecto o inteligencia en público, pero si te ofendes te dice: "Ay, qué sensible eres, no aguantas nada". ¿Qué mecanismo es este?',
+    text: 'Tu pareja hace "bromas" sobre tu aspecto o inteligencia delante de otros. Si te quejas, dice que no aguantas nada. Tú piensas...',
     options: [
-      'Humor negro sin maldad',
-      'A veces soy muy sensible',
-      'Invalidación emocional con agresión pasiva',
-      'Quiere hacerme más fuerte'
+      'Tiene razón, me lo tomo todo muy a pecho',
+      'Es su forma de mostrar cariño, aunque me duele',
+      'No me gusta cómo me siento después de esas bromas',
+      'Debería aprender a reírme de mí misma'
     ],
     correctAnswer: 2,
-    difficulty: 3,
-    explanation: 'El narcisista usa el sarcasmo y las "bromas" para humillarte públicamente. Si reaccionas, te invalida acusándote de ser "demasiado sensible", transfiriéndote la culpa de su agresión.'
+    difficulty: 4,
+    explanation: 'Si una broma te deja peor de lo que estabas, no es una broma. No hace falta analizarlo más: simplemente no quieres más de eso.'
   },
   {
     id: '8',
-    text: 'Le cuentas a tu pareja un problema importante que te preocupa, y él/ella termina hablando de cómo eso le afecta a él/ella o cambia de tema a sus propios problemas. ¿Qué demuestra esto?',
+    text: 'Le cuentas algo que te preocupa y, de alguna manera, la conversación acaba siendo sobre sus problemas. ¿Cómo te sientes?',
     options: [
-      'Empatizar contando su experiencia',
-      'Falta de empatía y egocentrismo',
-      'Distraerme para que no me preocupe',
-      'Tiene problemas más graves'
+      'Es su forma de conectar, compartiendo experiencias',
+      'Como si mis cosas no importaran tanto',
+      'Supongo que sus problemas son más graves',
+      'Intenta distraerme para que no me preocupe'
     ],
     correctAnswer: 1,
-    difficulty: 3,
-    explanation: 'La falta de empatía es un rasgo central. No pueden conectar genuinamente con tus sentimientos; solo les importa cómo las situaciones les afectan a ellos o cómo pueden redirigir la atención hacia sí mismos.'
+    difficulty: 4,
+    explanation: 'Si habitualmente acabas escuchando en vez de siendo escuchada cuando necesitas apoyo, la balanza está desequilibrada. Mereces atención cuando la pides.'
   },
   {
     id: '9',
-    text: 'Tu pareja te castiga dejándote de hablar durante días (Tratamiento de Silencio) porque no hiciste exactamente lo que quería. ¿Qué busca con esto?',
+    text: 'Cuando no haces lo que tu pareja quiere, deja de hablarte durante días. ¿Cómo interpretas su silencio?',
     options: [
-      'Necesita espacio para calmarse',
-      'Forma de procesar emociones',
-      'Provocar ansiedad y culpa para que ceda',
-      'Mejor que gritar y discutir'
+      'Necesita tiempo para calmarse y está bien',
+      'Es su forma de procesar las cosas',
+      'Me genera ansiedad, como si fuera un castigo',
+      'Es mejor que gritarnos'
     ],
     correctAnswer: 2,
-    difficulty: 3,
-    explanation: 'El Tratamiento de Silencio es una forma de manipulación y castigo. Busca provocar angustia en la víctima para que esta, desesperada por recuperar la conexión, asuma la culpa y se someta.'
+    difficulty: 5,
+    explanation: 'Si su silencio te genera ansiedad y sensación de castigo, probablemente funcione exactamente así. El espacio sano no se siente como amenaza.'
   },
   {
     id: '10',
-    text: 'Cuando intentas poner un límite o decir "no" a algo que no quieres hacer, tu pareja reacciona con una ira desproporcionada o se hace la víctima. ¿Qué significa?',
+    text: 'Dices que no a algo y tu pareja explota o empieza a hacerse la víctima. ¿Qué piensas después?',
     options: [
-      'No sé explicarme bien',
-      'No respetan límites; lo viven como ataque',
-      'Le hice mucho daño al negarme',
-      'Es pasional'
+      'Debí explicarme mejor para que no reaccionara así',
+      'Quizá fui demasiado brusca al decir que no',
+      'No es normal que un "no" genere esta reacción',
+      'Es que es muy pasional y sensible'
     ],
-    correctAnswer: 1,
-    difficulty: 3,
-    explanation: 'Para un narcisista, un límite es un insulto a su autoridad y control. Reaccionarán con furia o victimismo para obligarte a retirar el límite y volver a tener acceso total a ti.'
+    correctAnswer: 2,
+    difficulty: 5,
+    explanation: 'Decir "no" es un derecho básico. Si cada vez que lo ejerces hay consecuencias emocionales desproporcionadas, el problema no está en cómo lo dices.'
   },
   {
     id: '11',
-    text: 'Notas que desde que estás con esta persona, has dejado de ver a tus amigos y familia porque a él/ella "no le caen bien" o se enfada cuando quedas con ellos. ¿Qué está pasando?',
+    text: 'Desde que estás con tu pareja, ves menos a tus amigos y familia. Él/ella dice que "no le caen bien" o se enfada cuando quedas con ellos.',
     options: [
-      'Mi entorno era tóxico y me abrió los ojos',
-      'Es normal centrarse en la pareja',
-      'Aislamiento para que dependas sólo de él/ella',
-      'Casualidad de horarios'
+      'Tiene razón, mi entorno no era tan bueno',
+      'Es normal centrarse en la pareja al principio',
+      'Echo de menos a mi gente y eso me preocupa',
+      'Es casualidad, simplemente no hay tiempo'
     ],
     correctAnswer: 2,
-    difficulty: 4,
-    explanation: 'El aislamiento es clave para el control. Si no tienes a nadie que te dé una perspectiva externa o apoyo, es mucho más difícil darte cuenta del abuso y salir de la relación.'
+    difficulty: 6,
+    explanation: 'Echar de menos a tu gente es una señal importante. Las relaciones sanas amplían tu mundo, no lo reducen.'
   },
   {
     id: '12',
-    text: 'Tu pareja siempre es el héroe o la víctima en todas sus historias pasadas. Sus ex parejas están "locas" o fueron "malvadas". ¿Qué te sugiere esto?',
+    text: 'Tu pareja siempre es el héroe o la víctima en sus historias. Todas sus ex "estaban locas". ¿Qué piensas?',
     options: [
-      'Mala suerte en el amor',
-      'Persona muy resiliente',
-      'Bandera roja: no asumir responsabilidad',
-      'Seguro que es verdad'
+      'Ha tenido muy mala suerte en el amor',
+      'Es una persona muy fuerte que ha superado mucho',
+      'Me pregunto qué pasó realmente en esas relaciones',
+      'Seguro que dice la verdad, no tiene por qué mentir'
     ],
     correctAnswer: 2,
-    difficulty: 4,
-    explanation: 'Los narcisistas nunca asumen la culpa. Reescriben la historia para ser siempre los buenos o las víctimas. Si todas sus ex parejas están "locas", es muy probable que él/ella fuera el problema.'
+    difficulty: 5,
+    explanation: 'Cuando alguien nunca tiene parte de responsabilidad en sus conflictos pasados, es razonable preguntarse si la historia completa es diferente.'
   },
   {
     id: '13',
-    text: 'Sientes que tienes que "caminar sobre cáscaras de huevo" en casa para evitar que tu pareja explote o se moleste. ¿Cómo se llama este estado?',
+    text: 'Sientes que tienes que medir cada palabra y gesto en casa para no provocar una mala reacción. ¿Cómo describirías este estado?',
     options: [
-      'Respeto y consideración',
-      'Hipervigilancia por miedo a su reacción',
-      'Adaptación a la convivencia',
-      'Paz doméstica'
+      'Es respeto y consideración normal',
+      'Estoy tensa, como esperando que explote algo',
+      'Es parte de adaptarse a la convivencia',
+      'Así mantengo la paz en casa'
     ],
     correctAnswer: 1,
-    difficulty: 4,
-    explanation: 'La hipervigilancia es un síntoma de trauma. Vives en tensión permanente intentando predecir y gestionar el estado de ánimo del abusador para evitar conflictos, anulando tus propias necesidades.'
+    difficulty: 6,
+    explanation: 'Si vives en tensión permanente intentando evitar conflictos, tu cuerpo está en modo alerta. Eso no es paz, es supervivencia.'
   },
   {
     id: '14',
-    text: 'Tu pareja te promete que "mañana cambiará", que "iremos a terapia" o que "todo será diferente", pero sus acciones nunca coinciden con sus palabras (Future Faking). ¿Por qué lo hace?',
+    text: 'Tu pareja promete constantemente que "las cosas van a cambiar", pero nunca pasa. ¿Qué piensas?',
     options: [
-      'Buenas intenciones pero olvida',
-      'Ganar tiempo con falsas esperanzas',
-      'Quiere cambiar realmente',
-      'Optimismo'
+      'Tiene buenas intenciones, solo le cuesta cumplir',
+      'Me mantengo esperando algo que no llega',
+      'Quiere cambiar de verdad, hay que darle tiempo',
+      'Es optimista por naturaleza'
     ],
     correctAnswer: 1,
-    difficulty: 4,
-    explanation: 'El Future Faking consiste en prometer un futuro maravilloso que nunca llegará. Es el "zanahoria" que ponen delante de ti para que sigas tirando del carro de la relación, soportando el abuso presente.'
+    difficulty: 5,
+    explanation: 'Si llevas tiempo esperando cambios que no llegan, quizá las promesas funcionan más para mantenerte ahí que para cambiar algo realmente.'
   },
   {
     id: '15',
-    text: 'En una reunión social, tu pareja es encantadora, carismática y amable con todos, pero en cuanto subís al coche o llegáis a casa, su cara cambia y se vuelve fría o agresiva. ¿Qué es esto?',
+    text: 'En público tu pareja es encantadora, pero en casa cambia completamente y se vuelve fría o agresiva. ¿Cómo lo vives?',
     options: [
-      'Está cansado de socializar',
-      'Tiene doble personalidad',
-      'Máscara pública vs. realidad privada',
-      'Tiene mucha confianza conmigo'
+      'Le agota socializar y por eso está más irritable',
+      'Tiene dos caras muy diferentes',
+      'Conmigo se relaja y muestra su verdadero yo',
+      'Es que me tiene mucha confianza'
     ],
-    correctAnswer: 2,
-    difficulty: 5,
-    explanation: 'Los narcisistas cuidan obsesivamente su imagen pública. Pueden ser "luz de la calle" y "oscuridad de la casa". Esto confunde a la víctima y hace que nadie más crea lo que sucede en privado.'
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Si la versión que el mundo ve es muy diferente a la que tú conoces en privado, es normal que te sientas confundida y sola con esa realidad.'
   },
   {
     id: '16',
-    text: 'Te descubres pidiendo perdón por cosas que no has hecho o por reaccionar a sus provocaciones, sintiéndote culpable. ¿Qué ha logrado el narcisista?',
+    text: 'Te descubres pidiendo perdón por cosas que no has hecho, o por tu forma de reaccionar cuando te provocan. ¿Cómo te sientes?',
     options: [
-      'Aprender humildad',
-      'Invertir la culpa: él víctima, tú verdugo',
-      'Mejor comunicación',
-      'Yo soy así de bueno/a'
+      'Estoy aprendiendo a ser más humilde',
+      'Confundida, como si siempre fuera yo la culpable',
+      'Es lo mejor para que no haya más conflicto',
+      'Soy así de buena persona'
     ],
     correctAnswer: 1,
-    difficulty: 5,
-    explanation: 'Mediante la manipulación, el narcisista logra que te sientas culpable de sus abusos o de tus reacciones defensivas. Terminas consolando al agresor.'
+    difficulty: 6,
+    explanation: 'Si habitualmente acabas disculpándote sin saber muy bien por qué, algo se ha desequilibrado. Merece la pena preguntarse cómo llegaste ahí.'
   },
   {
     id: '17',
-    text: 'Tu pareja utiliza tus inseguridades o secretos que le contaste en confianza para herirte durante las discusiones. ¿Qué demuestra esto?',
+    text: 'Tu pareja usa cosas íntimas que le contaste en confianza para atacarte durante las discusiones. ¿Qué piensas?',
     options: [
-      'Buena memoria',
-      'La confianza se rompió',
-      'Usar tu información como arma',
-      'Ayudarme a superar miedos'
+      'Tiene muy buena memoria para todo',
+      'La confianza se rompió y eso me duele',
+      'Me siento traicionada, usó mis vulnerabilidades contra mí',
+      'Intenta ayudarme a superar mis miedos'
     ],
     correctAnswer: 2,
-    difficulty: 5,
-    explanation: 'Un narcisista recopila información sobre tus debilidades durante la fase de idealización no para conocerte, sino para tener munición y usarla contra ti en la fase de devaluación.'
+    difficulty: 6,
+    explanation: 'Lo que compartiste en intimidad no debería convertirse en munición. Sentirse traicionada en esos momentos es completamente válido.'
   },
   {
     id: '18',
-    text: 'Sientes que te has perdido a ti mismo/a, que ya no sabes qué te gusta, qué opinas o quién eres desde que estás con esta persona. ¿Qué ha ocurrido?',
+    text: 'Ya no sabes qué te gusta, qué opinas o quién eres. Sientes que te has perdido desde que estás con esta persona.',
     options: [
-      'He madurado y cambiado',
-      'Erosión de identidad por control',
-      'Sacrificio normal del amor',
-      'Mimetizarme con mi pareja'
+      'He madurado y cambiado, es normal',
+      'Me he adaptado demasiado y ya no me reconozco',
+      'Es el sacrificio natural del amor',
+      'Me he fusionado con mi pareja, es romántico'
     ],
     correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'El abuso narcisista erosiona tu identidad. Dejas de ser tú para convertirte en un objeto que satisface las necesidades del narcisista, perdiendo tus hobbies, opiniones y esencia.'
+    difficulty: 7,
+    explanation: 'Perderte a ti misma no es madurar ni amar. Si ya no te reconoces, es una señal de que algo importante se ha perdido en el camino.'
   },
   {
     id: '19',
-    text: 'Tu pareja te acusa de ser infiel sin ninguna prueba, revisa tu móvil y te interroga constantemente. Curiosamente, él/ella es quien coquetea con otros. ¿Qué es?',
+    text: 'Tu pareja te acusa de coquetear o ser infiel sin pruebas, pero tú notas que es quien más coquetea con otros. ¿Qué piensas?',
     options: [
-      'Celos porque me quiere',
-      'Proyección: acusarte de lo que hace',
-      'Inseguridad normal',
-      'Sexto sentido'
+      'Me quiere tanto que le dan celos',
+      'Es curioso que me acuse de lo que hace',
+      'Tendrá sus razones para desconfiar',
+      'Tiene un sexto sentido para estas cosas'
     ],
     correctAnswer: 1,
     difficulty: 6,
-    explanation: 'La proyección es un mecanismo de defensa. El narcisista atribuye a otros sus propios defectos, pensamientos o acciones inaceptables. Si te acusa de infiel sin motivo, sospecha de él/ella.'
+    explanation: 'Cuando alguien te acusa constantemente de algo que en realidad hace, no es casualidad. Presta atención a ese patrón.'
   },
   {
     id: '20',
-    text: 'Cuando intentas hablar de cómo te sientes, te dice frases como: "Ya estás otra vez con tus dramas", "No es para tanto", "Te lo tomas todo a la tremenda". ¿Qué hace?',
+    text: 'Cuando intentas expresar cómo te sientes, te dice "no es para tanto" o "siempre estás con dramas". ¿Cómo reaccionas?',
     options: [
-      'Me ayuda a relativizar',
-      'Minimizar e invalidar sentimientos',
-      'Tengo tendencia al drama',
-      'Persona pragmática'
+      'Intento relativizar más, tendrá razón',
+      'Empiezo a dudar si mis sentimientos son válidos',
+      'Me callo para no crear más problemas',
+      'Es una persona muy práctica'
     ],
     correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Minimizar tus sentimientos es una forma de decirte que tu realidad interna no importa. Busca que reprimas tus emociones y aceptes el trato inaceptable sin quejarte.'
+    difficulty: 5,
+    explanation: 'Si después de hablar de tus sentimientos dudas de si tenías derecho a sentirlos, algo no va bien. Tus emociones son válidas.'
   },
   {
     id: '21',
-    text: 'Tu pareja "olvida" convenientemente tus cumpleaños, aniversarios o fechas importantes, o los arruina creando una pelea justo antes. ¿Por qué?',
+    text: 'Tu pareja olvida tus días especiales o crea peleas justo antes de ellos. ¿Qué piensas?',
     options: [
-      'Despiste',
-      'Mala suerte',
-      'Sabotaje del foco en ti',
-      'Estrés ese día'
+      'Es muy despistado/a, no lo hace a propósito',
+      'Qué mala suerte, siempre pasa algo',
+      'Es raro que siempre coincida con mis momentos importantes',
+      'El estrés le afecta más esos días'
     ],
     correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Los narcisistas odian que otros sean el centro de atención. Arruinar tus días especiales es una forma de sabotaje para recuperar el protagonismo o castigarte por ser feliz sin ellos.'
+    explanation: 'Cuando los "olvidos" o conflictos coinciden sistemáticamente con tus momentos, merece la pena preguntarse si es realmente casualidad.'
   },
   {
     id: '22',
-    text: 'Te dice que nadie más te querrá como él/ella, que estás "dañado/a" o que sin él/ella no eres nada. ¿Cuál es el mensaje oculto?',
+    text: 'Te dice que nadie más te va a querer como él/ella, que estás "dañada" o que sin él/ella no eres nada. ¿Cómo te hace sentir?',
     options: [
-      'Amor eterno',
-      'Tengo suerte de tenerle',
-      'Indefensión aprendida para que no te vayas',
-      'Crítica constructiva'
+      'Agradecida de tener a alguien que me aguanta',
+      'Tengo suerte de que me quiera a pesar de mis defectos',
+      'Atrapada, como si no tuviera más opciones',
+      'Es su forma extraña de decirme que me quiere'
     ],
     correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Buscan destruir tu autoestima hasta tal punto que creas que no mereces nada mejor y que eres incapaz de sobrevivir sin ellos. Es una jaula psicológica.'
+    explanation: 'El amor no te hace sentir atrapada ni defectuosa. Si te sientes así, no es amor lo que te están dando.'
   },
   {
     id: '23',
-    text: 'Notas que tu pareja cambia de personalidad según con quién esté: es intelectual con unos, fiestero con otros, víctima con otros. ¿Qué rasgo es?',
+    text: 'Tu pareja parece una persona diferente según con quién esté: intelectual con unos, fiestero con otros, víctima con otros. ¿Qué opinas?',
     options: [
-      'Adaptable y social',
-      'Múltiples intereses',
-      'Yo falso camaleónico',
-      'Bipolar'
+      'Es muy adaptable y social',
+      'Tiene muchos intereses variados',
+      'No sé cuál es su verdadera personalidad',
+      'Es versátil, eso es bueno'
     ],
     correctAnswer: 2,
     difficulty: 7,
-    explanation: 'El narcisista carece de un núcleo de identidad sólido. Construye diferentes máscaras o personajes para manipular a diferentes personas y obtener "suministro" de cada una.'
+    explanation: 'No saber quién es realmente tu pareja después de tiempo juntos es confuso. Esa incertidumbre sobre su identidad es significativa.'
   },
   {
     id: '24',
-    text: 'Tras una ruptura, empieza a publicar fotos muy felices con una nueva pareja a los pocos días, haciendo todo lo que tú querías hacer. ¿Qué sientes?',
+    text: 'Tras la ruptura, ves que publica fotos muy feliz con alguien nuevo haciendo todo lo que tú querías hacer. ¿Qué sientes?',
     options: [
-      'Me alegro por él/ella',
-      'Amor verdadero y rápido',
-      'Puesta en escena para herirte',
-      'Yo no era suficiente'
+      'Me alegro de que sea feliz',
+      'Tan rápido, debe ser amor verdadero',
+      'Me duele, pero sé que es una fachada',
+      'Yo no era suficiente para hacerle feliz'
     ],
     correctAnswer: 2,
-    difficulty: 8,
-    explanation: 'El narcisista usa las redes sociales y a sus nuevas parejas como armas. Exhibe una felicidad falsa para provocarte dolor y hacerte creer que tú eras el problema. La nueva víctima sufrirá lo mismo pronto.'
+    difficulty: 6,
+    explanation: 'Sentir dolor es normal, pero intuir que hay algo forzado en esa felicidad instantánea también es válido. Confía en lo que sabes.'
   },
   {
     id: '25',
-    text: 'Tu jefe se apropia de tus ideas, te humilla en las reuniones pero luego te invita a comer como si nada, y crea rivalidad entre compañeros. ¿Qué perfil tiene?',
+    text: 'Tu jefe se lleva el mérito de tus ideas, te critica en público pero luego te invita a comer como si nada. ¿Cómo lo vives?',
     options: [
-      'Líder exigente y justo',
-      'Narcisista laboral',
-      'Gestión moderna',
-      'Un poco peculiar'
+      'Es un líder exigente pero justo',
+      'Confundida, no sé si le caigo bien o mal',
+      'Es gestión moderna, hay que adaptarse',
+      'Es un poco raro pero no es mala persona'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'El narcisismo no solo se da en pareja. En el trabajo, buscan poder, se apropian de logros ajenos, no tienen empatía y usan el "divide y vencerás" para controlar al equipo.'
+    difficulty: 5,
+    explanation: 'La confusión entre humillación y afabilidad no es normal en un entorno sano. Esa mezcla te mantiene en desequilibrio.'
   },
   {
     id: '26',
-    text: 'Un familiar siempre se hace la víctima, dice que "se sacrifica por todos" pero en realidad manipula con culpa y no respeta la privacidad. ¿Qué es?',
+    text: 'Un familiar siempre habla de cuánto "se sacrifica por todos", pero usa la culpa para conseguir lo que quiere. ¿Qué opinas?',
     options: [
-      'Madre/padre abnegado',
-      'Narcisista encubierto/vulnerable',
-      'Necesita más cariño',
-      'Persona muy sensible'
+      'Es una madre/padre entregado que merece reconocimiento',
+      'Siento culpa constantemente a su alrededor',
+      'Necesita más cariño y atención',
+      'Es una persona muy sensible'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'El narcisista encubierto usa la victimización y el "sacrificio" como herramienta de control. "Después de todo lo que he hecho por ti..." es su frase favorita para generar culpa y obligación.'
+    difficulty: 6,
+    explanation: 'Si estar cerca de alguien te hace sentir culpable constantemente, presta atención. El sacrificio genuino no viene con factura emocional.'
   },
   {
     id: '27',
-    text: 'Cuando le confrontas con pruebas de sus mentiras, cambia de tema, saca trapos sucios tuyos del pasado o empieza a hablar sin sentido hasta marearte. ¿Técnica?',
+    text: 'Cuando le presentas pruebas de algo que hizo mal, cambia de tema, te ataca con cosas del pasado o habla sin sentido hasta confundirte.',
     options: [
-      'Se lía explicándose',
-      'Ensalada de palabras para confundirte',
-      'Recordar el pasado “con razón”',
-      'Debate justo'
+      'Se lía al explicarse, es normal',
+      'Acabo agotada y sin resolver nada',
+      'Tiene razón en recordar el pasado',
+      'Es su forma de debatir'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'La "Ensalada de Palabras" es un discurso circular, ilógico y confuso diseñado para agotarte mentalmente, frustrarte y hacer que desistas de buscar la verdad o una disculpa.'
+    difficulty: 7,
+    explanation: 'Si las conversaciones te dejan agotada y más confundida que al principio, sin ninguna resolución, algo está fallando en esa dinámica.'
   },
   {
     id: '28',
-    text: 'Sientes una necesidad física y obsesiva de contactar con tu ex pareja abusiva, aunque sabes que te hace daño. Es como una droga. ¿Qué es?',
+    text: 'Aunque sabes que esa persona te hace daño, sientes una necesidad casi física de contactarla. Es como una adicción.',
     options: [
-      'Amor verdadero que no muere',
-      'Masoquismo',
-      'Vínculo de trauma por refuerzo intermitente',
-      'Falta de voluntad'
+      'Es amor verdadero que no muere',
+      'Quizá soy masoquista',
+      'Mi cuerpo reacciona aunque mi mente sepa que no me conviene',
+      'Me falta fuerza de voluntad'
     ],
     correctAnswer: 2,
-    difficulty: 9,
-    explanation: 'El cerebro reacciona al ciclo de abuso (dolor-alivio) igual que a una droga dura. No es amor, es una adicción química a los picos de dopamina y cortisol generados por el abusador.'
+    difficulty: 8,
+    explanation: 'Esa necesidad compulsiva no es amor, es tu sistema nervioso enganchado a un patrón. Reconocerlo es el primer paso para salir.'
   },
   {
     id: '29',
-    text: 'Decides aplicar el "Contacto Cero", pero amigos comunes te traen mensajes de él/ella o te dicen "pobrecito, está muy mal". ¿Qué son estos amigos?',
+    text: 'Has cortado el contacto con tu ex, pero amigos comunes te traen mensajes suyos o te dicen "pobrecito, lo está pasando mal".',
     options: [
-      'Buenos mediadores',
-      '“Monos voladores” emisarios del narcisista',
-      'Gente neutral',
-      'Amigos por la paz'
+      'Son buenos amigos intentando mediar',
+      'Me presionan para que vuelva y me incomoda',
+      'Son neutrales, solo transmiten información',
+      'Quieren que hagamos las paces'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Los "Monos Voladores" son personas que el narcisista utiliza para espiarte, enviarte mensajes o presionarte para volver, a menudo bajo la apariencia de preocupación o amistad.'
+    difficulty: 6,
+    explanation: 'Si esos mensajes te presionan para volver a algo que decidiste dejar, no son neutrales. Tu decisión merece ser respetada.'
   },
   {
     id: '30',
-    text: 'Al principio de la relación, te contó historias terribles de su infancia para dar pena y que quisieras "salvarle" o cuidarle. ¿Qué buscaba?',
+    text: 'Al principio te contó historias muy duras de su infancia. Sentiste que querías cuidarle y protegerle.',
     options: [
-      'Desahogo sincero',
-      'Apelar a tu empatía para que bajes la guardia',
-      'Intimidad real',
-      'Que fueras su terapeuta'
+      'Fue un momento de intimidad sincera',
+      'Quizá usó mi empatía para que bajara la guardia',
+      'Conectamos a un nivel muy profundo',
+      'Necesitaba un terapeuta más que una pareja'
     ],
     correctAnswer: 1,
-    difficulty: 10,
-    explanation: 'Los narcisistas explotan la empatía de sus víctimas presentándose como "niños heridos". Si sientes pena por él/ella, tolerarás abusos que no tolerarías en otra persona, pensando que "no es su culpa".'
+    difficulty: 8,
+    explanation: 'La empatía es bella, pero también puede ser usada. Si esas historias te hicieron tolerar cosas que no deberías, merece la pena reflexionar.'
   },
   {
     id: '31',
-    text: 'Tu pareja te regala algo muy caro que no te gusta o no pediste, y luego te exige que lo uses y te echa en cara "todo lo que gasta en ti". ¿Qué es?',
+    text: 'Te regala cosas caras que no pediste y luego te las echa en cara si no haces lo que quiere. ¿Cómo te sientes?',
     options: [
-      'Generoso pero con mal gusto',
-      'Control con regalos (love bombing material)',
-      'Comprar mi obediencia',
-      'Detalle bonito malentendido'
+      'Es generoso aunque tenga mal gusto',
+      'Como si los regalos fueran deudas que debo pagar',
+      'Debería ser más agradecida',
+      'Es un detalle bonito mal entendido'
     ],
     correctAnswer: 1,
     difficulty: 5,
-    explanation: 'Los regalos no son desinteresados. Son "deudas" que crea para luego cobrarte en forma de obediencia o para reprocharte que eres una "desagradecida" si te quejas de su trato.'
+    explanation: 'Los regalos que se convierten en deudas emocionales no son regalos. Si sientes que debes algo a cambio, la generosidad no era genuina.'
   },
   {
     id: '32',
-    text: 'Haces un gran logro en tu trabajo o estudios. Tu pareja dice "felicidades" secamente e inmediatamente cambia de tema o se pone enferma. ¿Por qué?',
+    text: 'Consigues un logro importante y tu pareja apenas reacciona, o justo ese día se pone enferma o crea un problema.',
     options: [
-      'Mala suerte justo hoy',
-      'Le da poca importancia',
-      'Envidia patológica: tu éxito le opaca',
-      'Estaba distraído'
+      'Qué mala suerte que coincidiera',
+      'No le da importancia a estas cosas',
+      'Es raro que mis buenos momentos siempre se estropeen',
+      'Estaba distraído/a con otras cosas'
     ],
     correctAnswer: 2,
     difficulty: 6,
-    explanation: 'El narcisista ve el éxito ajeno como una amenaza a su propia superioridad. Intentará arruinar tu momento o ignorarlo para que no te sientas "demasiado importante".'
+    explanation: 'Cuando tus éxitos sistemáticamente coinciden con problemas o indiferencia, empieza a parecer menos casualidad y más patrón.'
   },
   {
     id: '33',
-    text: 'Te dice "nadie te va a aguantar con ese carácter", "estás loca", "necesitas ayuda psiquiátrica". Tú empiezas a creerlo. ¿Efecto?',
+    text: 'Te repite que "nadie te va a aguantar", que "estás loca" o que "necesitas ayuda". Has empezado a creerlo.',
     options: [
-      'Tengo carácter difícil',
-      'Introyectar la voz del abusador',
-      'Recomendación de salud',
-      'Ayuda para mejorar'
+      'Quizá tengo un carácter difícil',
+      'Sus palabras se han metido en mi cabeza',
+      'Es una recomendación de salud',
+      'Quiere ayudarme a mejorar'
     ],
     correctAnswer: 1,
     difficulty: 7,
-    explanation: 'A fuerza de repetición, la víctima internaliza los insultos del abusador. Empiezas a atacarte a ti misma con sus mismas palabras, minando tu autoestima desde dentro.'
+    explanation: 'Cuando empiezas a repetirte las críticas de alguien como si fueran tuyas, es momento de preguntarte de dónde vienen realmente esos pensamientos.'
   },
   {
     id: '34',
-    text: 'Cuando le pides que haga algo simple (sacar la basura, llegar puntual), dice que sí pero nunca lo hace, o lo hace mal a propósito. ¿Qué es?',
+    text: 'Le pides algo simple y dice que sí, pero nunca lo hace, o lo hace mal a propósito. Siempre hay excusas.',
     options: [
-      'Olvidadizo o torpe',
-      'Resistencia pasivo-agresiva para controlar',
-      'TDAH',
+      'Es olvidadizo, no lo hace adrede',
+      'Me frustra, siento que mis peticiones no importan',
+      'Quizá tiene TDAH',
       'No me explico bien'
     ],
     correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'La resistencia pasiva es una forma de agresión encubierta. Aceptan verbalmente para evitar el conflicto directo, pero boicotean la acción para demostrar que tú no mandas sobre ellos.'
+    difficulty: 6,
+    explanation: 'Si repetidamente sientes que tus necesidades no son importantes, el problema no es tu forma de pedirlas.'
   },
   {
     id: '35',
-    text: 'Durante una discusión, te acorrala físicamente o te bloquea la salida "para que le escuches", aunque no te pegue. ¿Qué nivel de riesgo es?',
+    text: 'Durante una discusión, te bloquea la salida o te acorrala físicamente "para que le escuches".',
     options: [
-      'Bajo: solo hablar',
-      'Medio: algo intenso',
-      'Alto: intimidación física',
-      'Pasión desmedida'
+      'Solo quiere hablar, no es grave',
+      'Es algo intenso pero comprensible',
+      'Me da miedo, aunque no me haya pegado',
+      'Es muy apasionado/a'
     ],
     correctAnswer: 2,
-    difficulty: 8,
-    explanation: 'Bloquear el paso, acorralar o romper objetos cerca de ti es violencia física e intimidación. Busca generar miedo físico para controlarte. Es una señal de peligro inminente.'
+    difficulty: 3,
+    explanation: 'El miedo físico es una señal de alarma seria. No hace falta que haya golpes para que haya intimidación. Tu instinto tiene razón.'
   },
   {
     id: '36',
-    text: 'Tu pareja te dice cómo vestirte, qué comer o cómo peinarte, sutilmente al principio ("te queda mejor esto") y luego con críticas. ¿Objetivo?',
+    text: 'Tu pareja opina sobre tu ropa, tu pelo, lo que comes. Al principio eran "sugerencias", ahora son críticas constantes.',
     options: [
-      'Que esté guapa/o',
-      'Buen sentido de la moda',
-      'Anular tu identidad a su gusto',
-      'Mejorar mi imagen'
+      'Quiere que esté más guapa/o',
+      'Tiene buen gusto y quiere compartirlo',
+      'Ya no me siento libre de elegir por mí misma',
+      'Me ayuda a mejorar mi imagen'
     ],
     correctAnswer: 2,
     difficulty: 5,
-    explanation: 'El narcisista te ve como un objeto o accesorio que debe reflejar bien sobre él/ella. No respeta tu autonomía ni tus gustos; quiere moldearte a su imagen y semejanza.'
+    explanation: 'Si has dejado de sentirte libre para tomar decisiones sobre tu propio cuerpo y apariencia, algo importante se ha perdido.'
   },
   {
     id: '37',
-    text: 'Has dejado la relación y te sientes culpable por "abandonarle" cuando "te necesitaba". ¿Qué sentimiento es este?',
+    text: 'Has dejado la relación pero te sientes culpable por "abandonarle" cuando "te necesitaba".',
     options: [
-      'Soy mala persona',
-      'Falsa culpa por condicionamiento',
-      'Responsabilidad afectiva',
-      'Pena real'
+      'Soy mala persona por irme',
+      'Esta culpa no es mía, me la implantaron',
+      'Tengo responsabilidad afectiva',
+      'Le debo más de lo que le di'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'El abusador te ha entrenado para que te sientas responsable de su bienestar emocional. Esa culpa no es tuya, es un botón que él/ella instaló para que no te fueras.'
+    difficulty: 7,
+    explanation: 'La culpa por protegerte a ti misma es una señal de que alguien te entrenó para sentirte responsable de su bienestar. No lo eres.'
   },
   {
     id: '38',
-    text: 'Observas que tu pareja trata mal a los camareros, dependientes o personas de servicio, pero es encantador con gente de estatus. ¿Qué indica?',
+    text: 'Tu pareja trata mal a camareros o dependientes, pero es encantadora con gente importante. ¿Qué piensas?',
     options: [
-      'Exigente con el servicio',
-      'Tiene clase',
-      'Clasismo y falta de empatía real',
-      'Mal día'
+      'Es exigente con el servicio, es normal',
+      'Tiene clase y sabe comportarse',
+      'Me incomoda ver cómo trata a quien no puede defenderse',
+      'Habrá tenido un mal día'
     ],
     correctAnswer: 2,
     difficulty: 4,
-    explanation: 'La verdadera cara de una persona se ve en cómo trata a quienes no tienen poder sobre ella. El narcisista desprecia a quien considera "inferior" o que no le sirve.'
+    explanation: 'Cómo alguien trata a quienes no pueden devolverle nada dice mucho. Tu incomodidad ante eso es una brújula válida.'
   },
   {
     id: '39',
-    text: 'Te promete un viaje increíble si haces X cosa que él quiere. Haces X, y el viaje nunca ocurre o pone una excusa. ¿Cómo se llama?',
+    text: 'Te promete algo maravilloso si haces lo que quiere. Lo haces, pero la promesa nunca se cumple.',
     options: [
-      'Mala suerte',
-      'Refuerzo intermitente y future faking',
-      'Economía de fichas',
-      'Cambio de planes'
+      'Surgió algo y no pudo ser',
+      'Me siento usada, fue solo una zanahoria',
+      'Es mala suerte, la próxima vez será',
+      'Los planes cambian, es normal'
     ],
     correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Usa la promesa de una recompensa futura para manipular tu comportamiento presente. Una vez obtiene lo que quiere, la promesa se desvanece.'
+    difficulty: 5,
+    explanation: 'Si repetidamente haces tu parte y la recompensa nunca llega, es razonable sentirse usada. No es mala suerte, es un patrón.'
   },
   {
     id: '40',
-    text: 'Sientes que tienes que "adivinar" qué quiere o por qué está enfadado porque no te lo dice claramente, pero te castiga igual. ¿Qué provoca?',
+    text: 'Sientes que tienes que adivinar qué quiere o por qué está enfadado porque nunca te lo dice claramente, pero te castiga igual.',
     options: [
-      'Telepatía',
-      'Ansiedad por leer su mente',
-      'Mejorar lo no verbal',
-      'Esforzarme por entenderle'
-    ],
-    correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'Esperan que seas una extensión de su mente y anticipes sus deseos. Si no lo haces, te castigan. Esto te mantiene en un estado de alerta y sumisión constante.'
-  },
-  {
-    id: '41',
-    text: 'Tu pareja te dice: "Si me dejas, me mato" o "Me moriré sin ti". ¿Qué tipo de manipulación es?',
-    options: [
-      'Amor desesperado',
-      'Chantaje emocional extremo',
-      'Depresión grave',
-      'Romanticismo trágico'
-    ],
-    correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'La amenaza de suicidio es la carta final de control. Es un acto de violencia psicológica para obligarte a quedarte contra tu voluntad usando el terror a ser culpable de su muerte.'
-  },
-  {
-    id: '42',
-    text: 'Después de una discusión horrible, tenéis sexo increíble y muy intenso. Sientes que todo está arreglado. ¿Qué ha pasado?',
-    options: [
-      'Sexo de reconciliación',
-      'Refuerzo bioquímico del vínculo de trauma',
-      'Nos hemos perdonado',
-      'Pasión'
-    ],
-    correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'El sexo tras el abuso libera oxitocina y dopamina que alivian el dolor emocional previo, reforzando la adicción a la relación. No soluciona el problema, solo anestesia la herida temporalmente.'
-  },
-  {
-    id: '43',
-    text: 'Tu pareja te hace sentir que eres tú quien tiene problemas mentales, quien es celosa, loca o insegura, cuando antes de la relación eras estable. ¿Conclusión?',
-    options: [
-      'La relación sacó lo peor',
-      'Yo soy el problema',
-      'Proyección: te contagia su caos',
-      'Necesito medicación'
-    ],
-    correctAnswer: 2,
-    difficulty: 8,
-    explanation: 'Si entraste sana en la relación y ahora te sientes "loca", es probable que sea el resultado del Gaslighting y el abuso sistemático, no un trastorno tuyo.'
-  },
-  {
-    id: '44',
-    text: 'Siempre que intentas hablar de la relación, la conversación termina siendo sobre lo "ingrata" que eres y todo lo que él/ella hace por ti. ¿Resultado?',
-    options: [
-      'Soy egoísta',
-      'Desvío para no asumir responsabilidad',
-      'Hace mucho por mí',
-      'Comunicación efectiva'
+      'Debería desarrollar mi telepatía',
+      'Vivo en ansiedad intentando leerle la mente',
+      'Tengo que mejorar mi comunicación no verbal',
+      'Me esfuerzo mucho por entenderle'
     ],
     correctAnswer: 1,
     difficulty: 6,
-    explanation: 'Nunca podrás resolver un conflicto con un narcisista porque nunca admitirán ser parte del problema. Siempre girarán la tortilla para que tú acabes pidiendo perdón.'
+    explanation: 'No es tu trabajo adivinar lo que no te dicen. Vivir intentando descifrar a alguien que no comunica es agotador e injusto para ti.'
   },
   {
-    id: '45',
-    text: 'Te dice "Yo soy así, tómalo o déjalo" cuando le pides respeto básico. ¿Qué significa?',
+    id: '41',
+    text: 'Tu pareja amenaza con hacerse daño si le dejas. ¿Qué sientes?',
     options: [
-      'Persona auténtica',
-      'Negativa a cambiar o considerar tus necesidades',
-      'Honestidad',
-      'Mucha personalidad'
+      'Es un amor desesperado, me necesita',
+      'Me siento atrapada por miedo a lo que pueda pasar',
+      'Quizá está muy deprimido y necesita ayuda',
+      'Es muy romántico a su manera'
     ],
     correctAnswer: 1,
     difficulty: 4,
-    explanation: 'Es una declaración de intenciones: no piensa cambiar ni adaptarse. Te está diciendo que el precio de estar con él/ella es aceptar el maltrato.'
+    explanation: 'Sentirse atrapada por amenazas no es amor, es coacción. La responsabilidad de su vida no es tuya, aunque te hagan sentir que sí.'
   },
   {
-    id: '46',
-    text: 'Sientes alivio cuando tu pareja se va de viaje o sale de casa. ¿Qué te dice tu cuerpo?',
+    id: '42',
+    text: 'Después de una pelea terrible, tenéis sexo intenso y sientes que todo se ha arreglado. ¿Es así?',
     options: [
-      'Me gusta la soledad',
-      'La relación es fuente de estrés',
-      'Le echaré de menos luego',
-      'Soy independiente'
-    ],
-    correctAnswer: 1,
-    difficulty: 3,
-    explanation: 'Tu cuerpo es sabio. Si sientes paz cuando tu pareja no está, es una señal inequívoca de que su presencia es una amenaza o una carga para tu sistema nervioso.'
-  },
-  {
-    id: '47',
-    text: 'Tu pareja te compara con su madre/padre, diciendo que deberías ser más como ella/él, o compite con ella/él por tu atención. ¿Dinámica?',
-    options: [
-      'Mamitis',
-      'Triangulación familiar edípica',
-      'Que me lleve bien con su familia',
-      'Es familiar'
+      'Sí, es sexo de reconciliación',
+      'Me siento mejor pero nada se ha hablado realmente',
+      'Nos hemos perdonado de esta manera',
+      'La pasión sigue viva'
     ],
     correctAnswer: 1,
     difficulty: 7,
-    explanation: 'Los narcisistas suelen tener relaciones enfermizas con sus progenitores. Usan esas figuras para hacerte sentir insuficiente o para establecer estándares inalcanzables.'
+    explanation: 'Si después de la intensidad física el problema original sigue ahí sin resolver, la reconciliación es una ilusión. El alivio temporal no es solución.'
+  },
+  {
+    id: '43',
+    text: 'Antes de esta relación te sentías estable. Ahora te sientes loca, celosa e insegura. ¿Qué ha pasado?',
+    options: [
+      'La relación sacó mi peor versión',
+      'Yo soy el problema aquí',
+      'Algo en esta relación me ha desestabilizado',
+      'Necesito medicación'
+    ],
+    correctAnswer: 2,
+    difficulty: 7,
+    explanation: 'Si entraste estable y ahora te sientes inestable, el contexto importa. No asumas que el problema eres tú sin mirar qué ha cambiado.'
+  },
+  {
+    id: '44',
+    text: 'Cada vez que quieres hablar de la relación, acabas disculpándote por ser "ingrata" con todo lo que hace por ti.',
+    options: [
+      'Es verdad, soy muy egoísta',
+      'La conversación siempre se desvía y acabo yo pidiendo perdón',
+      'Hace mucho por mí y debería reconocerlo más',
+      'Tenemos una comunicación muy efectiva'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Si nunca puedes hablar de lo que te preocupa sin acabar disculpándote, la comunicación no está funcionando a tu favor.'
+  },
+  {
+    id: '45',
+    text: 'Le pides respeto básico y te dice "yo soy así, tómalo o déjalo". ¿Qué interpretas?',
+    options: [
+      'Es una persona auténtica que sabe quién es',
+      'No va a cambiar y tendré que decidir si puedo con eso',
+      'Es muy honesto/a',
+      'Tiene mucha personalidad'
+    ],
+    correctAnswer: 1,
+    difficulty: 4,
+    explanation: 'Cuando alguien te dice claramente que no va a cambiar, créele. La decisión de si puedes vivir con eso es tuya.'
+  },
+  {
+    id: '46',
+    text: 'Sientes alivio cuando tu pareja no está en casa. ¿Qué te dice eso?',
+    options: [
+      'Me gusta la soledad, es normal',
+      'Mi cuerpo se relaja cuando no está, eso significa algo',
+      'Luego le echaré de menos',
+      'Soy muy independiente'
+    ],
+    correctAnswer: 1,
+    difficulty: 3,
+    explanation: 'Si tu cuerpo se relaja cuando esa persona no está, tu sistema nervioso te está dando información importante. Escúchalo.'
+  },
+  {
+    id: '47',
+    text: 'Tu pareja te compara constantemente con su madre/padre, diciendo que deberías ser más como ella/él.',
+    options: [
+      'Quiere mucho a su familia, es normal',
+      'Me hace sentir que nunca estaré a la altura',
+      'Quiere que me lleve bien con ellos',
+      'Es muy familiar'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Las comparaciones constantes con figuras que nunca podrás igualar te mantienen sintiéndote insuficiente. Eso no es casualidad.'
   },
   {
     id: '48',
-    text: 'Descubres que tiene perfiles en apps de citas "solo para hacer amigos" o "por aburrimiento". ¿Realidad?',
+    text: 'Descubres que tu pareja tiene perfiles en apps de citas. Dice que es "solo para hacer amigos" o "por aburrimiento".',
     options: [
-      'Muy sociable',
-      'Búsqueda de suministro y validación',
-      'Curiosidad',
+      'Es muy sociable y extrovertido/a',
+      'No me lo creo, pero quiero creerle',
+      'Es simple curiosidad',
       'No significa nada'
     ],
     correctAnswer: 1,
     difficulty: 5,
-    explanation: 'El narcisista necesita atención constante (suministro) como un coche necesita gasolina. Las apps de citas son una fuente fácil de validación, independientemente de si tienen pareja.'
+    explanation: 'Cuando la explicación no te convence pero quieres creerla, esa disonancia es información. Confía en lo que tu intuición percibe.'
   },
   {
     id: '49',
-    text: 'Cuando enfermas, se enfada contigo, te ignora o dice que "siempre te pasa algo" en lugar de cuidarte. ¿Por qué?',
+    text: 'Cuando te pones enferma, tu pareja se enfada, te ignora o dice que "siempre te pasa algo". ¿Cómo te sientes?',
     options: [
-      'Asco a los virus',
-      'Falta de empatía y molestia',
+      'Le dan asco los virus, es comprensible',
+      'Sola y culpable por necesitar cuidados',
       'Quiere que me recupere rápido',
-      'Hipocondría'
+      'Quizá exagero mis malestares'
     ],
     correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Tu enfermedad es un inconveniente para el narcisista porque: 1) No puedes darle servicio/atención. 2) Requiere que tú seas el centro de atención, lo cual detestan.'
+    difficulty: 5,
+    explanation: 'Sentirse culpable por enfermar no es normal. Merecemos cuidado cuando lo necesitamos, no reproches.'
   },
   {
     id: '50',
-    text: 'Al principio te decía que eras "demasiado buena para él/ella", ahora te dice que "tienes suerte de que él/ella te aguante". ¿Proceso?',
+    text: 'Al principio te decía que eras "demasiado buena para él/ella". Ahora te dice que "tienes suerte de que te aguante".',
     options: [
-      'Cambió de opinión',
-      'Devaluación para destruir tu autoestima',
-      'Es una broma',
-      'Realismo'
+      'Simplemente cambió de opinión sobre mí',
+      'Me subió muy arriba para luego dejarme caer',
+      'Es una broma recurrente',
+      'Ahora es más realista'
     ],
     correctAnswer: 1,
     difficulty: 5,
-    explanation: 'Primero te suben a un pedestal (para engancharte) y luego te tiran de él (para controlarte). Si crees que no vales nada, no te irás.'
+    explanation: 'Pasar de ser idealizada a ser menospreciada no es evolución natural. Ese contraste tan marcado tiene un efecto muy específico en tu autoestima.'
   },
-  // 51-100: Tácticas Avanzadas y Dinámicas Familiares/Sociales
+  // 51-100: Dinámicas más sutiles y contextos variados
   {
     id: '51',
-    text: 'Tu pareja te critica por algo que ella misma hace constantemente. Si se lo señalas, se indigna y dice que "no es lo mismo". ¿Qué es?',
+    text: 'Tu pareja te critica por algo que ella misma hace constantemente. Si se lo señalas, se enfada y dice que "no es lo mismo". ¿Cómo te sientes?',
     options: [
-      'Doble moral y falta de autocrítica',
-      'Hipocresía adaptativa',
-      'Es que sus motivos son diferentes',
-      'Es un malentendido'
+      'Confundida por la incoherencia',
+      'Quizá tiene razón, sus motivos son diferentes',
+      'Es un simple malentendido',
+      'No me había dado cuenta de que lo hacía'
     ],
     correctAnswer: 0,
-    difficulty: 6,
-    explanation: 'Los narcisistas se sienten por encima de las reglas. Lo que para ellos es aceptable, para ti es un motivo de castigo. No hay coherencia, solo conveniencia.'
+    difficulty: 5,
+    explanation: 'Cuando las reglas solo aplican para ti pero no para la otra persona, la confusión es la respuesta lógica. Esa incoherencia no es casualidad.'
   },
   {
     id: '52',
-    text: 'En una cena familiar, tu madre/padre cuenta una historia humillante sobre ti de cuando eras pequeño para hacer reír a todos. Si te molestas, dice que "no tienes sentido del humor". ¿Dinámica?',
+    text: 'En una cena familiar, tu madre/padre cuenta una historia humillante de tu infancia para hacer reír a todos. Si te molestas, dice que "no tienes humor".',
     options: [
-      'Familia muy divertida',
-      'Humillación pública para suministro',
-      'Amor de madre/padre',
-      'Soy muy susceptible'
+      'Es una familia muy divertida y cercana',
+      'Me siento expuesta y nadie respeta mi incomodidad',
+      'Es amor de madre/padre, aunque a veces duela',
+      'Quizá soy demasiado susceptible'
     ],
     correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'En familias narcisistas, los hijos son extensiones del padre. Su dolor o vergüenza es secundario al deseo del padre de ser el centro de atención o quedar como "el gracioso".'
+    difficulty: 6,
+    explanation: 'Sentirse expuesta y que tu incomodidad sea ignorada no es señal de que seas "demasiado sensible". Tu malestar es válido.'
   },
   {
     id: '53',
-    text: 'Has cortado con tu pareja. Al día siguiente, descubres que ha llamado a tus padres y mejores amigos llorando, diciendo que está "preocupado/a por tu salud mental". ¿Qué hace?',
+    text: 'Has cortado con tu pareja. Al día siguiente, descubres que ha llamado a tus padres y amigos diciendo que "está preocupado/a por tu salud mental".',
     options: [
       'Se preocupa de verdad por mí',
-      'Difamación preventiva (smear)',
+      'Intenta controlar la narrativa antes de que yo hable',
       'Busca consuelo en mi entorno',
-      'Es un acto de bondad'
+      'Es un gesto de bondad mal entendido'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'La campaña de difamación busca destruir tu credibilidad antes de que puedas contar tu versión. Se presenta como la víctima preocupada para que nadie te crea si hablas del abuso.'
+    difficulty: 7,
+    explanation: 'Si alguien te quería bien, no llamaría a tu entorno cuestionando tu estabilidad justo cuando decides irte. Eso es otra cosa.'
   },
   {
     id: '54',
-    text: 'Tu pareja controla cada euro que gastas, te pide los tickets del súper y te critica si compras algo para ti, aunque él/ella gaste mucho. ¿Qué es?',
+    text: 'Tu pareja controla cada euro que gastas, te pide tickets y te critica si compras algo para ti, aunque gaste mucho en sí misma.',
     options: [
-      'Es una persona muy ahorradora',
-      'Abuso financiero por control económico',
-      'Quiere que tengamos un futuro mejor',
-      'Es buena administración'
+      'Es muy ahorrador/a, está pensando en nuestro futuro',
+      'Siento que no tengo libertad con mi propio dinero',
+      'Es buena administración de la casa',
+      'Simplemente tiene otra forma de ver las finanzas'
     ],
     correctAnswer: 1,
     difficulty: 6,
-    explanation: 'El dinero es poder. Al controlar tus finanzas, limita tu libertad y capacidad de movimiento, haciéndote sentir que no puedes sobrevivir sin su "gestión".'
+    explanation: 'Si tu dinero está vigilado pero el suyo no, el tema no es el ahorro. Es quién tiene libertad y quién no.'
   },
   {
     id: '55',
-    text: 'Te dice que eres "demasiado inteligente para tu propio bien" o que "tus estudios no sirven para nada en la vida real". ¿Por qué?',
+    text: 'Te dice que eres "demasiado inteligente para tu propio bien" o que "tus estudios no sirven para nada". ¿Cómo te hace sentir?',
     options: [
-      'Es una opinión sincera',
-      'Devaluación de capacidades para que no seas independiente',
-      'Quiere que sea más práctico/a',
-      'Es un cumplido disfrazado'
+      'Es una opinión sincera que debo considerar',
+      'Como si mi formación fuera un defecto, no un logro',
+      'Quiere que sea más práctica',
+      'Es un cumplido extraño'
     ],
     correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'El narcisista necesita ser el más listo de la relación. Cualquier logro intelectual o académico tuyo es visto como una amenaza que debe ser minimizada.'
+    difficulty: 6,
+    explanation: 'Cuando tus logros se presentan como problemas, no te están ayudando a mejorar. Te están haciendo sentir que brillar es un error.'
   },
   {
     id: '56',
-    text: 'Notas que tu pareja coquetea con el camarero/a delante de ti, y si dices algo, te acusa de ser "celosa e insegura". ¿Táctica?',
+    text: 'Tu pareja coquetea abiertamente con otras personas delante de ti. Si dices algo, te acusa de ser "celosa e insegura".',
     options: [
-      'Solo es amable',
-      'Triangulación activa para bajarte la autoestima y mantenerte en vilo',
-      'Es su forma de ser',
-      'Es verdad, soy muy celosa'
-    ],
-    correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Provocar celos deliberadamente es una forma de control. Disfruta viendo cómo sufres por su atención, lo cual valida su poder sobre tus emociones.'
-  },
-  {
-    id: '57',
-    text: 'Tu pareja te interrumpe constantemente cuando hablas, termina tus frases o habla por ti en las reuniones. ¿Qué indica?',
-    options: [
-      'Me conoce tan bien que sabe lo que voy a decir',
-      'Invisibilización y falta de respeto a tu autonomía',
-      'Es muy impaciente',
-      'Quiere ayudarme a explicarme'
+      'Solo es amable, no significa nada',
+      'Me siento mal y encima me hacen sentir que el problema soy yo',
+      'Es su forma de ser, muy sociable',
+      'Quizá sí soy demasiado celosa'
     ],
     correctAnswer: 1,
     difficulty: 5,
-    explanation: 'Al no dejarte hablar, te está comunicando que tu voz y tus pensamientos no tienen valor por sí mismos, solo lo que él/ella decide proyectar sobre ti.'
+    explanation: 'Sentir malestar y que además te culpen por sentirlo es una doble trampa. El problema no es tu percepción.'
+  },
+  {
+    id: '57',
+    text: 'Tu pareja te interrumpe constantemente cuando hablas, termina tus frases o habla por ti en reuniones.',
+    options: [
+      'Me conoce tan bien que sabe lo que voy a decir',
+      'Siento que mi voz no tiene espacio',
+      'Es muy impaciente, pero no lo hace con mala intención',
+      'Intenta ayudarme a explicarme mejor'
+    ],
+    correctAnswer: 1,
+    difficulty: 4,
+    explanation: 'Si habitualmente no puedes terminar tus propias frases, tu voz está siendo silenciada. No importa la intención, importa el efecto.'
   },
   {
     id: '58',
-    text: 'Sientes que tienes que "pagar" cada momento de felicidad o favor que te hace con una gratitud eterna o aguantando un mal trato posterior. ¿Cómo se llama?',
+    text: 'Sientes que cada favor que te hace o momento bonito hay que "pagarlo" con gratitud eterna o aguantando mal trato después.',
     options: [
-      'Reciprocidad',
-      'Deuda emocional perpetua',
-      'Gratitud',
-      'Intercambio justo'
-    ],
-    correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'Para un narcisista, nada es gratis. Cada "gesto amable" es una inversión que usará más tarde para manipularte o para recordarte lo "bueno" que es comparado contigo.'
-  },
-  {
-    id: '59',
-    text: 'Tu pareja se obsesiona con su cuerpo, el gimnasio y su ropa, y te exige que tú también seas "perfecta" físicamente. ¿Perfil?',
-    options: [
-      'Narcisista Somático',
-      'Persona muy deportista',
-      'Narcisista Cerebral',
-      'Modelo'
-    ],
-    correctAnswer: 0,
-    difficulty: 8,
-    explanation: 'El narcisista somático basa su superioridad en su apariencia física y capacidad de seducción. Te ve como un accesorio que debe estar a la altura de su "perfección".'
-  },
-  {
-    id: '60',
-    text: 'Tu pareja desprecia a los que no tienen su nivel de estudios o cultura, considerándolos "borregos" o "inferiores". ¿Perfil?',
-    options: [
-      'Narcisista Cerebral',
-      'Persona muy culta',
-      'Narcisista Somático',
-      'Intelectual'
-    ],
-    correctAnswer: 0,
-    difficulty: 8,
-    explanation: 'El narcisista cerebral usa su intelecto, conocimientos o estatus académico para sentirse superior y humillar a los demás, incluyendo a su pareja si no le "sigue el ritmo".'
-  },
-  {
-    id: '61',
-    text: 'Te das cuenta de que tu pareja te ha estado mintiendo sobre cosas pequeñas e innecesarias. Cuando le pillas, miente sobre la mentira. ¿Por qué?',
-    options: [
-      'Tiene mala memoria',
-      'Mentira patológica para controlar la narrativa',
-      'No quiere herirme',
-      'Son mentiras piadosas'
-    ],
-    correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Mienten porque pueden y porque les da una sensación de poder tener un mundo secreto al que tú no accedes. La verdad no es un valor para ellos, solo la utilidad de la historia.'
-  },
-  {
-    id: '62',
-    text: 'Tu pareja utiliza el sexo como premio cuando te portas "bien" y te lo niega sistemáticamente como castigo cuando hay conflicto. ¿Qué es?',
-    options: [
-      'Es normal que no tenga ganas si estamos mal',
-      'Uso del sexo como herramienta de control y manipulación',
-      'Falta de deseo sexual',
-      'Respeto a sus tiempos'
-    ],
-    correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'Convertir la intimidad en una moneda de cambio es una forma de deshumanizar la relación y someter tus necesidades biológicas y afectivas a su voluntad.'
-  },
-  {
-    id: '63',
-    text: 'En una discusión, empieza a imitar tu tono de voz de forma burlona o a hacer ruidos mientras hablas. ¿Qué busca?',
-    options: [
-      'Hacer la situación más amena',
-      'Humillar e invalidar para desestabilizarte',
-      'Es un comportamiento infantil sin malicia',
-      'Quiere que deje de gritar'
+      'Es reciprocidad normal en una pareja',
+      'Como si nada fuera gratis y siempre debiera algo',
+      'Es gratitud, algo positivo',
+      'Es un intercambio justo'
     ],
     correctAnswer: 1,
     difficulty: 6,
-    explanation: 'Es una táctica de provocación (Baiting). Al humillarte de forma tan burda, busca que explotes de ira para luego decir: "¿Ves cómo te pones? Estás loca/o".'
+    explanation: 'El amor no se cobra. Si sientes que cada gesto positivo viene con factura emocional, la generosidad no era genuina.'
   },
   {
-    id: '64',
-    text: 'Sientes que tu pareja es como un niño/a pequeño/a atrapado en el cuerpo de un adulto. ¿Qué concepto psicológico lo explica?',
+    id: '59',
+    text: 'Tu pareja está obsesionada con su físico y te presiona constantemente para que tú también estés "perfecta".',
     options: [
-      'Síndrome de Peter Pan',
-      'Desarrollo emocional detenido por trauma o exceso de mimo',
-      'Inmadurez pasajera',
-      'Espíritu joven'
+      'Es muy deportista y quiere compartirlo conmigo',
+      'Me siento juzgada si no cumplo sus estándares físicos',
+      'Quiere que estemos sanos juntos',
+      'Le gusta cuidarse y eso es admirable'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'El narcisista no desarrolló una empatía madura ni la capacidad de gestionar la frustración. Emocionalmente, siguen siendo infantes que necesitan atención total y constante.'
+    difficulty: 5,
+    explanation: 'La diferencia entre motivar y presionar está en cómo te sientes. Si te sientes juzgada, no es apoyo, es exigencia.'
   },
   {
-    id: '65',
-    text: 'Tu pareja te dice que "somos un equipo contra el mundo" y que "nadie nos entiende como nosotros". ¿Peligro?',
+    id: '60',
+    text: 'Tu pareja menosprecia a quienes no tienen su nivel de estudios, llamándolos "simples" o "borregos".',
     options: [
-      'Es una unión muy fuerte',
-      'Mentalidad de "nosotros contra ellos" para aislarte',
-      'Es romanticismo puro',
-      'Lealtad extrema'
+      'Es una persona muy culta con altos estándares',
+      'Me incomoda cómo habla de los demás',
+      'Valora la inteligencia, no es para tanto',
+      'Es un intelectual, así son'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'Esta retórica busca que veas a tus amigos y familia como enemigos o extraños, reforzando tu dependencia emocional y tu aislamiento social.'
+    difficulty: 5,
+    explanation: 'Cuando alguien necesita menospreciar a otros para sentirse superior, esa superioridad no es real. Tu incomodidad tiene sentido.'
   },
   {
-    id: '66',
-    text: 'Un "amigo" siempre te cuenta las cosas malas que otros dicen de ti, supuestamente para "protegerte", pero te deja sintiéndote fatal. ¿Qué es?',
+    id: '61',
+    text: 'Tu pareja miente sobre cosas pequeñas sin necesidad. Cuando la pillas, miente sobre la mentira.',
     options: [
-      'Un amigo fiel',
-      'Mono volador/instigador que crea inseguridad y dependencia',
-      'Alguien muy honesto',
-      'Un buen confidente'
+      'Tiene mala memoria, no es grave',
+      'No entiendo por qué miente en cosas que no importan',
+      'No quiere herirme con la verdad',
+      'Son mentiritas sin importancia'
     ],
     correctAnswer: 1,
     difficulty: 7,
-    explanation: 'Esta persona actúa como emisario del caos. Su objetivo real no es informarte, sino minar tu confianza en los demás para que te recluyas en el círculo del narcisista.'
+    explanation: 'Cuando alguien miente sin motivo aparente, el tema no es la mentira específica. Es que la verdad no tiene valor para esa persona.'
+  },
+  {
+    id: '62',
+    text: 'Tu pareja usa el sexo como premio cuando "te portas bien" y lo niega como castigo cuando hay conflicto.',
+    options: [
+      'Es normal no tener ganas cuando estamos mal',
+      'La intimidad se ha convertido en moneda de cambio',
+      'Tiene bajo deseo sexual',
+      'Respeto sus tiempos'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'La intimidad no debería ser un sistema de recompensa y castigo. Si lo es, la relación se ha convertido en una transacción.'
+  },
+  {
+    id: '63',
+    text: 'En una discusión, empieza a imitar tu voz de forma burlona o hace ruidos mientras hablas.',
+    options: [
+      'Intenta quitarle hierro a la situación',
+      'Me siento humillada y ganas de explotar',
+      'Es un comportamiento infantil, no lo hace adrede',
+      'Quiere que deje de gritar'
+    ],
+    correctAnswer: 1,
+    difficulty: 5,
+    explanation: 'Sentirse humillada no es ser "demasiado sensible". Es la respuesta natural cuando alguien te ridiculiza activamente.'
+  },
+  {
+    id: '64',
+    text: 'Tu pareja parece un niño pequeño en un cuerpo de adulto: berrinches, necesidad de atención constante, cero tolerancia a la frustración.',
+    options: [
+      'Tiene espíritu joven',
+      'Me agota tener que ser siempre yo la adulta de la relación',
+      'Es una fase de inmadurez pasajera',
+      'Es espontáneo y eso me gusta'
+    ],
+    correctAnswer: 1,
+    difficulty: 7,
+    explanation: 'Estar siempre en el rol de cuidadora de un adulto es agotador. No es tu trabajo criar a tu pareja.'
+  },
+  {
+    id: '65',
+    text: 'Tu pareja te dice que "somos un equipo contra el mundo" y que "nadie nos entiende como nosotros".',
+    options: [
+      'Es una unión muy fuerte y especial',
+      'Siento que me aleja de todo lo demás',
+      'Es muy romántico',
+      'Es lealtad extrema'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'El romance que te aísla de tu mundo no es protección, es limitación. Las relaciones sanas no necesitan enemigos externos.'
+  },
+  {
+    id: '66',
+    text: 'Un "amigo" siempre te cuenta lo malo que otros dicen de ti "para protegerte", pero te deja sintiéndote fatal.',
+    options: [
+      'Es un amigo fiel que me cuida',
+      'Después de hablar con él/ella me siento peor, no mejor',
+      'Es muy honesto, eso es bueno',
+      'Es un buen confidente'
+    ],
+    correctAnswer: 1,
+    difficulty: 5,
+    explanation: 'La información que te deja peor no es protección. Si después de sus "avisos" te sientes más insegura, el efecto no es accidental.'
   },
   {
     id: '67',
-    text: 'Tu pareja se atribuye el mérito de tus buenas ideas o de las cosas que salen bien en casa, pero te culpa de todo lo que sale mal. ¿Mecanismo?',
+    text: 'Tu pareja se lleva el mérito cuando las cosas salen bien, pero te culpa cuando salen mal.',
     options: [
-      'Es un poco egocéntrico',
-      'Externalización de la culpa y apropiación del éxito (Egoísmo defensivo)',
+      'Es un poco egocéntrico pero no malo',
+      'Siento que cargo con lo malo y no me reconocen lo bueno',
       'Es que yo no sé gestionar las crisis',
       'Es un líder natural'
     ],
     correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'El narcisista no puede tolerar el fracaso (daña su falsa imagen), así que lo proyecta en ti. Tampoco soporta que tú brilles por ti misma, así que se adueña de tus logros.'
+    difficulty: 5,
+    explanation: 'Si solo te toca cargar con los fracasos, la distribución no es justa. Tu percepción de injusticia es acertada.'
   },
   {
     id: '68',
-    text: 'Has empezado a dudar de tus propios recuerdos, de si viste aquello o si oíste lo otro. Tienes "niebla mental". ¿Causa probable?',
+    text: 'Has empezado a dudar de tus propios recuerdos. Tienes "niebla mental" y te cuesta concentrarte.',
     options: [
-      'Estrés laboral',
-      'Efecto prolongado del Gaslighting y el estrés postraumático',
-      'Falta de vitaminas',
-      'Estoy envejeciendo'
+      'Es el estrés del trabajo',
+      'Desde que estoy con esta persona, mi mente no funciona igual',
+      'Me faltan vitaminas',
+      'Es la edad'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'La niebla mental es la respuesta del cerebro a la disonancia cognitiva y al abuso constante. Es un mecanismo de defensa ante una realidad que es demasiado dolorosa o confusa para procesar.'
+    difficulty: 8,
+    explanation: 'Si tu claridad mental ha cambiado desde que estás con alguien, esa correlación merece atención. El contexto importa.'
   },
   {
     id: '69',
-    text: 'En la familia, hay un hermano que nunca hace nada mal a ojos de los padres y otro que siempre es el culpable de todo. ¿Roles?',
+    text: 'En tu familia hay un hermano que nunca hace nada mal y otro que siempre es el culpable de todo.',
     options: [
-      'Hijo Dorado y Chivo Expiatorio',
-      'Hijo bueno e hijo rebelde',
-      'Hijo mayor e hijo menor',
-      'Cuestión de afinidad'
+      'Es cuestión de personalidades diferentes',
+      'Los roles están repartidos de forma muy injusta',
+      'El mayor siempre tiene más responsabilidad',
+      'Es afinidad natural'
     ],
-    correctAnswer: 0,
-    difficulty: 8,
-    explanation: 'En el sistema narcisista, los roles se asignan para dividir y controlar. El Hijo Dorado debe ser perfecto; el Chivo Expiatorio carga con todas las frustraciones y fallos del sistema.'
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Cuando los roles son tan rígidos independientemente de lo que cada uno haga, hay algo estructural que no funciona.'
   },
   {
     id: '70',
-    text: 'Tu pareja dice que es "muy espiritual", "ve energías" o es "muy religioso/a", pero usa eso para juzgarte y decirte que estás "vibrando bajo" o "en pecado". ¿Qué es?',
+    text: 'Tu pareja se presenta como "muy espiritual" o "muy religiosa", pero usa eso para juzgarte: "vibras bajo", "estás en pecado".',
     options: [
-      'Una persona muy mística',
-      'Narcisismo espiritual para abusar',
-      'Alguien que quiere salvar mi alma',
-      'Un guía espiritual'
+      'Es una persona muy conectada con lo espiritual',
+      'Su espiritualidad se usa para hacerme sentir inferior',
+      'Quiere guiarme en mi camino',
+      'Me ayuda a crecer espiritualmente'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Es una de las formas más peligrosas de narcisismo, ya que el abusador se ampara en una autoridad "divina" o "cósmica" para invalidar y controlar a la víctima.'
+    difficulty: 7,
+    explanation: 'La espiritualidad que te hace sentir inferior no es guía, es control. Una fe sana no se usa como arma.'
   },
   {
     id: '71',
-    text: 'Tu pareja te despierta en mitad de la noche para discutir o te impide dormir "hasta que se arreglen las cosas" (que nunca se arreglan). ¿Táctica?',
+    text: 'Tu pareja te despierta en mitad de la noche para discutir o no te deja dormir "hasta que se arreglen las cosas".',
     options: [
-      'Es muy apasionado/a con la comunicación',
-      'Privación del sueño: una táctica de tortura psicológica para debilitar tu voluntad',
-      'Insomnio compartido',
+      'Es muy apasionado/a y quiere resolverlo todo',
+      'Estoy agotada y no puedo pensar con claridad',
+      'Prefiere hablarlo ahora que dejarlo para mañana',
       'Quiere solucionar los problemas rápido'
     ],
     correctAnswer: 1,
-    difficulty: 10,
-    explanation: 'La privación de sueño te impide pensar con claridad, te vuelve más dócil y destruye tu salud física y mental. Es una forma de maltrato grave y deliberada.'
+    difficulty: 4,
+    explanation: 'No poder dormir hasta que aceptes lo que quiere no es comunicación. Es agotamiento estratégico.'
   },
   {
     id: '72',
-    text: 'Sientes que el narcisista "te lee la mente" porque sabe exactamente qué decir para herirte o para que vuelvas. ¿Por qué?',
+    text: 'Tu pareja parece saber exactamente qué decir para herirte o para que vuelvas. Es como si "leyera tu mente".',
     options: [
-      'Porque tenemos una conexión especial',
-      'Empatía cognitiva: usa su capacidad de entender tus emociones para manipularlas, no para sentirlas',
-      'Porque es muy inteligente',
-      'Es telepatía'
+      'Tenemos una conexión muy especial',
+      'Conoce mis puntos débiles y los usa',
+      'Es muy inteligente emocionalmente',
+      'Tenemos telepatía'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'El narcisista observa tus reacciones obsesivamente para aprender tus "botones". Sabe cómo te sientes, pero no le importa; usa ese conocimiento como un manual de instrucciones para controlarte.'
+    difficulty: 7,
+    explanation: 'Conocer tus puntos débiles para protegerte es amor. Conocerlos para usarlos es otra cosa muy diferente.'
   },
   {
     id: '73',
-    text: 'Te dice: "Siento que te hayas sentido mal por lo que dije". ¿Es una disculpa real?',
+    text: 'Te dice: "Siento que te hayas sentido mal por lo que dije". ¿Cómo te suena esa disculpa?',
     options: [
-      'Sí, me ha pedido perdón',
-      'No-disculpa: culpa tu reacción, no su acción',
-      'Es una disculpa a medias',
+      'Me ha pedido perdón, está bien',
+      'No se disculpa por lo que hizo, sino por cómo reaccioné yo',
+      'Es una disculpa a medias, pero es algo',
       'Es muy educado/a'
     ],
     correctAnswer: 1,
-    difficulty: 5,
-    explanation: 'Una disculpa real asume la responsabilidad ("Siento haber dicho eso"). La falsa disculpa te culpa a ti por ser "demasiado sensible" o por "interpretar mal".'
+    difficulty: 4,
+    explanation: 'Una disculpa real asume responsabilidad por la acción, no por tu reacción. La diferencia es sutil pero importante.'
   },
   {
     id: '74',
-    text: 'Cuando por fin logras dejar la relación, te das cuenta de que no tienes hobbies, ni amigos, ni dinero ahorrado. ¿Cómo se llama este estado?',
+    text: 'Tras dejar la relación, te das cuenta de que no tienes hobbies, ni amigos cercanos, ni ahorros propios.',
     options: [
-      'Empezar de cero',
-      'Tierra quemada (sabotaje de tus recursos)',
+      'Es empezar de cero, pasa a veces',
+      'Todo lo que era mío se fue perdiendo sin darme cuenta',
       'Mala suerte post-ruptura',
-      'Libertad absoluta'
+      'Ahora tengo libertad total'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'Es una estrategia deliberada de sabotaje. Cuantos menos recursos (emocionales, sociales o económicos) tengas, más difícil te será sobrevivir fuera de su control.'
+    difficulty: 7,
+    explanation: 'Si al salir descubres que no te queda nada propio, esa pérdida no fue accidental. Alguien se beneficiaba de tu aislamiento.'
   },
   {
     id: '75',
-    text: 'Tu pareja te graba durante las discusiones o saca fotos de cuando estás llorando para "enseñárselas a otros" y demostrar que estás loca/o. ¿Qué es?',
+    text: 'Tu pareja te graba cuando estás llorando o alterada, diciendo que es "para que veas cómo te pones".',
     options: [
-      'Recopilación de pruebas',
-      'Provocar y crear pruebas falsas',
-      'Un diario visual',
-      'Es para que yo vea cómo me pongo'
+      'Quiere que sea consciente de mis reacciones',
+      'Me provoca y luego graba solo mi reacción',
+      'Es un diario de nuestra relación',
+      'Quiere tener pruebas por si acaso'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Suelen provocarte hasta que estallas (Ira Reactiva) y graban solo tu reacción para usarla como "prueba" de tu inestabilidad ante familiares, amigos o jueces.'
+    difficulty: 7,
+    explanation: 'Grabar solo tu reacción sin el contexto que la provocó no es documentación honesta. Es fabricación de evidencia.'
   },
   {
     id: '76',
-    text: '¿Cuál es la única forma real de ganar el "juego" contra un narcisista?',
+    text: 'Llevas meses intentando "ganar" discusiones o hacer que tu pareja entienda. ¿Qué has conseguido?',
     options: [
-      'Vengarte y que sufra lo mismo',
-      'No jugar: aplicar Contacto Cero y recuperar tu vida',
-      'Hacerle ver la verdad para que cambie',
-      'Ganar todas las discusiones'
+      'Algunos avances pequeños',
+      'Agotamiento sin ningún cambio real',
+      'Estoy aprendiendo a comunicarme mejor',
+      'Poco a poco vamos mejorando'
     ],
     correctAnswer: 1,
     difficulty: 5,
-    explanation: 'No puedes ganar una discusión ni obtener justicia de alguien que no tiene conciencia ni empatía. La victoria es salir del sistema de abuso y volverte indiferente a su existencia.'
+    explanation: 'Si después de mucho esfuerzo solo tienes agotamiento, quizá el juego no se puede ganar. A veces la victoria es dejar de jugar.'
   },
   {
     id: '77',
-    text: 'Notas que tu pareja se "aburre" cuando las cosas van bien y hay paz, y busca cualquier excusa para crear un drama. ¿Por qué?',
+    text: 'Cuando las cosas van bien y hay paz, tu pareja parece aburrirse y encuentra cualquier excusa para crear un conflicto.',
     options: [
       'Necesita emoción en su vida',
-      'Adicción al caos y necesidad de reafirmar su control mediante el conflicto',
-      'Es una persona muy activa',
+      'La paz le incomoda y el conflicto le activa',
+      'Es muy activo/a mentalmente',
       'No soporta la monotonía'
     ],
     correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'La paz les resulta amenazante porque no hay "suministro" (atención intensa). El conflicto les hace sentirse poderosos y vivos, a costa de tu salud mental.'
+    difficulty: 6,
+    explanation: 'Si la paz se siente como amenaza para alguien, esa persona necesita el caos. No es tu trabajo proporcionárselo.'
   },
   {
     id: '78',
-    text: 'Te dice que sus padres eran "perfectos" y su infancia "maravillosa", pero no tiene ninguna relación real con ellos o es de total sumisión. ¿Qué oculta?',
+    text: 'Tu pareja idealiza su infancia diciendo que fue "perfecta", pero no tiene relación real con su familia o es de sumisión total.',
     options: [
-      'Mucho respeto familiar',
-      'Negación de traumas y falta de identidad propia',
-      'Una familia muy unida',
-      'Es muy reservado/a'
-    ],
-    correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'La idealización extrema de la infancia suele ser una máscara para ocultar heridas profundas que no pueden procesar. No hay una visión realista, solo una fachada de perfección.'
-  },
-  {
-    id: '79',
-    text: 'Tras dejar la relación, sientes que nadie te va a creer porque él/ella es "muy buena persona" de cara al exterior. ¿Cómo se siente la víctima?',
-    options: [
-      'Loca e incomprendida',
-      'Invisibilizada por la "Máscara de Bondad" del abusador',
-      'Exagerada',
-      'Agradecida por lo bueno'
-    ],
-    correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'Es el aislamiento final: el abusador ha construido una imagen tan perfecta que la víctima se siente atrapada en una realidad que nadie más ve. Esto se llama "abuso invisible".'
-  },
-  {
-    id: '80',
-    text: '¿Qué es la "Piedra Gris" (Grey Rocking)?',
-    options: [
-      'Ser duro como una piedra ante los insultos',
-      'Actuar de forma aburrida y neutral para que el narcisista pierda interés en ti',
-      'Tirarle piedras a su tejado',
-      'Quedarse paralizado de miedo'
-    ],
-    correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Es una técnica de supervivencia cuando no puedes aplicar el contacto cero. Te vuelves tan poco interesante (como una piedra gris) que el narcisista busca suministro en otra parte.'
-  },
-  {
-    id: '81',
-    text: 'Tu pareja te dice que "te ha hecho un favor" al estar contigo. ¿Qué busca minar?',
-    options: [
-      'Mi orgullo',
-      'Tu valor propio y sentido de merecimiento',
-      'Mi independencia',
-      'Mi gratitud'
-    ],
-    correctAnswer: 1,
-    difficulty: 4,
-    explanation: 'Es una táctica para que sientas que le debes algo por el simple hecho de existir a su lado. Busca que te sientas inferior y afortunada/o de recibir sus migajas de atención.'
-  },
-  {
-    id: '82',
-    text: 'Notas que el narcisista trata de "comprar" a tus hijos con regalos caros o permisividad excesiva para ponerlos en tu contra. ¿Táctica?',
-    options: [
-      'Es un padre/madre muy generoso',
-      'Triangulación con los hijos y alienación parental',
-      'Quiere recuperar el tiempo perdido',
-      'Es su forma de pedir perdón'
-    ],
-    correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Usa a los hijos como armas para castigarte. No le importa el bienestar de los niños, solo ganar la batalla de lealtades y dejarte como "el malo" o "la estricta".'
-  },
-  {
-    id: '83',
-    text: 'Te dice que eres "demasiado emocional" o "poco racional" para invalidar tus quejas legítimas sobre su comportamiento. ¿Qué hace?',
-    options: [
-      'Me ayuda a ser más lógico/a',
-      'Sexismo o prejuicio usado como herramienta de Gaslighting',
-      'Tiene razón, soy muy sensible',
-      'Es un consejo constructivo'
-    ],
-    correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Etiquetar tus emociones como "irracionales" es una forma de silenciarte. Si tus sentimientos son "fallos de fábrica", él/ella no tiene por qué escucharlos ni cambiar.'
-  },
-  {
-    id: '84',
-    text: '¿Por qué un narcisista nunca te dará un cierre (closure) real tras la ruptura?',
-    options: [
-      'Porque no sabe cómo hacerlo',
-      'Porque dejar la puerta abierta le permite volver a por suministro en el futuro',
-      'Porque está muy dolido/a',
-      'Porque no quiere hacerme más daño'
-    ],
-    correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'El cierre implica responsabilidad y empatía, algo que no tienen. Prefieren dejarte confundida/o y esperando, manteniendo un hilo invisible de control sobre ti.'
-  },
-  {
-    id: '85',
-    text: 'Sientes que tu felicidad "le molesta" y que solo está contento/a cuando tú estás triste, enferma o derrotada. ¿Es real?',
-    options: [
-      'No, es mi imaginación',
-      'Suministro negativo: tu dolor le da poder',
-      'Es que es una persona muy empática con el dolor',
-      'Solo quiere cuidarme cuando estoy mal'
-    ],
-    correctAnswer: 1,
-    difficulty: 10,
-    explanation: 'Ver que tiene el poder de arruinar tu día o tu salud le confirma su importancia. Tu debilidad es su fuerza; tu tristeza es el alimento de su ego.'
-  },
-  {
-    id: '86',
-    text: 'Tu pareja te dice que "todos tus amigos son unos hipócritas" y que "solo él/ella te dice la verdad". ¿Qué busca?',
-    options: [
-      'Sinceridad radical',
-      'Romper vínculos de confianza externos',
-      'Protección ante malas influencias',
-      'Ayudarme a elegir mejor mis amistades'
+      'Respeta mucho a sus padres',
+      'La historia que cuenta no cuadra con lo que veo',
+      'Tiene una familia muy unida',
+      'Es reservado/a con su pasado'
     ],
     correctAnswer: 1,
     difficulty: 7,
-    explanation: 'Al sembrar la duda sobre los demás, te empuja a confiar ciegamente en él/ella. Es el primer paso para un aislamiento total y una manipulación sin filtros.'
+    explanation: 'Cuando las palabras y los hechos no coinciden, confía en lo que ves, no en lo que te cuentan.'
   },
   {
-    id: '87',
-    text: 'Notas que el narcisista copia tus gestos, tus gustos musicales e incluso tu forma de hablar al principio de la relación. ¿Cómo se llama?',
+    id: '79',
+    text: 'Tras dejar la relación, sientes que nadie te va a creer porque tu ex es "encantador/a" con todo el mundo.',
     options: [
-      'Almas gemelas',
-      'Mirroring (Efecto Espejo): técnica de seducción para que creas que es tu pareja ideal',
-      'Mimetismo romántico',
-      'Admiración profunda'
+      'Quizá exagero lo que pasó',
+      'Viví algo real aunque nadie más lo viera',
+      'Seguramente él/ella tiene razón',
+      'Debería estar agradecida por lo bueno'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Que otros no vean lo que tú viviste no significa que no ocurrió. Tu experiencia es válida aunque sea invisible para los demás.'
+  },
+  {
+    id: '80',
+    text: 'No puedes cortar el contacto totalmente, así que decides ser aburrida, neutral, sin dar información ni emociones. ¿Qué efecto tiene?',
+    options: [
+      'Me siento fuerte y protegida',
+      'Es agotador, pero me da algo de paz',
+      'Me siento como un robot',
+      'Funciona a veces, otras no'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Esa estrategia de supervivencia no es cómoda, pero a veces es necesaria. Lo importante es que te da algo de espacio.'
+  },
+  {
+    id: '81',
+    text: 'Tu pareja te dice que "te ha hecho un favor al estar contigo". ¿Cómo te hace sentir eso?',
+    options: [
+      'Agradecida de que me elija',
+      'Como si tuviera que devolverle algo por existir',
+      'Es su forma rara de decir que me quiere',
+      'Tengo suerte de tenerle'
+    ],
+    correctAnswer: 1,
+    difficulty: 4,
+    explanation: 'Sentir que debes algo por ser elegida no es amor. El amor no genera deuda.'
+  },
+  {
+    id: '82',
+    text: 'Tu ex "compra" a tus hijos con regalos excesivos y permisividad, poniéndolos en tu contra.',
+    options: [
+      'Es muy generoso/a con los niños',
+      'Siento que los usa para hacerme daño a mí',
+      'Quiere compensar el tiempo perdido',
+      'Es su forma de pedir perdón'
+    ],
+    correctAnswer: 1,
+    difficulty: 7,
+    explanation: 'Cuando los hijos se usan como herramienta en un conflicto de adultos, el objetivo no es su bienestar.'
+  },
+  {
+    id: '83',
+    text: 'Te dice que eres "demasiado emocional" o "poco racional" para invalidar tus quejas.',
+    options: [
+      'Tiene razón, debería controlarme más',
+      'Siento que cualquier cosa que diga será descartada',
+      'Es una persona muy lógica',
+      'Me ayuda a ver las cosas más fríamente'
     ],
     correctAnswer: 1,
     difficulty: 5,
-    explanation: 'No es que seáis iguales, es que está reflejando tu propia personalidad para que te enamores de ti misma/o proyectada en él/ella. Es una identidad robada temporalmente.'
+    explanation: 'Si tus emociones se usan para invalidar lo que dices, el problema no son tus emociones. Es que no quieren escucharte.'
+  },
+  {
+    id: '84',
+    text: 'Tras la ruptura, tu ex nunca te dio un cierre real. Sigues sin entender qué pasó.',
+    options: [
+      'No sabe cómo hacerlo',
+      'Me dejó en suspenso a propósito',
+      'Está muy dolido/a para hablar',
+      'No quiere hacerme más daño'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'El cierre que nunca llega no es falta de habilidad. Es una puerta que se deja abierta intencionalmente.'
+  },
+  {
+    id: '85',
+    text: 'Sientes que tu felicidad le molesta a tu pareja. Solo parece contenta cuando tú estás mal.',
+    options: [
+      'Es mi imaginación',
+      'Hay un patrón real: mi tristeza le activa, mi alegría le apaga',
+      'Es muy empática con mi dolor',
+      'Solo quiere cuidarme cuando estoy mal'
+    ],
+    correctAnswer: 1,
+    difficulty: 8,
+    explanation: 'Si has notado ese patrón repetidamente, no es imaginación. Confía en lo que has observado.'
+  },
+  {
+    id: '86',
+    text: 'Tu pareja dice que "todos tus amigos son hipócritas" y que "solo él/ella te dice la verdad".',
+    options: [
+      'Es muy directo/a, eso es bueno',
+      'Me está alejando de la gente que me quiere',
+      'Quiere protegerme de malas influencias',
+      'Me ayuda a elegir mejor mis amistades'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Cuando alguien te dice que solo puedes confiar en él/ella, no te está protegiendo. Te está aislando.'
+  },
+  {
+    id: '87',
+    text: 'Al principio, tu pareja parecía tu "alma gemela": compartía todos tus gustos, opiniones, hasta tu forma de hablar.',
+    options: [
+      'Encontré a mi persona perfecta',
+      'Ahora me pregunto si esa persona era real o un reflejo mío',
+      'Nos parecemos mucho naturalmente',
+      'Me admira profundamente'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'La coincidencia perfecta al principio que luego desaparece merece preguntarse: ¿era real o era lo que yo quería ver?'
   },
   {
     id: '88',
-    text: 'Tras una pelea, te dice: "Si tanto te molesto, ¿por qué no me dejas?". ¿Qué busca?',
+    text: 'Tras una pelea, te dice: "Si tanto te molesto, ¿por qué no me dejas?". ¿Qué sientes?',
     options: [
-      'Darme libertad',
-      'Que le ruegues que se quede y le valides su importancia (Descarte Inverso)',
+      'Me está dando libertad para decidir',
+      'Siento presión para demostrar que le quiero',
       'Es una pregunta lógica',
       'Quiere terminar la relación'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'Es un reto manipulador. Sabe que estás enganchada/o y busca que seas tú quien luche por la relación, dándole a él/ella todo el poder y la posición de "deseado/a".'
+    difficulty: 6,
+    explanation: 'Si esa pregunta te hace sentir que debes demostrar algo, no es una invitación sincera. Es un reto.'
   },
   {
     id: '89',
-    text: '¿Qué ocurre si intentas aplicar la técnica de la Piedra Gris con un narcisista muy agresivo?',
+    text: 'Intentas no reaccionar emocionalmente con tu ex porque sabes que lo usa. ¿Qué pasa cuando lo haces?',
     options: [
-      'Que se calmará inmediatamente',
-      'Puede aumentar su agresividad para intentar forzar una reacción emocional en ti',
-      'Que se irá para siempre',
-      'Que se volverá más cariñoso'
+      'Se calma y todo va mejor',
+      'A veces se enfada más intentando provocarme',
+      'Se aleja y me deja en paz',
+      'Se vuelve más cariñoso'
     ],
     correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'La Piedra Gris puede ser peligrosa si el abusador es violento. Al no recibir su "dosis" de drama, puede escalar el abuso para recuperarla. Úsala con precaución y plan de seguridad.'
+    difficulty: 7,
+    explanation: 'Si tu calma provoca que intensifique los intentos de provocarte, estás confirmando lo que tu instinto ya sabía.'
   },
   {
     id: '90',
-    text: 'Tu pareja te dice que "eres demasiado perfecta/o" y que "le das miedo". ¿Qué está haciendo?',
+    text: 'Tu pareja te puso en un pedestal al principio: "eres perfecta", "me das miedo de lo increíble que eres".',
     options: [
-      'Un cumplido extraño',
-      'Future faking e idealización extrema',
-      'Admiración sincera',
-      'Inseguridad real'
+      'Fue muy romántico y me encantó',
+      'Ahora siento que cualquier fallo me hará caer de ese pedestal',
+      'Me admira sinceramente',
+      'Es muy inseguro/a y yo le doy seguridad'
     ],
     correctAnswer: 1,
     difficulty: 6,
-    explanation: 'Te pone en un pedestal tan alto que la caída será más dolorosa. Es una forma de atraparte en una imagen de ti misma que querrás mantener a toda costa, incluso aguantando abusos.'
+    explanation: 'Los pedestales son incómodos porque desde ahí solo puedes caer. La presión de mantenerse "perfecta" es agotadora.'
   },
   {
     id: '91',
-    text: 'Notas que el narcisista nunca te pregunta "¿Cómo estás?" o "¿Cómo te ha ido el día?" de forma genuina. ¿Por qué?',
+    text: 'Tu pareja nunca te pregunta cómo estás o cómo te fue el día. Parece no interesarle tu mundo interno.',
     options: [
-      'Es muy despistado/a',
-      'Tu mundo interno no le interesa, solo lo que puedes hacer por él/ella',
-      'Porque ya lo sabe todo de mí',
+      'Es despistado/a, no es mala persona',
+      'Siento que no le importo más allá de lo que hago por él/ella',
+      'Ya lo sabe todo de mí, no hace falta',
       'Es poco hablador/a'
     ],
     correctAnswer: 1,
     difficulty: 4,
-    explanation: 'Para un narcisista, las otras personas son "objetos" con funciones, no seres con sentimientos. No preguntan porque realmente no les importa la respuesta.'
+    explanation: 'Sentir que solo importas por lo que haces, no por quién eres, no es despiste. Es falta de interés real.'
   },
   {
     id: '92',
-    text: '¿Qué es el "Hoovering de Cumpleaños"?',
+    text: 'Tu ex te escribe en tu cumpleaños después de meses de silencio con un mensaje "inocente".',
     options: [
-      'Un regalo sorpresa',
-      'Contactar contigo en tu cumpleaños tras meses de silencio para reengancharte',
-      'Limpiar la casa el día de tu cumple',
-      'Una fiesta sorpresa'
+      'Qué detalle, se acordó de mí',
+      'No es casualidad, quiere ver si aún tiene acceso',
+      'Es un gesto de buena voluntad',
+      'Le echo de menos, quizá debería contestar'
     ],
     correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Aprovechan fechas vulnerables para "aparecer" con un mensaje inocente. Buscan ver si todavía tienen acceso a ti y si pueden romper tu contacto cero.'
+    difficulty: 5,
+    explanation: 'Los mensajes en fechas vulnerables rara vez son inocentes. Buscan ver si la puerta sigue abierta.'
   },
   {
     id: '93',
-    text: 'Te dice que "él/ella es la única persona que te dice las cosas claras por tu bien". ¿Qué es?',
+    text: 'Te dice que "solo él/ella te dice las cosas claras por tu bien, los demás te mienten".',
     options: [
-      'Sinceridad brutal necesaria',
-      'Sincericidio para devaluación y control',
-      'Amor exigente',
-      'Crítica constructiva'
+      'Es brutalmente honesto/a, eso es valioso',
+      'Sus "verdades" siempre me dejan sintiéndome peor',
+      'Me quiere tanto que no me endulza las cosas',
+      'Es crítica constructiva'
     ],
     correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'Disfraza sus insultos y ataques de "honestidad". Es una forma de destruirte por dentro mientras finge que te está ayudando a "mejorar".'
+    difficulty: 5,
+    explanation: 'La honestidad que siempre te deja peor no es cuidado. Es ataque disfrazado de franqueza.'
   },
   {
     id: '94',
-    text: '¿Por qué los narcisistas suelen volver con sus ex parejas años después?',
+    text: 'Tu ex ha vuelto a escribirte años después, como si nada hubiera pasado. ¿Por qué crees que lo hace?',
     options: [
-      'Porque el amor nunca muere',
-      'Porque son fuentes de suministro conocidas que ya saben cómo manipular',
-      'Porque han cambiado y quieren redimirse',
-      'Por nostalgia'
-    ],
-    correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'Para ellos, las personas son como libros en una estantería. Si no tienen nada nuevo que leer, vuelven a los antiguos porque saben exactamente qué botones pulsar.'
-  },
-  {
-    id: '95',
-    text: '¿Qué es el "Vínculo de Trauma" (Trauma Bond)?',
-    options: [
-      'Una amistad forjada en la adversidad',
-      'Una adicción emocional al abusador creada por el refuerzo intermitente',
-      'Un trauma compartido con la pareja',
-      'Amor incondicional'
-    ],
-    correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Es lo que te mantiene unida/o a alguien que te hace daño. La alternancia de dolor y migajas de amor crea una dependencia química similar a la de la heroína.'
-  },
-  {
-    id: '96',
-    text: 'Tu pareja te dice que "te inventas las cosas" incluso cuando tienes capturas de pantalla o pruebas. ¿Nivel de Gaslighting?',
-    options: [
-      'Leve malentendido',
-      'Gaslighting extremo: negar evidencia física',
-      'Mala memoria visual',
-      'Confusión de archivos'
-    ],
-    correctAnswer: 1,
-    difficulty: 10,
-    explanation: 'Es la forma más agresiva de Gaslighting. No importa la verdad ni las pruebas; lo único que importa es que tú aceptes SU versión de la realidad.'
-  },
-  {
-    id: '97',
-    text: '¿Qué siente un narcisista cuando ve que su víctima por fin es feliz y ha sanado sin él/ella?',
-    options: [
-      'Alegría y paz',
-      'Rabia narcisista y deseo de sabotear esa felicidad para recuperar el control',
-      'Indiferencia',
-      'Arrepentimiento'
-    ],
-    correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Tu felicidad es un insulto para ellos. Significa que no eran tan necesarios como creían y que han perdido su poder. Intentarán aparecer para "arruinarte" el momento.'
-  },
-  {
-    id: '98',
-    text: '¿Cuál es el primer paso para salir de una relación narcisista?',
-    options: [
-      'Convencerle de que vaya a terapia',
-      'Informarse y romper la disonancia cognitiva (aceptar que es un abusador)',
-      'Esperar a que él/ella te deje',
-      'Pedirle perdón por última vez'
+      'El amor nunca muere, me sigue queriendo',
+      'Sabe exactamente cómo funcionan mis botones',
+      'Ha cambiado y quiere redimirse',
+      'Es nostalgia'
     ],
     correctAnswer: 1,
     difficulty: 6,
-    explanation: 'No puedes salir de una trampa que no ves. Entender las tácticas y aceptar que la persona que "amabas" no existe es el paso más duro pero necesario para la libertad.'
+    explanation: 'Volver años después sabiendo cómo engancharte no es amor renacido. Es conocimiento aplicado.'
   },
   {
-    id: '99',
-    text: 'Tu pareja te dice que "nadie te entenderá como él/ella" porque "tienes un pasado muy oscuro". ¿Qué hace?',
+    id: '95',
+    text: 'Sabes que esa persona te hace daño, pero sientes una necesidad casi física de estar con ella. ¿Cómo lo explicas?',
     options: [
-      'Me acepta como soy',
-      'Usar tu pasado para aislarte y monopolizar tu apoyo',
-      'Es muy comprensivo/a',
-      'Me ayuda a sanar'
+      'Es amor verdadero, muy intenso',
+      'Mi cuerpo está enganchado a algo que mi mente rechaza',
+      'Compartimos traumas que nos unen',
+      'Es amor incondicional'
     ],
     correctAnswer: 1,
     difficulty: 8,
-    explanation: 'Usa tu historia personal como una cadena. Te hace creer que eres "defectuosa/o" y que tienes suerte de tenerle, impidiendo que busques relaciones sanas.'
+    explanation: 'Cuando tu cuerpo y tu mente dicen cosas distintas, hay algo más que amor. Reconocerlo es el primer paso.'
   },
   {
-    id: '100',
-    text: '¿Qué es el "Descarte" narcisista?',
+    id: '96',
+    text: 'Tu pareja niega cosas que tienes grabadas o por escrito. Dice que lo inventas aunque tengas pruebas.',
     options: [
-      'Tirar la basura',
-      'Abandono repentino y cruel de la víctima cuando ya no es útil o ha sido "vaciada"',
-      'Un juego de cartas',
-      'Irse de vacaciones solo'
+      'Quizá malinterpreté las pruebas',
+      'Niega la realidad aunque la tenga delante',
+      'Tiene mala memoria',
+      'Los archivos pueden confundirse'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Negar pruebas físicas no es mala memoria. Es insistir en que su versión vale más que la realidad.'
+  },
+  {
+    id: '97',
+    text: 'Llevas meses sanando y sintiéndote mejor. De repente, tu ex reaparece. ¿Coincidencia?',
+    options: [
+      'Se alegra de que esté bien',
+      'Mi mejoría le molesta y viene a sabotearla',
+      'No le importo, es casualidad',
+      'Ha reflexionado y se arrepiente'
     ],
     correctAnswer: 1,
     difficulty: 7,
-    explanation: 'Es el final del ciclo. Una vez que te han devaluado y ya no les das el suministro que quieren, te desechan sin ninguna empatía, a menudo por una nueva víctima ya preparada.'
+    explanation: 'Tu felicidad sin él/ella puede sentirse como un insulto para quien necesitaba que le necesitaras. La reaparición rara vez es casualidad.'
+  },
+  {
+    id: '98',
+    text: 'Quieres salir de esta dinámica pero no sabes por dónde empezar. ¿Cuál sería el primer paso?',
+    options: [
+      'Convencerle de que vaya a terapia',
+      'Aceptar que lo que vivo tiene nombre y no es normal',
+      'Esperar a que él/ella me deje',
+      'Intentarlo una vez más'
+    ],
+    correctAnswer: 1,
+    difficulty: 5,
+    explanation: 'No puedes salir de algo que no reconoces. Ver la situación con claridad es el primer paso, y el más difícil.'
+  },
+  {
+    id: '99',
+    text: 'Tu pareja te dice que "nadie te entenderá como él/ella" porque tienes "un pasado muy oscuro".',
+    options: [
+      'Me acepta como soy, con todo',
+      'Usa mi pasado para hacerme sentir que no merezco más',
+      'Es muy comprensivo/a',
+      'Me ayuda a sanar mis heridas'
+    ],
+    correctAnswer: 1,
+    difficulty: 7,
+    explanation: 'Tu historia no te hace menos merecedora de buen trato. Quien la usa para atarte no te está aceptando, te está atrapando.'
+  },
+  {
+    id: '100',
+    text: 'Tras meses de críticas y frialdad, tu pareja te abandona de repente, a menudo por alguien nuevo. ¿Cómo te sientes?',
+    options: [
+      'Aliviada, aunque también rota',
+      'Desechada, como si ya no sirviera',
+      'Confundida, no entiendo qué pasó',
+      'Es lo mejor para ambos'
+    ],
+    correctAnswer: 1,
+    difficulty: 6,
+    explanation: 'Sentirse desechada después de haber dado tanto no es debilidad. Es la respuesta natural a ser tratada como un objeto reemplazable.'
   },
   // 101-150: Recuperación, Límites y Casos Específicos
   {
     id: '101',
-    text: '¿Cuál es el objetivo principal del "Contacto Cero"?',
+    text: 'Has decidido aplicar el "Contacto Cero". No le escribes, no le llamas. ¿Cuál es la señal de que está funcionando?',
     options: [
-      'Que el narcisista se dé cuenta de lo que ha perdido y vuelva',
-      'Desintoxicarte emocionalmente y romper el vínculo de trauma',
-      'Hacerle daño ignorándole',
-      'Demostrar que eres más fuerte'
+      'Él/ella se da cuenta de lo que perdió y vuelve pidiendo perdón',
+      'Empiezas a tener menos ansiedad y la "niebla mental" se disipa poco a poco',
+      'Le haces daño con tu silencio para que aprenda la lección',
+      'Demuestras a todos que eres la persona fuerte de la relación'
     ],
     correctAnswer: 1,
     difficulty: 6,
-    explanation: 'El contacto cero no es para manipular al otro, sino para protegerte a ti. Es el espacio necesario para que tu sistema nervioso se calme y puedas empezar a ver la realidad sin la niebla mental del abuso.'
+    explanation: 'El contacto cero no es una estrategia de reconquista ni de venganza, es una medida de higiene mental. Si tu ansiedad baja, funciona, haga lo que haga la otra persona.'
   },
   {
     id: '102',
-    text: 'Tu ex pareja narcisista te envía un mensaje: "He soñado contigo, espero que estés bien". ¿Qué deberías hacer si aplicas Contacto Cero?',
+    text: 'Tu ex, con quien terminaste mal, te escribe de la nada: "He soñado contigo, espero que estés bien". ¿Qué haces?',
     options: [
-      'Responder educadamente que estoy bien',
-      'Bloquear y no responder (ignorar el cebo)',
-      'Preguntarle qué ha soñado por curiosidad',
-      'Decirle que no me escriba más'
+      'Respondo educadamente con un "gracias, igualmente" para no ser rencorosa',
+      'Le pregunto qué soñó, por simple curiosidad humana',
+      'Borro el mensaje y no contesto. Cualquier respuesta reabre la puerta',
+      'Le digo que me deje en paz de una vez por todas'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Cualquier respuesta, incluso una negativa, le da el suministro que busca: saber que todavía tiene impacto en ti. El silencio absoluto es tu única defensa real.'
+    explanation: 'Responder, aunque sea para insultar o ser educada, le da lo que busca: saber que todavía tiene acceso a ti. El silencio es la única respuesta que protege tu paz.'
   },
   {
     id: '103',
-    text: 'Sientes una culpa inmensa por haber reaccionado con gritos o insultos tras meses de provocaciones. ¿Cómo se llama esto?',
+    text: 'Después de horas de que te provoquen, te critiquen y te ignoren, estallas y gritas un insulto. Tu pareja dice sonriendo: "¿Ves? La violenta eres tú". ¿Qué sientes?',
     options: [
-      'Abuso mutuo',
-      'Ira Reactiva: una reacción normal a un entorno anormal de abuso',
-      'Que me he vuelto como él/ella',
-      'Falta de control emocional'
+      'Tiene razón, he perdido los papeles y soy igual de tóxica',
+      'Una culpa terrible y la sensación de que soy yo quien estropea todo',
+      'Que me han empujado al límite a propósito para luego culparme de mi reacción',
+      'Que necesito ir a terapia para controlar mi ira'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'El abusador te empuja al límite hasta que estallas, y luego usa esa explosión para decir que TÚ eres el abusador. No es abuso mutuo, es una defensa desesperada de tu sistema ante el maltrato constante.'
+    explanation: 'Se llama "Ira Reactiva". Te pinchan hasta que explotas para poder señalar tu reacción y ocultar su provocación previa. No eres el abusador por defenderte, eres humano.'
   },
   {
     id: '104',
-    text: 'Tu nueva cita te cuenta en la primera cena que "todas sus ex eran unas locas que le engañaron". ¿Qué señal es esta?',
+    text: 'Estás cenando con alguien nuevo y te cuenta que sus tres últimas ex parejas estaban "totalmente locas" y le hicieron mucho daño. Tú piensas...',
     options: [
-      'Honestidad y vulnerabilidad',
-      'Red Flag (Bandera Roja): incapacidad de autocrítica y posible proyección',
-      'Mala suerte crónica',
-      'Sinceridad radical'
+      'Pobre, qué mala suerte ha tenido en el amor',
+      'Me gusta que sea tan sincero y vulnerable desde el principio',
+      'Si todas estaban "locas", el único denominador común es él',
+      'Yo le demostraré que no todas somos iguales'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 5,
-    explanation: 'Si alguien no asume ninguna responsabilidad en sus fracasos pasados y demoniza a todas sus ex parejas, es casi seguro que el problema era él. Tú serás la siguiente "loca" en su lista.'
+    explanation: 'Es una de las señales más claras. Alguien que no asume ninguna responsabilidad en sus rupturas y demoniza a todas sus ex parejas, probablemente hará lo mismo contigo.'
   },
   {
     id: '105',
-    text: '¿Qué es el "Gaslighting por Omisión"?',
+    text: 'Descubres que te ocultó información importante sobre dinero o planes. Cuando le preguntas, dice: "No te mentí, simplemente no te lo dije".',
     options: [
-      'No decir nada durante días',
-      'Ocultar información clave deliberadamente',
-      'Olvidar cosas sin querer',
-      'No hablar de los problemas'
+      'Técnicamente es verdad, no mintió',
+      'Ocultar información deliberadamente para manipular es mentir',
+      'Quizá se le olvidó con el estrés',
+      'Tengo que dejar de interrogarle tanto'
     ],
     correctAnswer: 1,
-    difficulty: 8,
-    explanation: 'No solo mienten diciendo cosas falsas, también mienten ocultando la verdad. Esto te deja en una posición de vulnerabilidad donde no puedes confiar en tu propia toma de decisiones.'
+    difficulty: 6,
+    explanation: 'La omisión es una mentira sofisticada. Te priva de la información necesaria para tomar decisiones libres sobre tu propia vida.'
   },
   {
     id: '106',
-    text: 'Tu pareja te dice que "te ha ayudado a ser quien eres" y que "sin él/ella estarías perdida". ¿Qué busca?',
+    text: 'Suele decirte frases como "te he ayudado a ser quien eres" o "sin mí seguirías perdida". Aunque suena a apoyo, te hace sentir...',
     options: [
-      'Reconocimiento a su apoyo',
-      'Apropiarse de tu crecimiento y generar dependencia',
-      'Motivarme para seguir adelante',
-      'Un cumplido'
+      'Muy agradecida por tenerle en mi vida',
+      'Pequeña, como si mis logros fueran prestados',
+      'Segura, porque sé que me cubre las espaldas',
+      'Motivada para seguir mejorando'
     ],
     correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'Busca que sientas que tus éxitos no son tuyos, sino una concesión de su parte. Es una forma de mantenerte pequeña/o y agradecida/o por su supuesta "guía".'
+    difficulty: 7,
+    explanation: 'El apoyo real empodera, no genera deuda. Si su "ayuda" te hace sentir que no vales nada por ti misma, no es ayuda, es creación de dependencia.'
   },
   {
     id: '107',
-    text: '¿Cómo reacciona un narcisista cuando intentas establecer un límite sano (ej: "no quiero que me hables así")?',
+    text: 'Le dices: "Por favor, no me hables en ese tono, me duele". Su reacción inmediata es...',
     options: [
-      'Pidiendo perdón y cambiando',
-      'Escalando el conflicto, burlándose o haciéndose la víctima',
-      'Ignorando el comentario',
-      'Aceptando el límite con madurez'
+      'Pedir perdón y bajar el tono',
+      'Explicar por qué estaba nervioso',
+      'Enfadarse más: "Ahora resulta que no se te puede decir nada, qué piel más fina"',
+      'Quedarse callado para reflexionar'
     ],
-    correctAnswer: 1,
-    difficulty: 7,
-    explanation: 'Los límites son vistos como un desafío a su control. Reaccionarán con rabia ("¿quién te crees que eres?") o victimismo ("me tratas como a un monstruo") para que retires el límite.'
+    correctAnswer: 2,
+    difficulty: 6,
+    explanation: 'Poner un límite sano a un narcisista se vive como un ataque. En lugar de respetar tu petición, te atacará por haberla hecho.'
   },
   {
     id: '108',
-    text: 'Sientes que tienes que "pedir permiso" para cosas básicas como comprarte ropa, ir al médico o ver a un amigo. ¿Qué ha pasado?',
+    text: 'Te das cuenta de que antes de comprarte algo bonito o quedar con un amigo, ensayas mentalmente cómo se lo vas a explicar a tu pareja para que no se enfade.',
     options: [
-      'Somos una pareja muy compenetrada',
-      'Infantilización: el narcisista te ha quitado tu autonomía de adulto',
-      'Es por respeto mutuo',
-      'Es que soy muy indecisa'
+      'Es normal, quiero que esté tranquilo',
+      'Soy muy considerada con sus sentimientos',
+      'He perdido mi autonomía y vivo pidiendo permiso para ser yo',
+      'Es para evitar malentendidos innecesarios'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Mediante la crítica y el control constante, te ha hecho creer que no eres capaz de tomar decisiones por ti misma/o, obligándote a consultar todo para evitar su enfado.'
+    explanation: 'Si tienes que gestionar su estado de ánimo antes de hacer cosas normales de adulto, no estás en una relación de iguales, estás bajo tutela emocional.'
   },
   {
     id: '109',
-    text: 'Tu pareja se queja de que "nunca le das suficiente amor" o que "siempre estás cansada", ignorando que trabajas y cuidas la casa. ¿Qué es?',
+    text: 'Te esfuerzas al máximo en casa, en el trabajo y con la pareja, pero él/ella siempre tiene una queja: "nunca es suficiente", "siempre estás cansada".',
     options: [
-      'Necesidad de más cariño',
-      'Suministro insaciable: nada de lo que hagas será nunca suficiente para su ego',
-      'Falta de tiempo de calidad',
-      'Deseo de conexión'
+      'Tengo que organizarme mejor',
+      'Es verdad, últimamente no le dedico tiempo de calidad',
+      'Es un pozo sin fondo: nada de lo que haga bastará para llenarle',
+      'Tiene necesidades afectivas altas'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'El narcisista es un pozo sin fondo. No importa cuánto te sacrifiques, siempre te pedirá más y te culpará por sus sentimientos de vacío interno.'
+    explanation: 'No es que hagas poco, es que su necesidad de atención y servicio es insaciable. Te desgastarás intentando llenar un vaso que tiene un agujero en el fondo.'
   },
   {
     id: '110',
-    text: '¿Qué es el "Amor Condicional" en una familia narcisista?',
+    text: 'En tu familia, sientes que tus padres solo te "ven" y te sonríen cuando sacas buenas notas o logras algo que pueden presumir ante los vecinos.',
     options: [
-      'Amor que se da solo si el hijo cumple las expectativas del padre',
-      'Amor con normas básicas de convivencia',
-      'Amor que dura poco tiempo',
-      'Amor que se demuestra con regalos'
+      'Quieren que tenga éxito en la vida',
+      'Son padres exigentes pero me quieren',
+      'Me siento un trofeo, no una persona: me quieren por lo que hago, no por lo que soy',
+      'Es su forma de motivarme'
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'No te quieren por quien eres, sino por lo que haces por ellos o cómo les haces quedar ante los demás. Si fallas o muestras tu propia personalidad, el "amor" se retira.'
+    explanation: 'El amor condicional no nutre, amaestra. Aprendes que para ser digno de amor tienes que "rendir" y cumplir expectativas ajenas.'
   },
   {
     id: '111',
-    text: 'Has notado que tu pareja es "amable" con otras personas delante de ti solo para que tú te sientas mal por no ser tan "buena" como ellos. ¿Técnica?',
+    text: 'Delante de ti, es encantador con la camarera o con una amiga tuya, y luego te mira con desdén. Te dice: "¿Ves? Ella sí es simpática, no como tú".',
     options: [
-      'Me enseña con el ejemplo',
-      'Triangulación de bondad para devaluarte',
-      'Es que los demás son mejores',
-      'Es muy sociable'
+      'Tiene razón, debería ser más amable',
+      'Lo hace para hacerme sentir insegura y comparada',
+      'Es una persona muy sociable con todo el mundo',
+      'Quizá tengo un mal día'
     ],
     correctAnswer: 1,
     difficulty: 8,
-    explanation: 'Usa a terceros para enviarte el mensaje de que eres insuficiente. "Mira qué maja es Fulanita, no como tú que siempre estás de mal humor".'
+    explanation: 'Utiliza la amabilidad con terceros como un arma contra ti. No es que le caigan bien ellos, es que quiere que tú te sientas mal.'
   },
   {
     id: '112',
-    text: 'Tu pareja te dice que "nadie más aguantaría tus problemas de ansiedad", cuando es él/ella quien te los provoca. ¿Qué es?',
+    text: 'Te provoca una crisis de ansiedad con sus gritos, y luego te abraza y te dice: "Tranquila, nadie más te aguantaría así de loca, solo yo".',
     options: [
-      'Apoyo incondicional',
-      'Crear el problema y vender la solución (gaslighting)',
-      'Es verdad, soy una carga',
-      'Es muy paciente'
+      'Es mi salvador, menos mal que me quiere',
+      'Crea la enfermedad y luego te vende la medicina envenenada',
+      'Soy una carga para cualquiera',
+      'Tiene mucha paciencia conmigo'
     ],
     correctAnswer: 1,
     difficulty: 9,
-    explanation: 'Te rompe los nervios y luego se presenta como la única persona dispuesta a estar con alguien "tan roto". Es una forma de encadenarte a tu verdugo.'
+    explanation: 'Es el ciclo completo del abuso: te rompe para luego presentarse como el único capaz de arreglarte, asegurándose de que no te vayas.'
   },
   {
     id: '113',
-    text: '¿Qué es el "Vampirismo Emocional"?',
+    text: 'Cada vez que pasas tiempo con esa persona, vuelves a casa con dolor de cabeza, agotada y sintiéndote "vacía", aunque no hayáis discutido gravemente.',
     options: [
-      'Una película de miedo',
-      'Drenar la energía de los demás para alimentar el propio ego',
-      'Estar muy cansado después de socializar',
-      'Tener mucha empatía'
+      'Soy yo, que me canso rápido de socializar',
+      'Es una persona muy intensa',
+      'Me está drenando la energía: es un vampiro emocional',
+      'Quizá necesito vitaminas'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 5,
-    explanation: 'Los narcisistas se alimentan de tus emociones (ya sean de alegría o de dolor). Te dejan exhausta/o mientras ellos parecen recargarse con el drama o tu atención.'
+    explanation: 'Tu cuerpo es el primero en notar el abuso. La interacción con un narcisista requiere tal nivel de alerta y gestión emocional que te deja exhausta físicamente.'
   },
   {
     id: '114',
-    text: 'Notas que tu pareja se burla de tus sueños y proyectos, llamándolos "fantasías" o "pérdida de tiempo". ¿Por qué?',
+    text: 'Le cuentas ilusionada un nuevo proyecto o sueño. Su respuesta es: "Sé realista, eso es muy difícil" o "Con lo inconstante que eres, lo dejarás en dos días".',
     options: [
-      'Quiere que sea realista',
-      'Miedo a que tu éxito te dé la independencia necesaria para dejarle',
-      'No tiene fe en mis capacidades',
-      'Es por mi bien económico'
+      'Es la voz de la razón que necesito',
+      'Quiere protegerme del fracaso',
+      'No soporta que tenga ilusiones propias que no le incluyan',
+      'Me conoce bien y sabe mis defectos'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Tu crecimiento es su amenaza. Si logras tus sueños, tendrás más autoestima y recursos, y serás más difícil de manipular y controlar.'
+    explanation: 'Un compañero sano celebra tus alas. Un narcisista intenta cortarlas porque tu independencia y éxito son una amenaza para su control.'
   },
   {
     id: '115',
-    text: 'Tu pareja te ha convencido de que dejes tu trabajo para "cuidar de la familia", pero ahora te humilla porque "no aportas dinero". ¿Trampa?',
+    text: 'Te convenció para que dejaras de trabajar porque "él se ocupaba de todo", pero ahora tienes que pedirle dinero para el café y te echa en cara cada gasto.',
     options: [
-      'Mala suerte financiera',
-      'Creación de dependencia económica para el control total',
-      'Es que las cosas han cambiado',
-      'Falta de comunicación'
+      'Es normal, la economía está mal',
+      'Me siento como una niña pidiendo la paga',
+      'Es una trampa: me ha quitado mi independencia financiera para controlarme',
+      'Debería gastar menos para no molestarle'
     ],
-    correctAnswer: 1,
-    difficulty: 9,
-    explanation: 'Te empuja a una situación de vulnerabilidad y luego usa esa misma vulnerabilidad para atacarte y recordarte tu posición de inferioridad.'
+    correctAnswer: 2,
+    difficulty: 8,
+    explanation: 'La dependencia económica es una de las cadenas más fuertes. Al principio parece cuidado ("descansa, yo proveo"), pero acaba siendo una jaula.'
   },
   {
     id: '116',
-    text: '¿Cómo se siente la "Disonancia Cognitiva" en una relación de abuso?',
+    text: 'Hay días que es la persona más maravillosa del mundo y días que es un monstruo cruel. Tu cerebro no para de intentar entender cuál es el "real".',
     options: [
-      'Confusión entre el "Dr. Jekyll" del principio y el "Mr. Hyde" de ahora',
-      'Saber que te miente pero querer creerle igual',
-      'Tener dos pensamientos contradictorios a la vez sobre la misma persona',
-      'Todas las anteriores'
+      'Todos tenemos días malos',
+      'El real es el bueno, el malo sale por estrés',
+      'Esa confusión es la trampa: te quedas esperando al bueno mientras soportas al malo',
+      'Tengo que tener más paciencia en sus días malos'
     ],
-    correctAnswer: 3,
+    correctAnswer: 2,
     difficulty: 10,
-    explanation: 'Es el estado mental más doloroso: amar a la máscara mientras sufres al abusador. Tu cerebro intenta reconciliar ambas versiones para no volverse loco, lo que te mantiene atrapada/o.'
+    explanation: 'Se llama Disonancia Cognitiva. Mantener dos imágenes opuestas de la misma persona te paraliza y te impide tomar la decisión de irte.'
   },
   {
     id: '117',
-    text: 'Tu pareja te acusa de "hacerle sentir mal" cada vez que intentas hablar de algo que él/ella ha hecho mal. ¿Qué hace?',
+    text: 'Le pillas en una mentira clara. Cuando se lo dices, la conversación gira y acabas tú pidiendo perdón por "desconfiar" y "ser paranoica".',
     options: [
-      'Es muy sensible al dolor ajeno',
-      'DARVO: inversión de roles',
-      'Tengo que ser más suave hablando',
-      'Es que le duele fallarme'
+      'Soy muy insegura y eso daña la relación',
+      'Es un genio del debate',
+      'Ha invertido los papeles: de culpable a víctima en dos frases',
+      'Debería confiar más si no tengo pruebas absolutas'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Es la técnica DARVO: Deny (Negar), Attack (Atacar), and Reverse Victim and Offender (Invertir Víctima y Agresor). Acabas tú consolándole a él por haberle pillado en una falta.'
+    explanation: 'Es una táctica clásica (DARVO). Niega la acusación, te ataca a ti, y se convierte en la víctima. El objetivo es que nunca más te atrevas a cuestionarle.'
   },
   {
     id: '118',
-    text: '¿Qué es el "Hoovering Maligno"?',
+    text: 'Tu ex reaparece, te dice que ha cambiado, quedáis... y en la primera cita te hace un comentario cruel sobre tu peso o tu trabajo, y se va.',
     options: [
-      'Aspirar la casa con mala cara',
-      'Reaparecer solo para comprobar que todavía puede hacerte daño y luego volverte a dejar',
-      'Insultarte por redes sociales',
-      'No devolverte tus cosas'
+      'Sigue siendo sincero, aunque duela',
+      'No he sabido aprovechar la segunda oportunidad',
+      'Solo volvió para ver si aún podía hacerme daño y sentirse poderoso',
+      'Es que no le gusto ya'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'A veces no vuelven para recuperarte, sino para ver si todavía pueden destruirte. Si respondes y ven que todavía te importa, se van satisfechos habiendo reabierto tu herida.'
+    explanation: 'A veces vuelven solo para "patear al perro". Necesitan confirmar que todavía tienen el poder de herirte. Una vez lo confirman, se van satisfechos.'
   },
   {
     id: '119',
-    text: 'Tu pareja te dice que "eres la única persona que le entiende", aislándote de los demás. ¿Qué sentimiento busca generar?',
+    text: 'Te dice constantemente: "Nadie te entiende como yo", "Tu familia no nos quiere ver felices", "Tus amigos tienen envidia de nuestro amor".',
     options: [
-      'Orgullo y exclusividad',
-      'Responsabilidad mesiánica (sentir que eres su salvadora)',
-      'Amor profundo',
-      'Compasión'
+      'Es verdad, tenemos una conexión única contra el mundo',
+      'Me quiere proteger de gente tóxica',
+      'Me está aislando para que él sea mi única referencia de realidad',
+      'Mi entorno no entiende nuestra pasión'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Al hacerte sentir "especial" por ser la única que le entiende, te carga con la responsabilidad de su salud mental, haciendo que sea casi imposible dejarle sin sentir que le "abandonas".'
+    explanation: 'El aislamiento se disfraza de "amor especial". Si consigue que desconfíes de todos los demás, nadie podrá avisarte de que estás siendo abusada.'
   },
   {
     id: '120',
-    text: '¿Por qué un narcisista suele arruinar las vacaciones o los viajes?',
+    text: 'Llega el viaje que tanto esperabas. Justo antes de salir o al llegar, él monta un drama enorme por una tontería y arruina los primeros días.',
     options: [
-      'Porque el estrés del viaje le afecta mucho',
-      'Porque no puede controlar el entorno y necesita reafirmar su poder mediante el caos',
-      'Porque no le gusta viajar',
-      'Por mala suerte'
+      'El estrés de viajar le sienta mal',
+      'Siempre tengo mala suerte en vacaciones',
+      'Boicotea los momentos felices para que la atención vuelva a él',
+      'Debería haber organizado yo mejor el viaje'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'En vacaciones el foco está en el placer y la relajación mutua. El narcisista necesita ser el centro de atención; si no lo es por algo bueno, lo será por crear un drama inolvidable.'
+    explanation: 'Los narcisistas odian los días felices ajenos (cumpleaños, vacaciones). Si no son el centro de atención por algo bueno, crearán un caos para serlo por algo malo.'
   },
   {
     id: '121',
-    text: 'Notas que tu pareja trata de "imitar" tus virtudes delante de otros para llevarse el mérito de tu personalidad. ¿Qué es?',
+    text: 'Le escuchas hablar con otros y repite exactamente tus opiniones, tus gustos musicales o tus anécdotas como si fueran suyas.',
     options: [
-      'Admiración profunda',
-      'Robo de identidad emocional (mirroring invertido)',
-      'Que nos parecemos mucho',
-      'Aprendizaje social'
+      'Tenemos tanta conexión que pensamos igual',
+      'Me admira tanto que me copia',
+      'Se está apropiando de mi personalidad para parecer más interesante',
+      'Es coincidencia'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Te "vacía" de tus rasgos positivos para ponérselos él/ella como una máscara ante los demás, mientras a ti te deja solo con las inseguridades que te ha implantado.'
+    explanation: 'Es un "robo de identidad". Carecen de un yo sólido, así que copian rasgos de sus víctimas para construir su máscara social.'
   },
   {
     id: '122',
-    text: '¿Qué es el "Aislamiento Geográfico"?',
+    text: 'Te propone mudaros a una ciudad nueva o al campo, lejos de tu familia y amigos, para "empezar de cero" y tener "una vida más tranquila".',
     options: [
-      'Vivir en una isla',
-      'Convencerte de mudarte lejos de tu familia y amigos para que dependas solo de él/ella',
-      'No tener coche',
-      'Vivir en el campo'
+      'Qué romántico, una aventura los dos solos',
+      'Es una oportunidad laboral',
+      'Si me aleja de mi red de apoyo, seré mucho más fácil de controlar',
+      'Necesitamos desconectar del mundo'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Es una táctica física de control. Sin tu red de apoyo cerca, el abuso puede escalar sin que nadie lo vea y sin que tú tengas un lugar fácil a donde huir.'
+    explanation: 'El aislamiento geográfico es una alerta roja. Sin amigos o familia cerca que vean lo que pasa, el abuso puede escalar sin testigos ni freno.'
   },
   {
     id: '123',
-    text: 'Tu pareja te dice que "nadie te creerá" si cuentas lo que pasa en casa porque "todos le adoran". ¿Qué busca?',
+    text: 'Amenaza veladamente: "Si cuentas lo que ha pasado, nadie te creerá. Todo el mundo piensa que eres la inestable y yo el santo".',
     options: [
-      'Advertirme de la realidad',
-      'Generar indefensión y miedo al juicio social',
-      'Protección de su imagen',
-      'Es verdad, nadie me cree'
+      'Es verdad, tiene mejor imagen que yo',
+      'Me da miedo porque sé que sabe manipular a la gente',
+      'Usa su buena imagen pública como escudo para abusar en privado',
+      'Es un consejo para que no haga el ridículo'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Usa su máscara pública como un escudo contra la verdad. Busca que te sientas sola y loca, para que ni siquiera intentes pedir ayuda.'
+    explanation: 'Saben perfectamente que tienen "dos caras". Usan el miedo al descrédito social para silenciarte y mantenerte sufriendo en secreto.'
   },
   {
     id: '124',
-    text: '¿Qué es el "Refuerzo Intermitente"?',
+    text: 'La relación es una montaña rusa. Te trata mal (bajón), y justo cuando estás a punto de irte, te trata como una reina (subidón). Y vuelta a empezar.',
     options: [
-      'Ir al gimnasio de vez en cuando',
-      'Alternar momentos de amor extremo con momentos de abuso sin patrón lógico',
-      'Dar premios solo en Navidad',
-      'Castigar poco'
+      'El amor es así, hay que luchar por los buenos momentos',
+      'Es muy pasional e inestable',
+      'Es un ciclo adictivo de refuerzo intermitente, igual que una tragaperras',
+      'Cuando estamos bien, estamos muy bien'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 10,
-    explanation: 'Es la técnica de adicción más potente. Como no sabes cuándo vendrá el "premio" (el amor), te quedas esperando y aguantando el abuso, igual que un ludópata ante una máquina tragaperras.'
+    explanation: 'Nuestro cerebro se engancha químicamente a la incertidumbre de "¿me querrá hoy?". Las "migajas" de amor saben a gloria cuando estás hambrienta por el maltrato.'
   },
   {
     id: '125',
-    text: 'Sientes que tienes que "justificar" el mal comportamiento de tu pareja ante tus amigos. ¿Qué indica?',
+    text: 'Tus amigos te dicen "no nos gusta cómo te trata", y tú te descubres defendiéndole: "Es que ha tenido un mal día", "En el fondo es bueno".',
     options: [
-      'Que soy muy leal',
-      'Que estás en la fase de negación de la disonancia cognitiva',
-      'Que mis amigos son muy criticones',
-      'Que él/ella tiene motivos para ser así'
+      'Ellos no le conocen como yo',
+      'Soy leal a mi pareja',
+      'Estoy justificando lo injustificable para no aceptar la dolorosa realidad',
+      'La gente juzga muy rápido'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Si tienes que explicar constantemente por qué "en el fondo es bueno", es que estás intentando convencerte a ti misma/o de algo que tus ojos ya ven que no es cierto.'
+    explanation: 'Si tienes que actuar como el abogado defensor de tu pareja ante la gente que te quiere, es porque en el fondo sabes que el "fiscal" tiene razón.'
   },
   {
     id: '126',
-    text: 'Tu pareja te dice que "eres la persona más difícil que ha conocido". ¿Objetivo?',
+    text: 'Te dice a menudo: "Eres una persona muy difícil", "Nadie más tendría la paciencia que tengo yo contigo".',
     options: [
-      'Sinceridad sobre nuestra relación',
-      'Proyectar su propia toxicidad en ti para que tú seas "el problema"',
-      'Hacerme reflexionar sobre mi carácter',
-      'Un reto amoroso'
+      'Tengo suerte de que me quiera así',
+      'Es verdad, tengo un carácter complicado',
+      'Me está convenciendo de que soy defectuosa para que no crea que merezco algo mejor',
+      'Es sincero y me ayuda a mejorar'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Es una forma de Gaslighting. Él/ella crea el conflicto, pero te dice que el conflicto existe porque tú eres "difícil", quitándose toda responsabilidad.'
+    explanation: 'Si te convence de que tú eres el problema y él el santo que te soporta, te quedarás agradecida recibiendo migajas en lugar de pedir respeto.'
   },
   {
     id: '127',
-    text: '¿Qué es el "Cierre por Indiferencia"?',
+    text: 'La relación terminó, pero sigues obsesionada analizando por qué hizo lo que hizo. Buscas un cierre, una explicación lógica que nunca llega.',
     options: [
-      'No despedirse',
-      'Aceptar que nunca entenderás al narcisista y dejar de buscar respuestas',
-      'Odiarle mucho',
-      'Bloquearle en todas partes'
+      'Necesito que nos sentemos a hablar para cerrar capítulo',
+      'Si entiendo el porqué, dejará de doler',
+      'La única explicación es que no le importaba mi dolor. Aceptar eso es el cierre',
+      'Seguro que él también está sufriendo'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'El verdadero cierre no viene de una conversación con el abusador (que solo mentirá), sino de tu propia decisión de que ya no te importa lo que piense, haga o diga.'
+    explanation: 'No busques lógica humana donde no hay empatía. El cierre no te lo da él (que te mentiría), te lo das tú aceptando la cruda realidad.'
   },
   {
     id: '128',
-    text: 'Notas que tu pareja trata de "competir" contigo incluso en cosas absurdas (quién está más cansado, quién ha sufrido más). ¿Por qué?',
+    text: 'Llegas a casa enferma con 39 de fiebre. Él te dice: "Pues yo tengo un dolor de espalda horrible, siempre tienes que ser el centro de atención".',
     options: [
-      'Es muy competitivo/a por naturaleza',
-      'Necesidad de ser siempre la "víctima mayor" o el "héroe mayor"',
-      'Es falta de sueño',
-      'Quiere superarse'
+      'Pobre, a él también le duele',
+      'Qué mala suerte que estemos los dos mal',
+      'Compite conmigo a ver quién es más víctima, incluso cuando estoy enferma',
+      'Debería no quejarme tanto'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 5,
-    explanation: 'No soportan que tus sentimientos o necesidades eclipsen los suyos. Si tú estás mal, ellos deben estar peor para recuperar el foco de atención y los cuidados.'
+    explanation: 'Es la incapacidad de ceder el foco. Si tú estás mal, él tiene que estar "más" mal para recuperar su rol de protagonista y no tener que cuidarte.'
   },
   {
     id: '129',
-    text: '¿Por qué el narcisista te llama "egoísta" cuando por fin empiezas a cuidar de ti misma/o?',
+    text: 'Decides apuntarte a un curso de pintura o salir a correr sola. Él te dice: "Qué egoísta eres, prefieres eso a estar con tu familia".',
     options: [
-      'Porque realmente lo soy ahora',
-      'Porque ya no eres útil para sus intereses y estás poniendo límites',
-      'Porque se siente abandonado/a',
-      'Porque quiere que compartamos más'
+      'Tiene razón, debería dedicarles más tiempo',
+      'Me siento culpable por querer tiempo para mí',
+      'Manipula con la culpa para que no tenga vida propia fuera de su control',
+      'Intentaré hacerlo cuando él no esté'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'En el diccionario narcisista, "egoísta" significa "alguien que no hace lo que yo quiero". Tu autocuidado es una amenaza directa a su suministro de control.'
+    explanation: 'Tener una identidad propia (hobbies, espacio) es sano. Que te llamen "egoísta" por cuidarte es una señal de que quieren poseerte, no quererte.'
   },
   {
     id: '130',
-    text: '¿Qué es el "Mono Volador Benévolo"?',
+    text: 'Una amiga común te dice: "Le he visto muy triste, dice que te echa de menos. Deberías llamarle, pobre".',
     options: [
-      'Un mono que ayuda',
-      'Instigador “benévolo” que te empuja a perdonar',
-      'Un psicólogo',
-      'Un amigo neutral'
+      'Quizá he sido muy dura',
+      'Si está triste es que le importo',
+      'Está usando a mi amiga como mensajera (Mono Volador) para manipularme',
+      'Le llamaré solo para ver cómo está'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Son personas que, a veces sin mala intención, invalidan tu dolor y te presionan para que vuelvas al ciclo de abuso, convirtiéndose en cómplices del narcisista.'
+    explanation: 'Los "Monos Voladores" son personas manipuladas por el narcisista para llegar a ti cuando tú has cerrado la puerta. No te fíes del mensaje, viene de la fuente tóxica.'
   },
   {
     id: '131',
-    text: 'Tu pareja te dice que "eres igual que tu madre/padre" (a quien tú detestas o temes). ¿Qué busca?',
+    text: 'Sabes que tienes una relación difícil con tu madre. En una pelea, él te dice: "Eres idéntica a tu madre, vas a acabar sola como ella".',
     options: [
-      'Ayudarme a ver mis sombras',
-      'Herirte en lo más profundo comparándote con tu mayor trauma',
-      'Es una observación genética',
-      'Sinceridad brutal'
+      'Es mi mayor miedo, ¿y si tiene razón?',
+      'Solo lo dice porque está enfadado',
+      'Usa mis traumas más profundos como arma para hacerme daño donde más duele',
+      'Tengo que esforzarme para no ser así'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es un ataque quirúrgico. Usa tus heridas de la infancia para desestabilizarte y hacerte sentir que estás "condenada/o" a ser como lo que más odias.'
+    explanation: 'Alguien que te quiere te ayuda a sanar tus heridas, no mete el dedo en ellas durante una discusión para ganar ventaja.'
   },
   {
     id: '132',
-    text: '¿Cómo afecta el abuso narcisista a la memoria a corto plazo?',
+    text: 'Últimamente se te olvidan las llaves, no te concentras en el trabajo y te sientes "tonta". Antes eras una persona muy ágil mentalmente.',
     options: [
-      'No afecta',
-      'La deteriora debido al cortisol alto y al estrés crónico del Gaslighting',
-      'La mejora para recordar los insultos',
-      'Solo afecta si hay golpes'
+      'Será la edad o el cansancio',
+      'Estoy perdiendo facultades',
+      'Es el efecto del estrés crónico y el abuso emocional en mi cerebro',
+      'Necesito dormir más'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Vivir en un estado de alerta constante daña el hipocampo. Por eso muchas víctimas sienten que "están perdiendo la cabeza" o que no pueden concentrarse en nada.'
+    explanation: 'Vivir en alerta permanente (caminando sobre cáscaras de huevo) inunda tu cerebro de cortisol, lo que afecta a la memoria y la concentración. No eres tonta, estás traumatizada.'
   },
   {
     id: '133',
-    text: '¿Qué es la "Falsa Vulnerabilidad"?',
+    text: 'Le dices que te vas a ir. De repente llora, se tira al suelo, dice que está deprimido o habla de traumas infantiles que nunca mencionó.',
     options: [
-      'Llorar de verdad',
-      'Fingir debilidad o contar traumas para atrapar tu empatía y que no te vayas',
-      'Ser muy tímido',
-      'Tener miedo'
+      'Me necesita, no puedo dejarle así',
+      'Por fin se abre emocionalmente',
+      'Es una actuación de "falsa vulnerabilidad" para dar pena y retenerme',
+      'Pobre, ha sufrido mucho'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Es el cebo del "pobre de mí". Lloran lágrimas de cocodrilo para que sientas pena y olvides el abuso que acaban de cometer. Es pura manipulación teatral.'
+    explanation: 'Si la vulnerabilidad solo aparece cuando tú pones un límite o te vas, es manipulación. Apelan a tu empatía para desarmarte.'
   },
   {
     id: '134',
-    text: 'Tu pareja te dice que "tienes mucha suerte de que te haya elegido a ti". ¿Qué mensaje envía?',
+    text: 'Te dice a menudo: "Podría estar con cualquiera, pero te elegí a ti. Tienes suerte".',
     options: [
-      'Que soy especial para él/ella',
-      'Que él/ella es superior y tú eres un subordinado afortunado',
-      'Es un cumplido romántico',
-      'Gratitud'
+      'Me siento halagada y especial',
+      'Es verdad, es muy atractivo/a',
+      'Me hace sentir que le debo algo por estar conmigo',
+      'Es una forma extraña de decir te quiero'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 5,
-    explanation: 'Establece una jerarquía de poder. Él/ella es el premio y tú eres el afortunado que debe esforzarse cada día por mantener su favor.'
+    explanation: 'No es un cumplido, es una demostración de estatus. "Yo soy el premio, tú la afortunada ganadora". Busca que te sientas inferior y agradecida.'
   },
   {
     id: '135',
-    text: '¿Por qué el narcisista odia que tengas éxito en tus hobbies?',
+    text: 'Cada vez que te pones a tocar la guitarra o escribir (tu pasión), él enciende la tele a todo volumen, te interrumpe o se burla.',
     options: [
-      'Porque ocupan tiempo que deberías dedicarle a él/ella',
-      'Porque te dan una identidad y satisfacción fuera de su control',
-      'Porque le dan envidia tus talentos',
-      'Todas las anteriores'
+      'No se da cuenta de que me molesta',
+      'Es que toco mal todavía',
+      'Sabotea activamente lo que me hace feliz porque no tiene que ver con él',
+      'Debería buscarme un sitio fuera para practicar'
     ],
-    correctAnswer: 3,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Cualquier fuente de alegría o validación que no venga de él/ella es una competencia que debe ser eliminada o saboteada.'
+    explanation: 'Tus pasiones son su competencia. Si algo te llena y te da autoestima ajena a la relación, intentará destruirlo o ridiculizarlo.'
   },
   {
     id: '136',
-    text: '¿Qué es el "Tratamiento de Silencio Preventivo"?',
+    text: 'Notas que te deja de hablar (ley del hielo) justo antes de fechas importantes o cuando intuyes que vas a pedirle algo.',
     options: [
-      'No hablar antes de desayunar',
-      'Dejar de hablarte antes de que tú puedas quejarte de algo, para que tengas miedo de hacerlo',
-      'Meditación en pareja',
-      'Paz y tranquilidad'
+      'Siempre nos peleamos en malas fechas',
+      'Necesita mucho espacio',
+      'Es un "silencio preventivo" para que esté tan asustada que no me atreva a pedir nada',
+      'Es casualidad'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es una forma de "entrenamiento". Te castiga con el silencio ante la mínima señal de que vas a poner un límite, para que aprendas a callarte y obedecer.'
+    explanation: 'Te "domestica" con silencios. Aprendes a no molestar, a no pedir y a no quejarte para evitar el castigo de su indiferencia.'
   },
   {
     id: '137',
-    text: '¿Qué sientes cuando aplicas la técnica de "Piedra Gris" correctamente?',
+    text: 'Has aprendido a no reaccionar a sus provocaciones. Le respondes con monosílabos, sin emoción (Piedra Gris). Te sientes...',
     options: [
-      'Mucho poder y control',
-      'Paz, pero también aburrimiento y una sensación de ser un robot',
-      'Felicidad extrema',
-      'Miedo'
+      'Aburrida y apagada, como si yo no fuera yo',
+      'Poderosa y en control',
+      'Triste por no poder comunicarme',
+      'Tranquila pero muerta por dentro'
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     difficulty: 7,
-    explanation: 'No es una técnica para ser feliz, sino para sobrevivir. Te protege de los ataques, pero requiere anular tu propia expresividad, por lo que solo debe ser temporal.'
+    explanation: 'La técnica de la Piedra Gris funciona para sobrevivir, pero tiene un coste: apagar tu vitalidad. Es un escudo temporal, no una forma de vida a largo plazo.'
   },
   {
     id: '138',
-    text: '¿Cómo reacciona un narcisista ante una enfermedad grave de su pareja?',
+    text: 'Te diagnostican una enfermedad que requiere reposo. Su reacción es enfadarse, desaparecer o decirte: "Vaya momento eliges para ponerte mala".',
     options: [
-      'Cuidándola con devoción',
-      'Victimizarse, ignorar o abandonar',
-      'Buscando los mejores médicos',
-      'Llorando mucho'
+      'Está asustado por mi salud y reacciona mal',
+      'Tiene mucho estrés y esto le desborda',
+      'Mi enfermedad le molesta porque dejo de serle útil y requiero cuidados',
+      'Es un hipocondríaco'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Una enfermedad grave te quita la capacidad de darle suministro y requiere que él/ella te cuide. Al no obtener beneficio, muchos narcisistas descartan a su pareja en este momento.'
+    explanation: 'Es uno de los momentos más dolorosos de revelación. Cuando dejas de ser un proveedor de servicios/atención y pasas a necesitarlos, para ellos te conviertes en un estorbo.'
   },
   {
     id: '139',
-    text: 'Tu pareja te dice que "nadie te va a decir las verdades como él/ella". ¿Qué es esto?',
+    text: 'Te dice cosas hirientes como "estás gorda", "esa ropa es ridícula" o "hablas tonterías", y añade: "Soy el único que te dice la verdad porque te quiero".',
     options: [
-      'Sinceridad radical necesaria',
-      'Ataques disfrazados de honestidad',
-      'Amor exigente',
-      'Crítica constructiva'
+      'Agradezco su sinceridad aunque duela',
+      'Prefiero una verdad dolorosa a una mentira',
+      'Disfraza la crueldad de honestidad para minar mi autoestima',
+      'Quiere que mejore mi imagen'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Usa la palabra "verdad" para validar sus insultos. Busca que creas que su visión negativa de ti es la única real y que los demás te mienten por educación.'
+    explanation: 'La honestidad sin empatía es crueldad. No te dice "la verdad", te dice su opinión destructiva para sentirse superior y bajarte los humos.'
   },
   {
     id: '140',
-    text: '¿Qué es la "Triangulación con la Nueva Víctima"?',
+    text: 'Te dejó por otra persona. A los pocos días sube fotos con ella haciendo todo lo que tú soñabas hacer, con frases de "amor verdadero".',
     options: [
-      'Presentarte a su nueva pareja',
-      'Hacerte saber lo feliz que es con la nueva persona para que sientas que el problema eras tú',
-      'Tener una relación de tres',
-      'Compararte con su ex'
+      'Nunca me quiso a mí, ella es la definitiva',
+      'Han conectado muy rápido',
+      'Es un montaje para hacerme daño a mí y enganchar a la nueva (triangulación)',
+      'Me alegro por ellos aunque duela'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Es el golpe final tras el descarte. Exhibe a la nueva persona como "la definitiva" para destruirte por dentro y hacerte creer que él/ella sí puede ser feliz con alguien que no seas tú.'
+    explanation: 'No es amor real, es teatro. Utiliza a la nueva víctima como un objeto para herirte a ti. La nueva persona está siendo bombardeada de amor (love bombing) y pronto sufrirá lo mismo.'
   },
   {
     id: '141',
-    text: '¿Qué es el "Hoovering Silencioso"?',
+    text: 'No te habla, pero mira todas tus historias de Instagram al minuto de subirlas, o da "me gusta" a cosas antiguas. No escribe, solo "está".',
     options: [
-      'No hablar',
-      'Mirar tus historias de redes sociales, pasar por tu casa o dar "likes" sin hablarte',
-      'Limpiar en silencio',
-      'Estar en la misma habitación sin hablar'
+      'Me echa de menos en silencio',
+      'Es tímido para hablarme',
+      'Quiere recordarme que sigue vigilando sin comprometerse a nada (Hoovering silencioso)',
+      'Se le va el dedo'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Es una forma de decir "estoy aquí, todavía te vigilo". Busca generarte ansiedad y que seas tú quien rompa el silencio por la presión de su presencia invisible.'
+    explanation: 'Es como un fantasma digital. Busca ocupar espacio en tu mente, generarte dudas ("¿le escribo yo?") y mantenerte enganchada sin hacer ningún esfuerzo real.'
   },
   {
     id: '142',
-    text: 'Sientes que tienes que "salvar" al narcisista de su propia oscuridad. ¿Qué rol estás adoptando?',
+    text: 'Piensas: "En el fondo es un niño herido, si le doy suficiente amor y comprensión, sanará y todo irá bien".',
     options: [
-      'Héroe/Heroína de cuento',
-      'Codependiente en el rol de salvador (Triángulo de Karpman)',
-      'Pareja ideal',
-      'Buen samaritano'
+      'El amor todo lo cura',
+      'Tengo síndrome de salvadora y estoy justificando el abuso',
+      'Es mi misión ayudarle',
+      'Nadie le ha querido bien hasta ahora'
     ],
     correctAnswer: 1,
     difficulty: 8,
-    explanation: 'El narcisista explota este deseo de ayudar. Mientras tú intentas "arreglarle", él/ella tiene vía libre para seguir abusando de ti, porque siempre tienes una excusa para su comportamiento.'
+    explanation: 'No eres su terapeuta ni su madre, eres su pareja. Querer "salvar" a alguien que te hace daño es una trampa del ego que te mantiene atada al sufrimiento.'
   },
   {
     id: '143',
-    text: '¿Por qué el narcisista te odia más cuanto más le ayudas?',
+    text: 'Le ayudas a conseguir un trabajo, le prestas dinero o le resuelves un problema grave. En lugar de gracias, te trata peor que nunca.',
     options: [
-      'Porque es un malagradecido',
-      'Porque tu ayuda le recuerda que es inferior o que necesita a alguien, dañando su ego',
-      'Porque no quiere que le ayuden',
-      'Porque la ayuda es mala'
+      'Es muy orgulloso y le cuesta agradecer',
+      'Está estresado por el cambio',
+      'Mi ayuda le hace sentir inferior (herida narcisista) y me castiga por ello',
+      'No valora nada'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 10,
-    explanation: 'Tu bondad y competencia son un espejo de su propia incapacidad. Al ayudarle, le demuestras que tú eres "más" que él/ella en ese aspecto, y eso provoca su rabia.'
+    explanation: 'Es contraintuitivo: tu generosidad le ofende. Al ayudarle, demuestras que tú tienes recursos que él no, y eso activa su envidia y rabia.'
   },
   {
     id: '144',
-    text: '¿Qué es la "Identidad Prestada"?',
+    text: 'Te das cuenta de que has cambiado tu forma de vestir, tus opiniones políticas y hasta tu risa para que a él le gusten o no se enfade.',
     options: [
-      'Tener un DNI falso',
-      'Cuando la víctima empieza a adoptar los gustos y opiniones del narcisista para evitar conflictos',
-      'Parecerse a un actor',
-      'No tener personalidad'
+      'He madurado gracias a él',
+      'Nos hemos mimetizado como pareja',
+      'He borrado mi identidad para sobrevivir a sus críticas',
+      'Son cambios naturales'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Es una táctica de supervivencia. Anulas quién eres y te conviertes en un espejo de lo que él/ella quiere, esperando que así te deje de atacar (cosa que nunca sucede).'
+    explanation: 'Te has convertido en un camaleón para evitar conflictos. Has sacrificado tu "yo" para que quepa su "ego". Eso no es amor, es colonización.'
   },
   {
     id: '145',
-    text: 'Tu pareja te dice que "exageras" cuando le pides que no te insulte. ¿Qué hace?',
+    text: 'Le dices: "Me dolió que me llamaras estúpida". Él responde riendo: "Ay, qué exagerada eres, era una broma, cómo te gusta el drama".',
     options: [
-      'Me ayuda a ser más fuerte',
-      'Minimización e invalidación (Gaslighting básico)',
-      'Tiene razón, me lo tomo muy a pecho',
-      'Es su forma de hablar'
+      'Quizá sí soy demasiado sensible',
+      'Debería tener más sentido del humor',
+      'Está invalidando mis sentimientos para no asumir su agresión',
+      'Es que tenemos humores distintos'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 5,
-    explanation: 'Al decir que exageras, convierte SU agresión en un problema de TU reacción. Deja de ser un insulto para pasar a ser "tu hipersensibilidad".'
+    explanation: 'La frase "eres una exagerada" es el mantra del maltratador psicológico. Si te duele, te duele. Negar tu dolor es una segunda agresión.'
   },
   {
     id: '146',
-    text: '¿Qué es el "Descarte de Amistad"?',
+    text: 'Tenías una amiga íntima que era el centro de tu vida. De repente, encuentra un grupo "más guay" y deja de hablarte de un día para otro sin explicación.',
     options: [
-      'Perder un amigo',
-      'Cuando un amigo narcisista te deja de hablar porque ya no eres "popular" o útil para él',
-      'Tener pocos amigos',
-      'Pelearse con alguien'
+      'He hecho algo mal y no sé qué es',
+      'La gente cambia de intereses',
+      'Me ha descartado porque ya no le sirvo de accesorio/público',
+      'Seguro que está muy ocupada'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Los amigos narcisistas te usan como trofeo o como fuente de favores. En cuanto dejas de brillar o de servirles, desaparecen sin dar explicaciones por una "mejor opción".'
+    explanation: 'El narcisismo no es solo romántico. Las amigas narcisistas te usan mientras les aportas estatus o atención. Cuando ya no eres útil, te tiran como un pañuelo.'
   },
   {
     id: '147',
-    text: '¿Por qué el narcisista siempre tiene que tener la última palabra en una discusión?',
+    text: 'Las discusiones nunca terminan hasta que tú cedes, lloras o le das la razón. Él/ella puede seguir horas o días argumentando sin cansarse.',
     options: [
-      'Porque tiene mejores argumentos',
-      'Porque para su ego, terminar la conversación significa que ha "ganado" y tiene el control',
-      'Porque es muy hablador/a',
-      'Por cortesía'
+      'Es muy tenaz y tiene principios fuertes',
+      'Quiere que nos entendamos de verdad',
+      'No busca una solución, busca la sumisión. Ganar es someterte',
+      'Yo me rindo muy fácil'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'No buscan la verdad ni la solución, solo la victoria. La última palabra es el sello final de su dominio sobre la situación y sobre ti.'
+    explanation: 'Para ellos, una discusión es una batalla de dominación. No pararán hasta verte derrotada, porque su objetivo no es el acuerdo, es la victoria.'
   },
   {
     id: '148',
-    text: '¿Qué es el "Amor Bombing" de disculpa?',
+    text: 'Después de una pelea horrible donde te insultó, aparece con un regalo caro, te invita a cenar y es la persona más dulce del mundo. No pide perdón, solo es "dulce".',
     options: [
-      'Regalar flores tras una pelea',
-      'Una explosión de afecto y promesas tras un abuso grave para que no te vayas',
-      'Pedir perdón de rodillas',
-      'Un acto de arrepentimiento real'
+      'Quiere arreglarlo con hechos, no palabras',
+      'Es su forma de pedir perdón',
+      'Es un soborno emocional para que olvide el abuso sin que él asuma culpa',
+      'Me quedo con lo bueno'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Es la fase de "luna de miel" del ciclo de abuso. No es amor, es una maniobra de rescate para que olvides lo que pasó y vuelvas a bajar la guardia.'
+    explanation: 'El "borrón y cuenta nueva" sin hablar del problema es una trampa. Compran tu silencio con gestos grandilocuentes para que el ciclo de abuso continúe.'
   },
   {
     id: '149',
-    text: 'Tu pareja te dice que "él/ella es el único que te soporta". ¿Qué busca crear?',
+    text: 'Te dice: "Con ese carácter que tienes, suerte tienes de que yo te aguante. Cualquier otro ya te habría dejado".',
     options: [
-      'Gratitud eterna',
-      'Indefensión aprendida y aislamiento',
-      'Amor profundo',
-      'Sentido del humor'
+      'Tengo que mejorar mi carácter',
+      'Es verdad, soy difícil de llevar',
+      'Me quiere hacer creer que soy inquerible para que no me vaya',
+      'Es una crítica constructiva dura'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Busca que creas que eres una persona defectuosa y que fuera de la relación solo hay soledad y rechazo. Es la mentira que te mantiene en la jaula.'
+    explanation: 'Busca destruir tu autoestima de mercado. Si crees que "nadie más te querrá", aguantarás cualquier trato por miedo a quedarte sola.'
   },
   {
     id: '150',
-    text: '¿Cuál es la señal más clara de que estás sanando del abuso narcisista?',
+    text: 'Después de mucho tiempo y trabajo personal, te cruzas con él/ella o ves una foto suya. Ya no sientes odio, ni miedo, ni amor. Solo... nada.',
     options: [
-      'Que ya no le odias, sino que te da lástima o indiferencia',
-      'Que has conseguido que te pida perdón',
-      'Que sabes todo sobre el narcisismo',
-      'Que has encontrado una nueva pareja rápido'
+      'Me he vuelto una persona fría',
+      'Estoy reprimiendo mis emociones',
+      'He sanado. La indiferencia es el verdadero final del abuso',
+      'Quizá debería saludarle'
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'La indiferencia es la meta final. Cuando sus acciones ya no te provocan una reacción emocional intensa, has recuperado tu poder y tu libertad mental.'
+    explanation: 'La indiferencia es la victoria. Significa que ha dejado de ser el protagonista de tu película (para bien o para mal) y se ha convertido en un extra irrelevante.'
   },
   // 151-200: Casos Específicos, Salud Mental y Recuperación Avanzada
   {
     id: '151',
-    text: 'Tu pareja te promete que irá a terapia de pareja, pero allí manipula al terapeuta para que crea que tú eres el problema. ¿Qué ha pasado?',
+    text: 'Le pides ir a terapia de pareja. Él acepta, pero durante las sesiones es encantador y consigue que el terapeuta crea que tú eres la histérica y él el santo.',
     options: [
-      'El terapeuta es malo',
-      'Triangulación terapéutica: usa al profesional para validarse y atacarte más fuerte',
-      'Es que yo tengo la culpa',
-      'Es un proceso normal'
+      'El terapeuta tiene razón, soy yo el problema',
+      'Ha conseguido manipular al terapeuta para tener un aliado más contra mí',
+      'Quizá no me explico bien en consulta',
+      'Es que él tiene mucho carisma'
     ],
     correctAnswer: 1,
     difficulty: 9,
-    explanation: 'Es muy común. Los narcisistas son encantadores y manipulan a los terapeutas no especializados para convertirlos en aliados contra la víctima.'
+    explanation: 'Es muy común. Los narcisistas son expertos en dar buena impresión. Si el terapeuta no es experto en abuso, acabará siendo triangulado y usado contra ti.'
   },
   {
     id: '152',
-    text: 'Sientes que tu cuerpo reacciona con ansiedad o dolor de estómago cada vez que recibes un mensaje suyo, incluso si el texto es "neutro". ¿Qué es?',
+    text: 'Ves su nombre en el móvil o escuchas que alguien abre la puerta de casa, y tu cuerpo reacciona con taquicardia y dolor de estómago.',
     options: [
-      'Indigestión',
-      'Memoria somática del trauma: tu cuerpo recuerda el peligro antes que tu mente',
       'Es emoción por verle',
-      'Casualidad'
+      'Tengo problemas digestivos',
+      'Mi cuerpo recuerda que esa persona es peligro y se pone en alerta',
+      'Estoy nerviosa por el trabajo'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'El cuerpo lleva la cuenta. Tu sistema nervioso ha asociado a esa persona con amenaza y dolor, activando la respuesta de lucha/huida automáticamente.'
+    explanation: 'El cuerpo no miente. Si reaccionas como si vieras a un león, es porque tu sistema nervioso ha detectado a un depredador, aunque tu mente lo niegue.'
   },
   {
     id: '153',
-    text: '¿Por qué el narcisista te acusa de "vivir en el pasado" cuando sacas a relucir un abuso no resuelto?',
+    text: 'Intentas hablar de algo doloroso que te hizo hace meses. Él te corta: "Otra vez con el pasado. No sabes perdonar, eres rencorosa".',
     options: [
-      'Porque hay que mirar al futuro',
-      'Para evadir responsabilidad y silenciarte (Gaslighting temporal)',
-      'Porque tiene mala memoria',
-      'Para ayudarte a avanzar'
+      'Tiene razón, hay que mirar hacia delante',
+      'Soy una persona muy negativa',
+      'Me está silenciando para no asumir responsabilidad por heridas que nunca sanó',
+      'El pasado pasado está'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Quieren borrar sus crímenes sin pagar la condena. Si te hacen sentir culpable por "recordar", evitan tener que pedir perdón o cambiar.'
+    explanation: 'No es rencor, es memoria. Si la herida sigue abierta es porque nunca hubo reparación ni arrepentimiento real, solo ganas de que te calles.'
   },
   {
     id: '154',
-    text: 'Tu pareja te dice que "todos sus ex estaban locos/as". ¿Qué probabilidad hay de que sea verdad?',
+    text: 'Te dice: "Mi ex estaba obsesionada conmigo, me acosaba". Tiempo después descubres que era él quien no la dejaba en paz.',
     options: [
-      'Alta, atrae a gente loca',
-      'Nula. Es una proyección y una campaña de difamación para ocultar que él/ella era el abusador',
-      'Media, hay mucha gente mal',
-      'Es mala suerte'
+      'Es que hay dos versiones de cada historia',
+      'Se confundió al contarlo',
+      'Estaba proyectando su propia conducta en ella para hacerse la víctima',
+      'Seguro que los dos tenían culpa'
     ],
-    correctAnswer: 1,
-    difficulty: 5,
-    explanation: 'Es el marcador más claro de un narcisista. Si todos los demás son el problema, el único denominador común es él/ella.'
+    correctAnswer: 2,
+    difficulty: 6,
+    explanation: 'La proyección es su mecanismo favorito. Acusan a los demás exactamente de lo que ellos hacen, para confundirte y limpiar su imagen.'
   },
   {
     id: '155',
-    text: '¿Qué es el "Narcisismo Comunal"?',
+    text: 'Es voluntario en ONGs, ayuda a los vecinos y todo el mundo dice "qué suerte tienes". En casa, te trata con desprecio y frialdad.',
     options: [
-      'Vivir en comuna',
-      'Suministro narcisista: generoso en público, cruel en privado',
-      'Compartir cosas',
-      'Ser muy sociable'
+      'Está cansado de ayudar a tanta gente',
+      'Nadie me creerá si cuento cómo es en realidad',
+      'Usa la caridad como fachada para alimentar su ego (Narcisismo Comunal)',
+      'Yo debería ser más agradecida'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Son los "santos" de cara a la galería. Hacen caridad para recibir aplausos, no por bondad. En casa, suelen ser tiranos que exigen adoración.'
+    explanation: 'Son los "ángeles de la calle y demonios de la casa". Buscan el aplauso público, no la bondad real. Tu sufrimiento en privado no les da "likes", así que no les importa.'
   },
   {
     id: '156',
-    text: 'Te sientes incapaz de tomar decisiones sencillas (qué comer, qué ropa ponerte) sin consultarle o pensar en qué diría él/ella. ¿Consecuencia?',
+    text: 'Estás en el súper eligiendo yogures y te paralizas. No sabes cuál coger porque temes que, elijas el que elijas, él te criticará.',
     options: [
-      'Dependencia emocional extrema y anulación del yo',
-      'Es que valoro mucho su opinión',
-      'Indecisión crónica',
-      'Respeto a la pareja'
+      'Soy una persona muy indecisa',
+      'Quiero acertar para que le guste',
+      'El abuso ha anulado mi capacidad de tomar hasta las decisiones más pequeñas',
+      'Mejor le llamo y le pregunto'
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Han criticado tanto tus elecciones pasadas que has dejado de confiar en tu criterio. Tu "brújula interna" ha sido sustituida por su aprobación.'
+    explanation: 'Cuando vives bajo una crítica constante, tu cerebro aprende que "decidir es peligroso". Te paralizas para evitar el castigo.'
   },
   {
     id: '157',
-    text: '¿Qué es el "Síndrome de la Víctima Narcisista" (o Síndrome de Abuso Narcisista)?',
+    text: 'Tienes ansiedad, insomnio, dudas de tu cordura y sientes que no vales nada. Antes de esta relación eras alegre y segura.',
     options: [
-      'Inventarse que eres víctima',
-      'Un conjunto de síntomas (ansiedad, TEPT, baja autoestima, duda) resultantes del abuso psicológico sistemático',
-      'Querer llamar la atención',
-      'Ser muy débil'
+      'La edad me ha cambiado',
+      'He tenido mala suerte en la vida',
+      'Tengo síntomas de estrés postraumático por abuso psicológico',
+      'Estoy deprimida sin razón'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'No es que seas débil, es que has sido sometido/a a una guerra psicológica invisible que deja secuelas reales en tu cerebro y sistema nervioso.'
+    explanation: 'No has "cambiado", te han desgastado. Esos síntomas son las heridas de guerra de una batalla invisible que libras a diario en tu propia casa.'
   },
   {
     id: '158',
-    text: 'Tu pareja te ignora cuando estás enfermo/a o necesitas ayuda, pero exige atención total si le duele una uña. ¿Qué falta aquí?',
+    text: 'Te has roto una pierna. Él te ayuda los dos primeros días (y se lo cuenta a todo el mundo), pero al tercero se enfada porque "le das mucho trabajo".',
     options: [
-      'Medicinas',
-      'Reciprocidad y empatía afectiva',
-      'Tiempo libre',
-      'Paciencia'
+      'Es normal, está cansado',
+      'Al menos me ayudó al principio',
+      'Mi dolor le molesta porque le quita libertad. Su empatía tiene fecha de caducidad muy corta',
+      'Soy una carga'
     ],
-    correctAnswer: 1,
-    difficulty: 6,
-    explanation: 'La relación con un narcisista es unidireccional. Tú eres el cuidador, él/ella es el rey/reina. Tus necesidades son una molestia para su agenda.'
+    correctAnswer: 2,
+    difficulty: 7,
+    explanation: 'Pueden fingir cuidados un rato para quedar bien, pero no soportan la carga real de cuidar a otro porque no obtienen beneficio inmediato.'
   },
   {
     id: '159',
-    text: '¿Qué pasa si le das una "segunda oportunidad" a un narcisista sin que haya hecho terapia real y profunda?',
+    text: 'Vuelves con él porque prometió cambiar. A la semana, te hace lo mismo de siempre, pero con una sonrisa cínica, sabiendo que le has perdonado.',
     options: [
-      'Que todo irá bien',
-      'Que el ciclo de abuso se repetirá, pero más rápido y con más intensidad',
-      'Que cambiará por amor',
-      'Que será diferente esta vez'
+      'Le cuesta cambiar, hay que darle tiempo',
+      'Ha recaído sin querer',
+      'Sabe que mi perdón es un cheque en blanco y me ha perdido el respeto',
+      'Es culpa mía por volver'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'No aprenden de sus errores, aprenden a manipularte mejor. Si vuelves, le confirmas que su abuso no tiene consecuencias reales, y perderán aún más el respeto por ti.'
+    explanation: 'Volver sin cambios reales solo le enseña una cosa: que puede abusar de ti y tú seguirás ahí. El respeto se pierde y el abuso escala.'
   },
   {
     id: '160',
-    text: '¿Qué es la "Triangulación con Dios" o espiritual?',
+    text: 'Usa la religión o la "espiritualidad" para decirte que debes perdonar, aguantar y someterte porque "es tu karma" o "Dios lo quiere así".',
     options: [
-      'Rezar juntos',
-      'Usar la religión o la espiritualidad para justificar el abuso ("Dios quiere que te sometas", "Es tu karma")',
-      'Ir a misa',
-      'Ser muy creyente'
+      'Es una persona muy devota',
+      'Tiene razón, el odio es malo',
+      'Está usando creencias sagradas para manipularme y que acepte el maltrato',
+      'Es mi lección de vida'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es una forma muy dañina de manipulación. Usan dogmas o creencias para que sientas que defenderte es un pecado o una falta espiritual.'
+    explanation: 'El abuso espiritual es devastador. Te hace creer que defenderte es un pecado o un fallo espiritual, dejándote indefensa ante el ataque.'
   },
   {
     id: '161',
-    text: 'Tu pareja te dice "nadie te va a querer con esos problemas mentales" cuando tú lloras por su maltrato. ¿Táctica?',
+    text: 'Estás llorando desesperada. Él te mira con cara de asco y dice: "Mírate, estás loca, das pena. Nadie te va a querer así".',
     options: [
-      'Diagnóstico médico',
-      'Estigmatización y amenaza de abandono para generar terror',
-      'Consejo de amigo',
-      'Verdad dolorosa'
+      'Es verdad, estoy hecha un desastre',
+      'Quiere ayudarme a que me calme',
+      'Disfruta viéndome rota y usa mi dolor para humillarme más',
+      'Se asusta al verme llorar'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Te rompen las piernas y luego se burlan de que no puedes caminar. Provocan tu inestabilidad y luego la usan para invalidarte y aislarte.'
+    explanation: 'La falta de empatía es total. En lugar de consuelo, recibes desprecio. Tu dolor no le conmueve, le reafirma en su superioridad ("yo estoy bien, ella está loca").'
   },
   {
     id: '162',
-    text: '¿Por qué el narcisista te hace esperar siempre (llegando tarde, tardando en contestar)?',
+    text: 'Siempre llega tarde, te hace esperar horas para responder, o cambia planes en el último minuto sin disculparse.',
     options: [
-      'Es muy ocupado',
-      'Juego de poder: tu tiempo vale menos que el suyo y él/ella controla el ritmo',
-      'Es despistado',
-      'Mala gestión del tiempo'
+      'Es muy despistado y bohemio',
+      'Tiene una agenda muy complicada',
+      'Mi tiempo no vale nada para él. Hacerme esperar es una forma de demostrar poder',
+      'Debería ser más flexible'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Hacerte esperar es una forma de dominación sutil. Te mantiene en "pausa", pendiente de él/ella, reafirmando que él/ella es quien tiene el control de la interacción.'
+    explanation: 'El mensaje es: "Yo soy importante, tú eres un accesorio que espera en la estantería hasta que yo decida usarte".'
   },
   {
     id: '163',
-    text: '¿Qué es el "Love Bombing" corporativo o laboral?',
+    text: 'En el trabajo, tu jefe te alaba en público ("eres mi estrella"), pero luego te carga de trabajo imposible y te amenaza sutilmente si te quejas.',
     options: [
-      'Regalos de empresa',
-      'Promesas de ascensos rápidos, halagos excesivos al entrar ("eres el mejor fichaje") para luego explotarte sin piedad',
-      'Buen ambiente laboral',
-      'Pagar bien'
+      'Es exigente porque confía en mí',
+      'Quiere que crezca profesionalmente',
+      'Me está explotando usando la adulación como cebo',
+      'Es el precio del éxito'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Te seducen con un futuro brillante para que aceptes condiciones abusivas, horas extra no pagadas y responsabilidades que no te tocan.'
+    explanation: 'El ciclo idealización-devaluación también ocurre en el trabajo. Te suben al cielo para que trabajes el triple, y te amenazan con el infierno si pides derechos.'
   },
   {
     id: '164',
-    text: 'Sientes vergüenza de contarle a tus amigos lo que pasa en tu relación porque sabes que volverás con él/ella. ¿Qué indica?',
+    text: 'Mientes a tus amigos diciendo que "todo va bien" porque te da vergüenza admitir que has vuelto con él por quinta vez.',
     options: [
-      'Que soy reservado/a',
-      'El aislamiento autoimpuesto por la disonancia cognitiva y el ciclo de abuso',
-      'Que mis amigos son cotillas',
-      'Que es una relación privada'
+      'Es mi vida privada',
+      'No quiero que le juzguen mal',
+      'El aislamiento es total: ya no puedo ser sincera ni con mi gente',
+      'Ellos no lo entenderían'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Te aíslas para evitar el juicio de los demás y la vergüenza de tu propia incoherencia (saber que está mal pero no poder dejarlo). El narcisista gana.'
+    explanation: 'La vergüenza es el aliado del abusador. Al ocultar la realidad, te quedas sola con el problema, que es justo lo que él quiere.'
   },
   {
     id: '165',
-    text: '¿Qué es la "Ley del Hielo" (Silent Treatment) prolongada?',
+    text: 'Le preguntas algo simple y él finge que no te oye. Le insistes y sigue mirando el móvil como si fueras invisible. Llevas así tres días.',
     options: [
-      'Tener frío',
-      'Violencia psicológica: ignorar la existencia del otro para anularlo como persona',
-      'Estar callado',
-      'Jugar al silencio'
+      'Estará muy concentrado',
+      'He hecho algo que le molestó',
+      'Me está castigando negándome la existencia (Tratamiento de Silencio)',
+      'Es mejor no molestarle'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'No es "necesitar espacio". Es castigar tu existencia. Te vuelves invisible para la persona que amas, lo que provoca un dolor cerebral similar al dolor físico.'
+    explanation: 'Ser ignorado duele en la misma zona del cerebro que un golpe físico. Es una forma cruel de decirte: "No existes para mí hasta que yo lo diga".'
   },
   {
     id: '166',
-    text: 'Tu pareja te acusa de ser "egoísta" cada vez que haces algo por ti mismo/a (ir al gimnasio, ver a un amigo). ¿Por qué?',
+    text: 'Te vas un fin de semana con amigas. Él te bombardea a mensajes, se "pone enfermo" o te acusa de abandonarle para que no disfrutes.',
     options: [
-      'Porque le abandono',
-      'Porque cualquier energía que no gastes en él/ella es "energía robada" según su visión',
-      'Porque soy egoísta',
-      'Porque me quiere en casa'
+      'Me echa mucho de menos',
+      'Tiene mala suerte con la salud',
+      'No soporta que yo sea feliz lejos de su control. Es un boicot',
+      'Debería haberme quedado'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'El narcisista cree tener derecho exclusivo sobre tu tiempo y energía. Tu autocuidado es visto como una traición a tu deber de servirle.'
+    explanation: 'Tu felicidad autónoma es una ofensa. Si te lo pasas bien sin él, significa que no le necesitas, y eso le aterra y enfurece.'
   },
   {
     id: '167',
-    text: '¿Qué es el "Reflejo Negativo"?',
+    text: 'Te acusa constantemente de ser infiel, de mentir o de ser egoísta. Tú sabes que eres fiel, honesta y generosa.',
     options: [
-      'Verse mal en el espejo',
-      'El narcisista proyecta en ti todas sus cualidades negativas y te convence de que son tuyas',
-      'Tener mala suerte',
-      'Ser pesimista'
+      'Quizá doy motivos sin querer',
+      'Es muy celoso porque me quiere',
+      'Se está describiendo a sí mismo y proyectándolo en mí',
+      'Tengo que demostrarle más mi amor'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Acabas cargando con SU "basura" psicológica. Tú te sientes el monstruo, el egoísta, el infiel, mientras él/ella se queda limpio de culpa.'
+    explanation: 'La confesión de un narcisista es su acusación. Si te acusa de algo loco sin pruebas, investiga, porque probablemente es lo que él está haciendo.'
   },
   {
     id: '168',
-    text: '¿Por qué te sientes "aburrido/a" con personas sanas y estables después de una relación narcisista?',
+    text: 'Sales con un chico majo, tranquilo y respetuoso... y te aburres. Sientes que "falta chispa" y echas de menos la intensidad de tu ex tóxico.',
     options: [
-      'Porque son aburridas de verdad',
-      'Porque tu cerebro está adicto a la adrenalina y el drama (adicción al caos)',
-      'Porque no hay química',
-      'Porque me gusta el riesgo'
+      'No es el hombre de mi vida',
+      'Me gustan los malotes',
+      'Soy adicta al cortisol y la adrenalina. La paz me parece aburrida, pero es lo que necesito',
+      'El amor tiene que doler un poco'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'La paz te parece "aburrimiento" porque tu sistema nervioso está desregulado. Necesitas tiempo para "desintoxicarte" y aprender a valorar la calma como amor, no como falta de interés.'
+    explanation: 'Tu cerebro está descalibrado. Has confundido ansiedad con mariposas. Sanar implica aprender a disfrutar de la calma sin sentir que "falta algo".'
   },
   {
     id: '169',
-    text: 'Tu pareja te dice "después de todo lo que he hecho por ti..." para que no le dejes. ¿Qué es?',
+    text: 'Te dice: "Yo te pagué la carrera", "Yo te saqué de tu casa". Usa favores del pasado para exigirte obediencia en el presente.',
     options: [
-      'Amor incondicional',
-      'Manipulación por deuda y culpa',
-      'Recordatorio amable',
-      'Verdad'
+      'Es verdad, le debo mucho',
+      'Tengo que ser agradecida',
+      'La ayuda no era un regalo, era una compra. Me está cobrando el alquiler de mi vida',
+      'Es justo que me lo recuerde'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Convierte la relación en una transacción. Los "favores" que hizo no eran regalos, eran préstamos con intereses impagables de lealtad eterna.'
+    explanation: 'El amor no lleva contabilidad. Si te echan en cara lo que hicieron por ti para que te calles, no fue amor, fue una inversión para comprarte.'
   },
   {
     id: '170',
-    text: '¿Qué es la "Falsa Vulnerabilidad"?',
+    text: 'Nunca llora ni se emociona, pero el día que le dices "me voy", se le llenan los ojos de lágrimas y te cuenta un trauma terrible.',
     options: [
-      'Ser débil de mentira',
-      'Fingir tristeza o problemas para manipularte y que bajes tus defensas o le perdones',
-      'Llorar de verdad',
-      'Ser muy sensible'
+      'Por fin ha roto su coraza',
+      'Me da pena dejarle ahora',
+      'Sabe qué botón apretar para activarme la pena y que me quede',
+      'Necesita mi ayuda'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Saben que la vulnerabilidad activa tu instinto de protección. Llorarán sin lágrimas o se inventarán traumas si ven que estás a punto de irte.'
+    explanation: 'Es manipulación táctica. Si su dolor solo aparece cuando va a perderte, no es dolor, es estrategia de retención.'
   },
   {
     id: '171',
-    text: '¿Qué es el "Suministro Secundario"?',
+    text: 'Cuando tú no puedes inflarle el ego (estás enferma, ocupada o triste), busca inmediatamente atención en otra persona (madre, amiga, ex).',
     options: [
-      'Tener un amante',
-      'Otras fuentes de atención (amantes, hijos, trabajo, fans) que mantienen su ego cuando tú fallas',
-      'Comer de más',
-      'Tener un hobby'
+      'Es muy sociable',
+      'Busca apoyo en otros',
+      'Necesita suministro constante. Si una fuente se seca, va a la siguiente sin miramientos',
+      'Hace bien en no depender solo de mí'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Nunca ponen todos los huevos en la misma cesta. Siempre tienen un "plan B" o una red de admiradores para no quedarse nunca sin su "combustible".'
+    explanation: 'Para el narcisista, las personas son intercambiables. Solo le importa quién le da su dosis de admiración en ese momento.'
   },
   {
     id: '172',
-    text: 'Sientes que tienes que grabar las conversaciones para demostrarte a ti mismo/a que no estás loco/a. ¿Qué indica?',
+    text: 'Has empezado a grabar las discusiones con el móvil a escondidas porque luego él niega haberte insultado y tú ya no te fías de tu memoria.',
     options: [
-      'Que soy paranoico/a',
-      'Que el Gaslighting es tan severo que desconfías de tu propia memoria y cordura',
-      'Que quiero ser espía',
-      'Que tengo mala memoria'
+      'Me estoy volviendo una espía paranoica',
+      'Es para mejorar mi comunicación',
+      'Es la única forma de validar mi realidad ante tanto Gaslighting',
+      'Estoy traicionando su confianza'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es una medida de supervivencia extrema. Cuando tu realidad es negada sistemáticamente, necesitas pruebas externas para anclarte a la verdad.'
+    explanation: 'Cuando llegas al punto de necesitar pruebas forenses para saber si estás loca o no, la relación ya te ha roto. Es un síntoma de defensa extrema.'
   },
   {
     id: '173',
-    text: 'Tu pareja te dice que "tienes suerte de que no te pegue" o rompe cosas cerca de ti. ¿Qué es?',
+    text: 'En una discusión, le pega un puñetazo a la pared, a dos centímetros de tu cara. Luego dice: "Menos mal que me controlo, porque me pones..."',
     options: [
-      'Control de la ira',
-      'Violencia física intimidatoria y amenaza velada',
-      'Es muy pasional',
-      'Se le resbalan las cosas'
+      'Tiene mucho temperamento',
+      'Se ha desahogado con la pared',
+      'Es violencia física. Me está enseñando lo que podría hacerme a mí para que tenga miedo',
+      'Es mi culpa por provocarle'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'La violencia contra objetos es violencia contra ti. Es una demostración de fuerza: "mira lo que puedo hacer, la próxima podrías ser tú".'
+    explanation: 'Golpear objetos cerca de ti es violencia. Es una amenaza directa: "Soy peligroso y la próxima vez no fallaré". Huye.'
   },
   {
     id: '174',
-    text: '¿Qué es la "Triangulación Perversa"?',
+    text: 'Consigue que tus propios padres o hijos se pongan de su lado, diciéndoles mentiras sobre ti. Te sientes sola en tu propia familia.',
     options: [
-      'Un triángulo amoroso',
-      'Aliarse con tus propios hijos o familiares en tu contra para dejarte solo/a y sin apoyo',
-      'Geometría difícil',
-      'Hacer tríos'
+      'Soy la oveja negra',
+      'Quizá ellos ven algo que yo no veo',
+      'Me ha triangulado con mi red de apoyo para dejarme indefensa',
+      'Tengo que esforzarme para que me quieran'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 10,
-    explanation: 'Es devastador. Convierte tu refugio (familia/hijos) en territorio enemigo. Busca aislarte totalmente dentro de tu propio hogar.'
+    explanation: 'Es una de las maniobras más crueles. Robarte tu refugio y poner a tu gente en tu contra te deja sin suelo bajo los pies.'
   },
   {
     id: '175',
-    text: '¿Por qué el narcisista te acusa de ser "tú el narcisista" cuando empiezas a poner límites?',
+    text: 'Le dices: "Deja de gritarme". Él responde: "¡Eres una controladora! ¡Siempre me dices qué hacer! ¡La narcisista eres tú!"',
     options: [
-      'Porque tiene razón',
-      'Proyección DARVO (Deny, Attack, Reverse Victim and Offender)',
-      'Porque he aprendido de él',
-      'Porque somos iguales'
+      'Quizá soy muy mandona',
+      'Igual sí soy narcisista',
+      'Me ataca por poner un límite y me acusa de lo que él es para confundirme',
+      'Debería pedirlo por favor'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Al poner límites, le quitas el control. Su reacción es acusarte de ser "egoísta" o "abusador" para que te sientas culpable y retires el límite.'
+    explanation: 'Poner límites no es controlar, es protegerse. Pero el narcisista te venderá tu autoprotección como una agresión hacia él.'
   },
   {
     id: '176',
-    text: '¿Qué es el "Aspiradora" (Hoovering) navideño?',
+    text: 'Te manda un mensaje en Navidad: "Te echo de menos, estos días son duros sin ti". Llevaba 6 meses ignorándote.',
     options: [
-      'Limpiar en Navidad',
-      'Aprovechar la nostalgia de las fiestas para contactarte y arruinar tu progreso',
-      'Regalar una aspiradora',
-      'Cenar juntos'
+      'El espíritu navideño le ha ablandado',
+      'Todavía me quiere',
+      'Sabe que estoy sensible por las fechas y aprovecha para tantear si sigo disponible',
+      'Debería felicitarle yo también'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Saben que en Navidad estás más vulnerable y sentimental. Un simple "Feliz Navidad" es un anzuelo para ver si picas y vuelves a abrir la puerta.'
+    explanation: 'Es "Hoovering de calendario". Usan fechas emocionales para colarse de nuevo en tu vida con el mínimo esfuerzo.'
   },
   {
     id: '177',
-    text: '¿Qué es la "Indiferencia Benigna"?',
+    text: 'Ya no le odias. Cuando te acuerdas de él, sientes una mezcla de pena lejana y pereza. Ya no te duele el estómago.',
     options: [
-      'No saludar',
-      'El estado de recuperación donde el narcisista ya no te genera ni odio ni amor, solo indiferencia',
-      'Ser maleducado',
-      'Ignorar a la gente'
+      'He perdido la capacidad de amar',
+      'Estoy en negación',
+      'Es la indiferencia benigna. Por fin soy libre',
+      'Debería sentir algo más fuerte'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Es la meta. El odio sigue siendo un vínculo. La indiferencia es la verdadera libertad: él/ella ya no tiene ningún peso emocional en tu vida.'
+    explanation: 'Felicidades. Has cruzado el desierto. Cuando alguien te es indiferente, ha perdido todo su poder sobre ti.'
   },
   {
     id: '178',
-    text: 'Tu pareja te dice que "eres frígida/o" o te compara sexualmente con otros para presionarte. ¿Qué es?',
+    text: 'No quieres tener sexo hoy. Él se enfada, te deja de hablar o te dice: "Pues buscaré fuera lo que no me das en casa". Cedes por miedo.',
     options: [
-      'Coerción sexual y abuso emocional',
-      'Quiere mejorar nuestra vida sexual',
-      'Es sincero',
-      'Tiene necesidades'
+      'Es mi deber de pareja',
+      'Los hombres tienen necesidades',
+      'Es coacción sexual. Tener sexo para evitar un castigo no es consentimiento, es sometimiento',
+      'Mejor hacerlo rápido y ya está'
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Usar la culpa, la comparación o el insulto para obtener sexo es abuso sexual. Tu cuerpo y tu deseo no deben ser moneda de cambio ni campo de batalla.'
+    explanation: 'El sexo bajo amenaza (de abandono, de enfado, de cuernos) es una forma de violencia. Tu cuerpo es tuyo, no un servicio que debes prestar para que no se enfade.'
   },
   {
     id: '179',
-    text: '¿Qué es el "Síndrome del Impostor" en la víctima?',
+    text: 'La gente te dice que eres inteligente y valiosa, pero tú sientes que eres un fraude y que si te conocieran de verdad verían lo "mala" que eres.',
     options: [
-      'Creer que eres un espía',
-      'Sentir que engañas a los demás cuando te dicen que eres buena persona, porque el narcisista te ha convencido de que eres "mala"',
-      'No saber trabajar',
-      'Mentir sobre tu nombre'
+      'Tengo baja autoestima de siempre',
+      'Soy muy humilde',
+      'He interiorizado la voz crítica de mi maltratador. Me veo como él me veía',
+      'Es verdad, engaño a todos'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'El narcisista ha reescrito tu autoimagen. Te ves a través de sus ojos distorsionados, sintiéndote un fraude aunque seas una persona maravillosa.'
+    explanation: 'Has tragado su veneno. Su opinión sobre ti ha suplantado a la tuya propia. Recuperarte es volver a verte con tus propios ojos.'
   },
   {
     id: '180',
-    text: '¿Qué es la "Validación Externa" para una víctima en recuperación?',
+    text: 'Te compras un vestido y te ves guapa. Inmediatamente piensas: "¿Qué pensará él?". No sabes si te gusta hasta que imaginas su reacción.',
     options: [
-      'Likes en Instagram',
-      'Aprender a validarse a sí misma sin necesitar la aprobación del narcisista ni de nadie más',
-      'Que te digan guapa',
-      'Ganar premios'
+      'Estoy muy enamorada',
+      'Valoro su gusto estético',
+      'Sigo buscando su validación externa porque no sé validarme a mí misma',
+      'Es para estar guapa para él'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'La recuperación pasa por reconstruir tu propio criterio. Que tú sepas que eres valiosa/o es suficiente, sin depender de que otro te lo confirme.'
+    explanation: 'Romper el espejo del narcisista cuesta. Aprender a decir "me gusto yo" sin necesitar su "like" mental es un paso gigante.'
   },
   {
     id: '181',
-    text: '¿Por qué no sirve de nada "desenmascarar" al narcisista públicamente?',
+    text: 'Quieres gritarle al mundo quién es él realmente, publicar las pruebas, desenmascararle en Facebook.',
     options: [
-      'Porque nadie te creerá',
-      'Porque se alimentan del conflicto y se harán las víctimas perfectas, dejándote a ti como el/la "loco/a"',
-      'Porque es ilegal',
-      'Porque no importa'
+      'Es justicia, debo hacerlo',
+      'Así avisaré a otras víctimas',
+      'Es una trampa. Se hará la víctima y yo pareceré la loca obsesionada. Mejor me centro en mi paz',
+      'Se lo merece'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Juegan en su terreno. Son expertos manipuladores de la imagen pública. Tu mejor venganza es ser feliz lejos de ellos, no ganarles una batalla pública.'
+    explanation: 'La venganza te mantiene atada a él. Además, ellos juegan sucio mejor que tú. La mejor venganza es que te vea feliz y que a ti te de igual.'
   },
   {
     id: '182',
-    text: '¿Qué es el "Contacto Cero Mental"?',
+    text: 'Le has bloqueado en WhatsApp, pero entras 20 veces al día a ver si ha cambiado la foto o si está en línea desde otro perfil.',
     options: [
-      'No pensar',
-      'Dejar de rumiar, espiar redes y hablar de él/ella',
-      'Meditar',
-      'Borrar su número'
+      'Es curiosidad inofensiva',
+      'Necesito saber que está bien',
+      'Estoy rompiendo el Contacto Cero mental. Sigo enganchada a su vida en lugar de vivir la mía',
+      'Es para estar prevenida'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Bloquearle en el móvil es el primer paso. Sacarle de tu cabeza es el verdadero trabajo. Mientras siga ocupando tus pensamientos, sigue teniendo poder.'
+    explanation: 'El contacto cero no es solo físico, es mental. Espiarle es hacerte daño a ti misma con un cuchillo digital. Suelta el cuchillo.'
   },
   {
     id: '183',
-    text: '¿Qué es la "Resonancia Límbica"?',
+    text: 'Al principio sentías que le conocías de toda la vida, que erais almas gemelas. Ahora te das cuenta de que no sabes quién es en realidad.',
     options: [
-      'Un tipo de música',
-      'Sintonía emocional profunda (ellos la fingen sin empatía real)',
-      'Tener buen oído',
-      'Vibrar alto'
+      'La gente cambia',
+      'Nos hemos distanciado',
+      'Me enamoré de un espejo. Reflejaba lo que yo quería ver, pero detrás no había nadie',
+      'El amor se acaba'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Por eso la conexión se sentía tan "mágica" al principio pero tan vacía después. Era un espejo, no una resonancia de alma a alma.'
+    explanation: 'Es duro aceptarlo: te enamoraste de una ilusión a medida. La persona que creías amar era un personaje interpretado para conquistarte.'
   },
   {
     id: '184',
-    text: '¿Qué es el "Descarte Diferido"?',
+    text: 'No te deja, pero te hace la vida imposible. Te trata con indiferencia y asco hasta que tú, desesperada, rompes con él.',
     options: [
-      'Tirar la basura tarde',
-      'Cuando el narcisista no te deja, pero hace tu vida miserable para que tú le dejes a él/ella y así poder hacerse la víctima',
-      'Dejarlo para mañana',
-      'Una ruptura lenta'
+      'Fui yo quien tomó la decisión',
+      'Ya no nos entendíamos',
+      'Me empujó a dejarle para no ser "el malo" que abandona. Es un descarte encubierto',
+      'Es lo mejor para los dos'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Es cobardía y estrategia. Si tú le dejas, él/ella puede decirle al mundo: "Mira cómo me abandonó después de todo lo que la amé".'
+    explanation: 'Es cobardía pura. Te torturan hasta que te vas, para luego poder decir a todos: "Ella me dejó, pobre de mí".'
   },
   {
     id: '185',
-    text: '¿Qué es la "Amnesia Perversa"?',
+    text: 'Le recuerdas algo cruel que te dijo ayer. Te mira a los ojos y dice muy serio: "Yo nunca dije eso, te lo estás inventando".',
     options: [
-      'Olvidar las llaves',
-      'Fingir no recordar abusos o promesas',
-      'Alzheimer',
-      'Tener mala memoria'
+      'Quizá lo soñé',
+      'Tengo muy mala memoria',
+      'Me está haciendo Luz de Gas (Gaslighting) descaradamente para que dude de mi realidad',
+      'Fue un malentendido'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'No es olvido, es negación estratégica. Si no lo "recuerda", no tiene que responsabilizarse de ello.'
+    explanation: 'Negar la realidad evidente es una forma de volverte loca. Si no confías en tu percepción, dependes totalmente de la suya.'
   },
   {
     id: '186',
-    text: '¿Por qué sientes que "te has vuelto loca/o" discutiendo con él/ella?',
+    text: 'Discutes con él y acabas gritando, llorando y diciendo cosas que no sientes. Te sientes irreconocible, tú no eres así.',
     options: [
-      'Porque grito mucho',
-      'Porque usan argumentos circulares, negación y proyección hasta que tu cerebro colapsa por agotamiento',
-      'Porque no tengo razón',
-      'Porque soy irracional'
+      'He sacado mi verdadero yo malvado',
+      'Soy una histérica',
+      'Me ha llevado a un nivel de estrés tan alto que mi cerebro ha colapsado. Es supervivencia, no maldad',
+      'Necesito medicación'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'No buscan resolver el conflicto, buscan ganarlo agotándote. Te llevan al límite para que explotes y luego acusarte de tu reacción.'
+    explanation: 'Te han arrastrado al barro y ahora te culpan por estar manchada. Esa "locura" temporal es tu psique intentando defenderse de un ataque constante.'
   },
   {
     id: '187',
-    text: '¿Qué es el "Narcisismo Maligno"?',
+    text: 'Hay veces que le ves sonreír sutilmente cuando estás llorando o pasándolo mal. Una microexpresión de placer.',
     options: [
-      'Un cáncer',
-      'Una mezcla de narcisismo, psicopatía, sadismo y paranoia. Disfrutan causando dolor',
-      'Ser muy malo',
-      'Tener mal carácter'
+      'Son imaginaciones mías',
+      'Es una sonrisa nerviosa',
+      'Disfruta de mi dolor (sadismo narcisista). Se siente poderoso al ver cuánto me afecta',
+      'Intenta animarme'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 10,
-    explanation: 'Es el perfil más peligroso. No solo carecen de empatía, sino que obtienen placer activo del sufrimiento ajeno. Huye sin mirar atrás.'
+    explanation: 'Es el rasgo más oscuro. Tu sufrimiento es su combustible. Ver que tiene el poder de destruirte le hace sentirse un dios.'
   },
   {
     id: '188',
-    text: '¿Qué es la "Cosificación"?',
+    text: 'Sientes que para él eres como una tostadora: útil mientras funcionas. Si te estropeas (enfermas, te quejas), te quiere tirar a la basura.',
     options: [
-      'Coser ropa',
-      'Tratar a las personas como objetos útiles o desechables, sin tener en cuenta sus sentimientos',
-      'Comprar cosas',
-      'Ser materialista'
+      'Es muy pragmático',
+      'No le gustan los problemas',
+      'Me ha cosificado. No soy una persona para él, soy un objeto con una función',
+      'Tengo que ser más útil'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Para ellos eres una tostadora. Mientras funciones (des suministro), te cuidan. Si te rompes o quieres derechos, te tiran.'
+    explanation: 'La deshumanización es clave. No se puede amar a una tostadora, solo se la usa. Y cuando no tuesta, se cambia por otra nueva.'
   },
   {
     id: '189',
-    text: '¿Qué es el "Refuerzo Intermitente"?',
+    text: 'Sabes que te hace daño, pero no puedes dejarle. Es como si fueras adicta a él, necesitas su aprobación como si fuera droga.',
     options: [
-      'Dar premios a veces',
-      'La técnica de manipulación más potente: dar "migajas" de amor de forma impredecible para mantener la adicción',
-      'Hacer obras',
-      'Ser inconstante'
+      'Es amor verdadero, del que duele',
+      'Soy masoquista',
+      'Es una adicción bioquímica provocada por el refuerzo intermitente. Mi cerebro está enganchado',
+      'No tengo fuerza de voluntad'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es lo que usan en las máquinas tragaperras. Como no sabes cuándo vendrá el premio (el momento dulce), te quedas enganchada/o tirando de la palanca eternamente.'
+    explanation: 'No es amor, es química. El ciclo de estrés-alivio genera un vínculo traumático (Trauma Bond) más difícil de romper que la heroína.'
   },
   {
     id: '190',
-    text: '¿Qué es la "Herida de Abandono" en la víctima?',
+    text: 'Al principio te dijo: "Yo nunca te abandonaré como hizo tu padre". Ahora amenaza con irse cada vez que discutís.',
     options: [
-      'Un corte en la piel',
-      'El trauma infantil que el narcisista detecta y explota para crear dependencia ("Yo nunca te dejaré")',
-      'Miedo a estar solo',
-      'Ser huérfano'
+      'Se le escapa por enfado',
+      'Ya no me quiere igual',
+      'Usó mi trauma de abandono para engancharme y ahora lo usa para torturarme',
+      'Tengo que portarme bien para que no se vaya'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Los narcisistas son depredadores emocionales. Huelen tus miedos y se presentan como la "cura" perfecta, para luego usar ese miedo contra ti.'
+    explanation: 'Recopilan información sobre tus miedos no para cuidarte, sino para tener munición. Saben exactamente dónde disparar para matarte de miedo.'
   },
   {
     id: '191',
-    text: '¿Qué es el "Self-Gaslighting"?',
+    text: 'Él no está en casa, pero se te cae un vaso y te rompes a llorar pensando en lo torpe que eres y la bronca que te mereces.',
     options: [
-      'Mentirse a uno mismo',
-      'Cuando la víctima empieza a dudar de su propia realidad y a justificar al abusador sin que él esté presente',
-      'Tener poca luz',
-      'Ser humilde'
+      'Soy muy torpe de verdad',
+      'Echo de menos su disciplina',
+      'Me hago Gaslighting a mí misma. Su voz crítica ya vive en mi cabeza sin que él esté',
+      'Tengo que tener más cuidado'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es el triunfo final del abusador. Ya no necesita estar ahí para manipularte; ha instalado su software en tu mente y tú haces el trabajo sucio por él.'
+    explanation: 'El abuso ha sido internalizado. Te has convertido en tu propio carcelero. El primer paso para sanar es echar a ese crítico interno.'
   },
   {
     id: '192',
-    text: '¿Qué es la "Triangulación Inversa"?',
+    text: 'Te dice: "Mi amiga Marta nunca se pone celosa por estas cosas, es súper relajada". Te sientes una loca controladora.',
     options: [
-      'Geometría avanzada',
-      'Hacerte sentir que TÚ eres la loca celosa comparada con sus amigas "normales" y "relajadas"',
-      'Tener tres novios',
-      'Ser poliamoroso'
+      'Debería ser más como Marta',
+      'Tengo que trabajar mis celos',
+      'Me está comparando (Triangulación) para que me sienta insegura y compita por su aprobación',
+      'Marta es mejor que yo'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 7,
-    explanation: 'Busca invalidar tu intuición. Sus "amigas" probablemente no saben nada, pero él las usa como estándar para hacerte sentir inadecuada.'
+    explanation: 'Marta es un fantasma. La usa como estándar inalcanzable para que sientas que nunca eres suficiente y te esfuerces más.'
   },
   {
     id: '193',
-    text: '¿Qué es el "Bombardeo de Amor" (Love Bombing) post-ruptura?',
+    text: 'Le dejaste. Aparece en tu puerta con mariachis, llorando, prometiendo boda e hijos. Todo lo que siempre quisiste, de golpe.',
     options: [
-      'Regalar flores',
-      'Intentar reconquistarte con una intensidad desmedida justo cuando empiezas a alejarte',
-      'Pedir perdón',
-      'Ser romántico'
+      'Se ha dado cuenta de que soy la mujer de su vida',
+      'El amor ha triunfado',
+      'Es Love Bombing desesperado para recuperarte. Si vuelves, el abuso volverá peor en dos semanas',
+      'Me lo merezco'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Es pánico a perder el control, no amor. En cuanto vuelvas a estar segura bajo su dominio, el "amor" desaparecerá y volverá el desprecio.'
+    explanation: 'Cuando pierden el control, tiran la casa por la ventana. No es amor, es pánico a perder su propiedad. Es un espejismo temporal.'
   },
   {
     id: '194',
-    text: '¿Qué es la "Empatía Cognitiva"?',
+    text: 'Sabe exactamente qué decir para hacerte sentir especial, y exactamente qué decir para destruirte. Tiene un radar para tus emociones.',
     options: [
-      'Ser listo',
-      'Saber intelectualmente qué siente el otro para poder manipularlo, pero sin sentirlo emocionalmente',
-      'Leer la mente',
-      'Ser psicólogo'
+      'Es muy empático',
+      'Me conoce mejor que nadie',
+      'Tiene empatía cognitiva (fría): te lee para manipularte, no para conectar contigo',
+      'Es mi alma gemela'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es su herramienta principal. Saben qué decir para que te sientas comprendida/o, pero es solo un guion aprendido, no una conexión real.'
+    explanation: 'Es como un hacker que conoce tus contraseñas. Usa esa información para robarte, no para protegerte.'
   },
   {
     id: '195',
-    text: '¿Qué es el "Vampirismo Energético"?',
+    text: 'Después de estar con él, sientes que te han "chupado el alma". Él, en cambio, se va silbando y lleno de energía.',
     options: [
-      'Beber sangre',
-      'Absorber la vitalidad de la víctima mediante el drama, la exigencia constante y el caos',
-      'Tener sueño',
-      'Ser aburrido'
+      'Yo soy aburrida y él vital',
+      'Me canso fácil',
+      'Me ha vampirizado. Se ha alimentado de mi reacción emocional y me ha dejado seca',
+      'Es que tiene mucha personalidad'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 6,
-    explanation: 'Salen de las interacciones recargados y felices, mientras tú te quedas agotada, confundida y vacía. Se han "alimentado" de tu reacción.'
+    explanation: 'Es una transferencia de energía. Él te provoca, tú explotas (le das energía), y él se siente poderoso mientras tú te quedas vacía.'
   },
   {
     id: '196',
-    text: '¿Qué es la "Disociación" durante el abuso?',
+    text: 'Cuando te grita, a veces sientes que "flotas" fuera de tu cuerpo o que lo ves todo como una película, sin sentir nada.',
     options: [
-      'Separarse',
-      'Desconectar de la realidad o del cuerpo para no sentir el dolor del momento (estar en "piloto automático")',
-      'Divorciarse',
-      'Dormirse'
+      'Me estoy volviendo loca',
+      'Tengo superpoderes',
+      'Me estoy disociando. Mi cerebro desconecta para no sentir un dolor insoportable',
+      'Me da igual lo que diga'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 9,
-    explanation: 'Es un mecanismo de defensa del cerebro ante un trauma insoportable. Te "vas" mentalmente porque estar "aquí" duele demasiado.'
+    explanation: 'Es la señal de alarma definitiva. Tu mente huye porque la realidad es demasiado agresiva para soportarla. Necesitas salir de ahí ya.'
   },
   {
     id: '197',
-    text: '¿Qué es la "Inversión de la Realidad"?',
+    text: 'Él te controla el móvil, pero te acusa a ti de controladora si le preguntas dónde estaba.',
     options: [
-      'Verlo todo al revés',
-      'Acusar a la víctima de hacer lo que el abusador hace (ej. "Tú me controlas" cuando él es el controlador)',
-      'Ser zurdo',
-      'Tener dislexia'
+      'Tengo que respetar su privacidad',
+      'Es que yo soy muy pesada',
+      'Me acusa de lo que él hace (Inversión) para que yo esté a la defensiva y no mire lo suyo',
+      'Los dos somos celosos'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 8,
-    explanation: 'Crea un mundo espejo donde arriba es abajo. Te pasas la vida defendiéndote de acusaciones falsas en lugar de señalar sus abusos reales.'
+    explanation: 'Acusa al espejo de tener manchas. Mientras tú te defiendes de ser "controladora", él sigue controlándote sin que te fijes.'
   },
   {
     id: '198',
-    text: '¿Qué es el "Ciclo de Abuso Narcisista"?',
+    text: 'La relación siempre sigue el mismo orden: Luna de miel -> Tensión -> Explosión/Abuso -> Luna de miel... Y cada vez va más rápido.',
     options: [
-      'Idealización -> Devaluación -> Descarte -> Hoovering',
-      'Conocerse -> Enamorarse -> Casarse',
-      'Pelear -> Arreglarse',
-      'Ser amigos -> Ser novios'
+      'Es nuestra rutina pasional',
+      'Todas las parejas discuten',
+      'Es el Ciclo del Abuso. Nunca cambiará, solo se hará más corto y violento',
+      'Mejorará con el tiempo'
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     difficulty: 10,
-    explanation: 'Es un patrón predecible y repetitivo. Entender que es un ciclo (y no incidentes aislados) es clave para poder romperlo y salir.'
+    explanation: 'No es una mala racha, es un círculo vicioso. La "luna de miel" no es el estado real de la relación, es solo el cebo para que no escapes.'
   },
   {
     id: '199',
-    text: '¿Qué es la "Libertad Post-Narcisista"?',
+    text: 'Un día te das cuenta de que no le necesitas. Que estás mejor sola que mal acompañada. Que eres capaz de ser feliz sin él.',
     options: [
-      'Estar soltero',
-      'Recuperar tu identidad, tu paz, tu criterio y tu alegría de vivir, sabiendo que sobreviviste y eres más fuerte',
-      'Salir de fiesta',
-      'Vivir solo'
+      'Soy una egoísta',
+      'Le he olvidado muy rápido',
+      'He recuperado mi poder. Soy libre',
+      'Me engaño a mí misma'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 10,
-    explanation: 'Es el renacimiento. Eres tú, pero versión 2.0: más sabia, con límites de acero y una capacidad de amarte a ti misma que nadie podrá romper jamás.'
+    explanation: 'Ese momento de lucidez vale oro. Agárrate a él. Tu vida te estaba esperando al otro lado del miedo.'
   },
   {
     id: '200',
-    text: 'Has llegado al final. ¿Cuál es la lección más importante?',
+    text: 'Has terminado este test. Si muchas respuestas te han dolido o te han hecho llorar, ¿qué significa?',
     options: [
-      'Que el amor duele',
-      'Que el amor NO duele. El amor es paz, respeto y seguridad. Si duele, no es amor, es abuso',
-      'Que hay que aguantar',
-      'Que todos son iguales'
+      'Que soy muy sensible',
+      'Que tengo mala suerte',
+      'Que mi cuerpo y mi alma reconocen la verdad que mi mente negaba. Merezco amor real, no esto',
+      'Que el test es muy duro'
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     difficulty: 1,
-    explanation: 'Grábatelo a fuego. El amor real no te destruye, te construye. Te mereces un amor que se sienta como un hogar, no como un campo de batalla.'
+    explanation: 'Tu dolor es la prueba. No estás loca, estás herida. Y las heridas, con tiempo, distancia y amor propio, se curan. Empieza hoy.'
   },
 ];

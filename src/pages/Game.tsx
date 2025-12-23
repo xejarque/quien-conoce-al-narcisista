@@ -30,15 +30,25 @@ export const Game = () => {
 
   const [showModal, setShowModal] = useState<{ title: string, message: string } | null>(null);
   const navigate = useNavigate();
-  const { playSound, stopSound, isMuted, toggleMute } = useSoundManager();
+  const { playSound, stopSound, isMuted, toggleMute, stopAll } = useSoundManager();
 
   const currentQuestion = questions[currentQuestionIndex];
 
-  // Start suspense music
+  // Manage music states based on game phase
   useEffect(() => {
-    playSound('suspense');
-    return () => stopSound('suspense');
-  }, [playSound, stopSound]);
+    if (isRevealing) {
+      playSound('tension');
+    } else if (isTransitioning) {
+      stopSound('tension');
+    } else if (!isGameOver) {
+      playSound('suspense');
+    }
+  }, [isRevealing, isTransitioning, isGameOver, playSound, stopSound]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => stopAll();
+  }, [stopAll]);
 
   useEffect(() => {
     if (isGameOver) {
