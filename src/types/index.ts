@@ -13,33 +13,32 @@ export interface Player {
   date: string;
 }
 
+export interface WrongAnswer {
+  questionText: string;
+  userAnswer: string;
+  correctAnswer: string;
+  explanation: string;
+}
+
 export interface GameState {
   questions: Question[];
   currentQuestionIndex: number;
+  redFlags: number;
   score: number;
+  totalTimeTaken: number;
   isGameOver: boolean;
   isGameWon: boolean;
   isTransitioning: boolean;
   isRevealing: boolean;
   selectedAnswer: number | null;
+  wrongAnswers: WrongAnswer[];
   lastAnswer?: {
     userAnswer: number;
     correctAnswer: number;
     explanation: string;
     questionText: string;
   };
-  lifelines: {
-    fiftyFifty: boolean;
-    phoneFriend: boolean;
-    audience: boolean;
-  };
   timeLeft: number;
-  hiddenOptions: number[];
-  lifelineResult?: {
-    type: 'phoneFriend' | 'audience';
-    suggestion?: number;
-    votes?: number[];
-  };
 }
 
-export type LifelineType = 'fiftyFifty' | 'phoneFriend' | 'audience';
+// export type LifelineType = 'fiftyFifty' | 'phoneFriend' | 'audience';

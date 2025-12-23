@@ -3,20 +3,30 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from '../hooks/useGame';
 import { Button } from '../components/UI/Button';
 import { motion } from 'framer-motion';
-import { Trophy, Home as HomeIcon, RefreshCw, AlertCircle, Volume2, VolumeX } from 'lucide-react';
+import { Trophy, Home as HomeIcon, RefreshCw, AlertCircle, Volume2, VolumeX, AlertTriangle, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useSoundManager } from '../hooks/useSoundManager';
 
 export const Results = () => {
-  const { score, isGameWon, startGame, currentQuestionIndex, lastAnswer } = useGame();
+  const { redFlags, totalTimeTaken, startGame, wrongAnswers, score } = useGame();
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [saved, setSaved] = useState(false);
-  const { questions } = useGame(); // Need questions to find options text
+  const [showRecommendations, setShowRecommendations] = useState(false);
   const { playSound, isMuted, toggleMute } = useSoundManager();
 
+  // Calculate diagnosis
+  const getDiagnosis = () => {
+    if (redFlags === 0) return { title: "Experto en Narcisismo", status: "Inmune", color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20", icon: Trophy };
+    if (redFlags <= 3) return { title: "Conocedor", status: "Alerta", color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20", icon: CheckCircle };
+    if (redFlags <= 7) return { title: "Vulnerable", status: "Precaución", color: "text-yellow-400", bg: "bg-yellow-500/10", border: "border-yellow-500/20", icon: AlertTriangle };
+    return { title: "En Riesgo", status: "Necesitas aprender más", color: "text-red-400", bg: "bg-red-500/10", border: "border-red-500/20", icon: AlertCircle };
+  };
+
+  const diagnosis = getDiagnosis();
+
   useEffect(() => {
-    if (isGameWon) {
+    if (redFlags === 0) {
       playSound('win');
       const duration = 5 * 1000;
       const animationEnd = Date.now() + duration;
@@ -32,28 +42,26 @@ export const Results = () => {
         }
 
         const particleCount = 50 * (timeLeft / duration);
-        // since particles fall down, start a bit higher than random
         confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
         confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
       }, 250);
 
       return () => clearInterval(interval);
     }
-    // Removed 'wrong' sound from here because it's already triggered in Game.tsx during transition
-  }, [isGameWon, playSound]);
+  }, [redFlags, playSound]);
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
-    
+
     const scores = JSON.parse(localStorage.getItem('trivia_scores') || '[]');
     scores.push({
       name,
-      score,
+      score: score,
       date: new Date().toISOString()
     });
     localStorage.setItem('trivia_scores', JSON.stringify(scores));
-    
+
     setSaved(true);
     setTimeout(() => navigate('/ranking'), 1500);
   };
@@ -64,36 +72,16 @@ export const Results = () => {
     navigate('/game');
   };
 
-  // Find the actual question object to get option text
-  // Since we shuffle, we need to find it by text or trust currentQuestionIndex if it wasn't reset yet.
-  // Actually, game over state preserves questions and index usually.
-  // Let's use `lastAnswer` to get indices.
-  // Wait, `lastAnswer` has indices. But we need the TEXT of the options.
-  // We can find the question in `questions` array.
-  // If questions are shuffled in context, `questions` from useGame should be the shuffled list used in game.
-  
-  const relevantQuestion = lastAnswer 
-    ? questions.find(q => q.text === lastAnswer.questionText)
-    : undefined;
-
-  const wrongOptionText = relevantQuestion && lastAnswer 
-    ? (lastAnswer.userAnswer === -1 ? 'Sin respuesta (Tiempo agotado)' : relevantQuestion.options[lastAnswer.userAnswer]) 
-    : 'Opción desconocida';
-
-  const correctOptionText = relevantQuestion && lastAnswer 
-    ? relevantQuestion.options[lastAnswer.correctAnswer] 
-    : 'Opción desconocida';
-
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <motion.div 
+      <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[2.5rem] max-w-lg w-full text-center shadow-2xl backdrop-blur-xl relative overflow-hidden"
       >
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"></div>
 
-        <button 
+        <button
           onClick={toggleMute}
           className="absolute top-6 right-6 p-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 transition-all z-20"
         >
@@ -101,79 +89,73 @@ export const Results = () => {
         </button>
 
         <div className="mb-8 flex justify-center">
-          {isGameWon ? (
-            <div className="relative">
-              <div className="absolute inset-0 bg-accent blur-2xl opacity-40 animate-pulse"></div>
-              <Trophy size={100} className="text-accent relative z-10" />
+            <div className={`p-6 rounded-full ${diagnosis.bg}`}>
+              <diagnosis.icon size={60} className={diagnosis.color} />
             </div>
-          ) : (
-            <div className="bg-red-500/10 p-6 rounded-full">
-              <AlertCircle size={60} className="text-red-400" />
-            </div>
-          )}
         </div>
 
-        {isGameWon && (
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-6 p-4 bg-green-500/10 rounded-2xl border border-green-500/20"
-          >
-            <h3 className="text-green-400 font-bold text-lg mb-1">¡Victoria Absoluta!</h3>
-            <p className="text-green-200/80 text-sm">Has demostrado un conocimiento profundo sobre el narcisismo.</p>
-          </motion.div>
-        )}
-
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-2 tracking-tight">
-          {isGameWon ? '¡ENHORABUENA!' : 'FIN DEL JUEGO'}
+        <h1 className="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
+          EVALUACIÓN COMPLETADA
         </h1>
-        
-        <p className="text-purple-200 mb-6 text-lg">
-          {isGameWon 
-            ? 'Has desenmascarado al narcisista con éxito.' 
-            : `Llegaste hasta el nivel ${currentQuestionIndex + 1}.`}
-        </p>
 
-        {!isGameWon && lastAnswer && (
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-8 bg-red-900/20 border border-red-500/20 p-6 rounded-xl text-left"
-          >
-            <h3 className="text-red-300 font-bold mb-2 flex items-center">
-              <AlertCircle size={18} className="mr-2" /> Respuesta Incorrecta
-            </h3>
-            <p className="text-white/80 text-sm mb-4 italic">"{lastAnswer.questionText}"</p>
-            
-            <div className="mb-3">
-              <span className="text-xs text-gray-400 uppercase tracking-wider block mb-1">Tú respondiste:</span>
-              <span className="text-red-400 font-medium block">
-                  {wrongOptionText}
-               </span>
-             </div>
-             
-             <div className="mb-4">
-               <span className="text-xs text-gray-400 uppercase tracking-wider block mb-1">Respuesta Correcta:</span>
-               <span className="text-green-400 font-bold block">
-                  {correctOptionText}
-               </span>
-             </div>
+        <div className={`mb-8 p-6 rounded-2xl border ${diagnosis.bg} ${diagnosis.border}`}>
+            <h2 className={`text-2xl font-bold mb-1 ${diagnosis.color}`}>{diagnosis.title}</h2>
+            <p className="text-white/80 uppercase tracking-widest text-sm">{diagnosis.status}</p>
+        </div>
 
-            <div className="bg-white/5 p-4 rounded-lg">
-              <span className="text-accent text-xs font-bold uppercase block mb-1">Por qué:</span>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                {lastAnswer.explanation}
-              </p>
+        <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                <span className="text-gray-400 text-xs uppercase block mb-1">Banderas Rojas (Fallos)</span>
+                <span className="text-3xl font-bold text-red-400">{redFlags} / 15</span>
             </div>
-          </motion.div>
-        )}
+            <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                <span className="text-gray-400 text-xs uppercase block mb-1">Tiempo Total</span>
+                <span className="text-3xl font-bold text-blue-400">{Math.floor(totalTimeTaken)}s</span>
+            </div>
+        </div>
 
-        <div className="bg-black/30 p-8 rounded-2xl mb-10 border border-white/5">
-          <div className="text-sm text-gray-400 uppercase tracking-widest mb-2 font-semibold">Puntuación Final</div>
-          <div className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">
+        <div className="bg-black/30 p-6 rounded-2xl mb-10 border border-white/5">
+          <div className="text-sm text-gray-400 uppercase tracking-widest mb-2 font-semibold">Puntuación de Salud</div>
+          <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">
             {score.toLocaleString()}
           </div>
         </div>
+
+        {/* Recommendations Section */}
+        {wrongAnswers && wrongAnswers.length > 0 && (
+          <div className="mb-10">
+            <button
+              onClick={() => setShowRecommendations(!showRecommendations)}
+              className="w-full flex items-center justify-between bg-red-500/10 border border-red-500/20 p-4 rounded-xl text-red-300 hover:bg-red-500/20 transition-all"
+            >
+              <span className="font-semibold">🚩 Ver recomendaciones ({wrongAnswers.length} errores)</span>
+              {showRecommendations ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </button>
+
+            {showRecommendations && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                className="mt-4 space-y-4 max-h-80 overflow-y-auto"
+              >
+                {wrongAnswers.map((wa, index) => (
+                  <div key={index} className="bg-black/30 border border-white/10 rounded-xl p-4 text-left">
+                    <p className="text-white/90 font-medium mb-2 text-sm">{wa.questionText}</p>
+                    <div className="flex flex-col gap-1 text-xs mb-2">
+                      <span className="text-red-400">❌ Tu respuesta: {wa.userAnswer}</span>
+                      <span className="text-green-400">✓ Respuesta correcta: {wa.correctAnswer}</span>
+                    </div>
+                    {wa.explanation && (
+                      <p className="text-purple-200/80 text-xs italic border-t border-white/10 pt-2 mt-2">
+                        💡 {wa.explanation}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </motion.div>
+            )}
+          </div>
+        )}
 
         {!saved ? (
           <form onSubmit={handleSave} className="mb-10">
@@ -196,7 +178,7 @@ export const Results = () => {
             </div>
           </form>
         ) : (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="mb-10 text-green-400 font-bold bg-green-500/10 py-3 px-6 rounded-xl border border-green-500/20"
@@ -207,7 +189,7 @@ export const Results = () => {
 
         <div className="flex flex-col md:flex-row gap-4">
           <Button onClick={handlePlayAgain} variant="primary" className="flex-1">
-            <RefreshCw className="mr-2" size={18} /> Intentar de nuevo
+            <RefreshCw className="mr-2" size={18} /> Repetir Evaluación
           </Button>
           <Button onClick={() => { playSound('click'); navigate('/'); }} variant="secondary" className="flex-1">
             <HomeIcon className="mr-2" size={18} /> Inicio

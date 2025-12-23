@@ -4,28 +4,27 @@ import { Button } from '../components/UI/Button';
 import { motion } from 'framer-motion';
 import { Play, Trophy, Sparkles, Volume2, VolumeX } from 'lucide-react';
 import { useSoundManager } from '../hooks/useSoundManager';
-import { useEffect } from 'react';
 
 export const Home = () => {
   const navigate = useNavigate();
   const { startGame } = useGame();
-  const { playSound, stopSound, isMuted, toggleMute } = useSoundManager();
+  const { playSound, isMuted, toggleMute } = useSoundManager();
 
-  useEffect(() => {
-    // Start background music
-    playSound('bgMusic');
+  // useEffect(() => {
+  //   // Start background music
+  //   playSound('bgMusic');
 
-    // Also retry when audio is unlocked
-    const handleUnlock = () => {
-      playSound('bgMusic');
-    };
-    window.addEventListener('audio_unlocked', handleUnlock);
-    
-    return () => {
-      window.removeEventListener('audio_unlocked', handleUnlock);
-      stopSound('bgMusic');
-    };
-  }, [playSound, stopSound]);
+  //   // Also retry when audio is unlocked
+  //   const handleUnlock = () => {
+  //     playSound('bgMusic');
+  //   };
+  //   window.addEventListener('audio_unlocked', handleUnlock);
+
+  //   return () => {
+  //     window.removeEventListener('audio_unlocked', handleUnlock);
+  //     stopSound('bgMusic');
+  //   };
+  // }, [playSound, stopSound]);
 
   const handleStart = () => {
     playSound('click');

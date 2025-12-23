@@ -1,40 +1,32 @@
 import React, { useReducer, useEffect, ReactNode } from 'react';
-import { GameState, LifelineType } from '../types';
+import { GameState } from '../types';
 import { questions as allQuestions } from '../data/questions';
-import { calculateScore } from '../utils/formatTime';
 import { GameContext } from './GameContextObject';
 
 type Action =
   | { type: 'START_GAME' }
-  | { type: 'ANSWER_QUESTION'; payload: { correct: boolean; score: number; answerIndex: number } }
-  | { type: 'USE_LIFELINE'; payload: LifelineType }
+  | { type: 'ANSWER_QUESTION'; payload: { correct: boolean; timeTaken: number; answerIndex: number } }
   | { type: 'TICK_TIMER' }
-  | { type: 'TIME_UP' }
-  | { type: 'SET_HIDDEN_OPTIONS'; payload: number[] }
   | { type: 'SET_TRANSITION'; payload: boolean }
   | { type: 'SET_REVEALING'; payload: boolean }
   | { type: 'SELECT_ANSWER'; payload: number | null }
-  | { type: 'SET_LIFELINE_RESULT'; payload: { type: 'phoneFriend' | 'audience'; suggestion?: number; votes?: number[] } | undefined }
   | { type: 'NEXT_QUESTION' };
 
 const TIME_PER_QUESTION = 30;
 
 const initialState: GameState = {
   currentQuestionIndex: 0,
+  redFlags: 0,
   score: 0,
+  totalTimeTaken: 0,
   isGameOver: false,
   isGameWon: false,
   isTransitioning: false,
   isRevealing: false,
   selectedAnswer: null,
-  lifelines: {
-    fiftyFifty: true,
-    phoneFriend: true,
-    audience: true,
-  },
+  wrongAnswers: [],
   timeLeft: TIME_PER_QUESTION,
   questions: [],
-  hiddenOptions: [],
 };
 
 const gameReducer = (state: GameState, action: Action): GameState => {
@@ -61,57 +53,64 @@ const gameReducer = (state: GameState, action: Action): GameState => {
         ...initialState,
         questions: selectedQuestions,
         timeLeft: TIME_PER_QUESTION,
-        hiddenOptions: [],
       };
     }
     case 'ANSWER_QUESTION': {
       const currentQuestion = state.questions[state.currentQuestionIndex];
-      if (action.payload.correct) {
-        return {
-          ...state,
-          score: state.score + action.payload.score,
-          lastAnswer: undefined,
-        };
-      } else {
-        return {
-          ...state,
-          isGameOver: true,
-          isGameWon: false,
-          isTransitioning: false,
-          lastAnswer: {
-            userAnswer: action.payload.answerIndex,
-            correctAnswer: currentQuestion.correctAnswer,
-            explanation: currentQuestion.explanation || '',
-            questionText: currentQuestion.text,
-          },
-        };
-      }
+      const isCorrect = action.payload.correct;
+      const redFlagIncrement = isCorrect ? 0 : 1;
+
+      // Calculate score: only add points for correct answers
+      // Points based on speed: faster = more points
+      // Base: 500 points + up to 500 bonus based on time left (max 1000 per question)
+      const timeLeft = TIME_PER_QUESTION - action.payload.timeTaken;
+      const pointsEarned = isCorrect
+        ? 500 + Math.floor((timeLeft / TIME_PER_QUESTION) * 500)
+        : 0;
+
+      // Track wrong answers for recommendations
+      const newWrongAnswers = isCorrect ? state.wrongAnswers : [
+        ...state.wrongAnswers,
+        {
+          questionText: currentQuestion.text,
+          userAnswer: action.payload.answerIndex >= 0 ? currentQuestion.options[action.payload.answerIndex] : 'Sin respuesta (tiempo agotado)',
+          correctAnswer: currentQuestion.options[currentQuestion.correctAnswer],
+          explanation: currentQuestion.explanation || '',
+        }
+      ];
+
+      return {
+        ...state,
+        redFlags: state.redFlags + redFlagIncrement,
+        score: state.score + pointsEarned,
+        totalTimeTaken: state.totalTimeTaken + action.payload.timeTaken,
+        wrongAnswers: newWrongAnswers,
+        lastAnswer: {
+          userAnswer: action.payload.answerIndex,
+          correctAnswer: currentQuestion.correctAnswer,
+          explanation: currentQuestion.explanation || '',
+          questionText: currentQuestion.text,
+        },
+      };
     }
     case 'NEXT_QUESTION': {
       const nextIndex = state.currentQuestionIndex + 1;
-      const isWon = nextIndex >= state.questions.length;
+      const isFinished = nextIndex >= state.questions.length;
       return {
         ...state,
         currentQuestionIndex: nextIndex,
-        isGameOver: isWon,
-        isGameWon: isWon,
+        isGameOver: isFinished,
+        isGameWon: isFinished, // Used to determine if we reached the end successfully
         timeLeft: TIME_PER_QUESTION,
         isTransitioning: false,
         isRevealing: false,
         selectedAnswer: null,
-        hiddenOptions: [],
-        lifelineResult: undefined,
       };
     }
     case 'SELECT_ANSWER':
       return {
         ...state,
         selectedAnswer: action.payload,
-      };
-    case 'SET_HIDDEN_OPTIONS':
-      return {
-        ...state,
-        hiddenOptions: action.payload,
       };
     case 'SET_TRANSITION':
       return {
@@ -123,38 +122,11 @@ const gameReducer = (state: GameState, action: Action): GameState => {
         ...state,
         isRevealing: action.payload,
       };
-    case 'SET_LIFELINE_RESULT':
-      return {
-        ...state,
-        lifelineResult: action.payload,
-      };
-    case 'USE_LIFELINE':
-      return {
-        ...state,
-        lifelines: {
-          ...state.lifelines,
-          [action.payload]: false,
-        },
-      };
     case 'TICK_TIMER':
       return {
         ...state,
         timeLeft: state.timeLeft - 1,
       };
-    case 'TIME_UP': {
-      const timeoutQuestion = state.questions[state.currentQuestionIndex];
-      return {
-        ...state,
-        isGameOver: true,
-        isGameWon: false,
-        lastAnswer: {
-          userAnswer: -1, // No answer provided
-          correctAnswer: timeoutQuestion.correctAnswer,
-          explanation: timeoutQuestion.explanation || 'Se acabó el tiempo antes de que pudieras responder.',
-          questionText: timeoutQuestion.text,
-        },
-      };
-    }
     default:
       return state;
   }
@@ -169,13 +141,19 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       timer = setInterval(() => {
         dispatch({ type: 'TICK_TIMER' });
       }, 1000);
-    } else if (state.timeLeft === 0 && !state.isGameOver && !state.isRevealing && !state.isTransitioning) {
-      dispatch({ type: 'TIME_UP' });
     }
+    // Time up handled by separate effect calling answerQuestion(-1)
     return () => {
       if (timer) clearInterval(timer);
     };
   }, [state.timeLeft, state.isGameOver, state.isRevealing, state.isTransitioning, state.questions.length]);
+
+  // Handle TIME_UP transition
+  useEffect(() => {
+    if (state.timeLeft === 0 && !state.isGameOver && !state.isTransitioning && !state.isRevealing) {
+       answerQuestion(-1);
+    }
+  }, [state.timeLeft, state.isGameOver, state.isTransitioning, state.isRevealing]);
 
   const startGame = () => {
     dispatch({ type: 'START_GAME' });
@@ -186,90 +164,21 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     const currentQuestion = state.questions[state.currentQuestionIndex];
     const isCorrect = currentQuestion.correctAnswer === answerIndex;
-    const scoreEarned = isCorrect ? calculateScore(state.currentQuestionIndex + 1, state.timeLeft) : 0;
+    const timeTaken = TIME_PER_QUESTION - state.timeLeft;
 
     dispatch({ type: 'SELECT_ANSWER', payload: answerIndex });
-    dispatch({ type: 'SET_REVEALING', payload: true });
 
-    // Fase de suspense (2 segundos)
-    setTimeout(() => {
-      dispatch({ type: 'SET_REVEALING', payload: false });
-      dispatch({ type: 'SET_TRANSITION', payload: true });
-
-      if (isCorrect) {
-        // Mostrar que es correcta por 1.5 segundos
-        setTimeout(() => {
-          dispatch({ type: 'ANSWER_QUESTION', payload: { correct: isCorrect, score: scoreEarned, answerIndex } });
-          dispatch({ type: 'NEXT_QUESTION' });
-        }, 1500);
-      } else {
-        // Mostrar que es incorrecta por 1.5 segundos antes de game over
-        setTimeout(() => {
-          dispatch({ type: 'ANSWER_QUESTION', payload: { correct: isCorrect, score: scoreEarned, answerIndex } });
-        }, 1500);
-      }
-    }, 2000); // 2 segundos de suspense
+    // Dispatch immediately without delays
+    dispatch({ type: 'ANSWER_QUESTION', payload: { correct: isCorrect, timeTaken, answerIndex } });
+    dispatch({ type: 'NEXT_QUESTION' });
   };
 
-  const applyLifeline = (type: LifelineType) => {
-    if (!state.lifelines[type]) return;
-
-    if (type === 'fiftyFifty') {
-      const currentQuestion = state.questions[state.currentQuestionIndex];
-      const correct = currentQuestion.correctAnswer;
-      const incorrectOptions = currentQuestion.options
-        .map((_, idx) => idx)
-        .filter(idx => idx !== correct);
-
-      const shuffled = [...incorrectOptions].sort(() => 0.5 - Math.random());
-      const toHide = shuffled.slice(0, 2);
-
-      dispatch({ type: 'SET_HIDDEN_OPTIONS', payload: toHide });
-    } else if (type === 'phoneFriend') {
-      const currentQuestion = state.questions[state.currentQuestionIndex];
-      const correct = currentQuestion.correctAnswer;
-      const isCorrect = Math.random() < 0.8;
-
-      let suggestion: number;
-      if (isCorrect) {
-        suggestion = correct;
-      } else {
-        const availableOptions = [0, 1, 2, 3].filter(idx => !state.hiddenOptions.includes(idx) && idx !== correct);
-        suggestion = availableOptions[Math.floor(Math.random() * availableOptions.length)];
-      }
-
-      dispatch({ type: 'SET_LIFELINE_RESULT', payload: { type: 'phoneFriend', suggestion } });
-    } else if (type === 'audience') {
-      const currentQuestion = state.questions[state.currentQuestionIndex];
-      const correct = currentQuestion.correctAnswer;
-
-      // Generate votes distribution
-      const votes = [0, 0, 0, 0];
-      const totalVotes = 100;
-
-      // Give more weight to the correct answer
-      let remaining = totalVotes;
-      const correctWeight = 40 + Math.floor(Math.random() * 30); // 40-70%
-      votes[correct] = correctWeight;
-      remaining -= correctWeight;
-
-      const availableIndices = [0, 1, 2, 3].filter(idx => idx !== correct && !state.hiddenOptions.includes(idx));
-
-      availableIndices.forEach((idx, i) => {
-        if (i === availableIndices.length - 1) {
-          votes[idx] = remaining;
-        } else {
-          const v = Math.floor(Math.random() * remaining);
-          votes[idx] = v;
-          remaining -= v;
-        }
-      });
-
-      dispatch({ type: 'SET_LIFELINE_RESULT', payload: { type: 'audience', votes } });
-    }
-
-    dispatch({ type: 'USE_LIFELINE', payload: type });
-  };
+  // We need a way to handle Time Up via answerQuestion mechanism to reuse logic
+  // useEffect(() => {
+  //     if (state.timeLeft === 0 && !state.isRevealing && !state.isTransitioning && !state.isGameOver) {
+  //         answerQuestion(-1);
+  //     }
+  // }, [state.timeLeft]);
 
   return (
     <GameContext.Provider
@@ -277,7 +186,6 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         ...state,
         startGame,
         answerQuestion,
-        applyLifeline,
       }}
     >
       {children}

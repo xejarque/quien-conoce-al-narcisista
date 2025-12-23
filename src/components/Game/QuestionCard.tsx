@@ -1,29 +1,21 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Question } from '../../types';
 import { clsx } from 'clsx';
 
 interface QuestionCardProps {
   question: Question;
   onAnswer: (index: number) => void;
-  hiddenOptions: number[];
   selectedAnswer: number | null;
   isCorrect: boolean | null;
   isRevealing: boolean;
-  lifelineResult?: {
-    type: 'phoneFriend' | 'audience';
-    suggestion?: number;
-    votes?: number[];
-  };
 }
 
 export const QuestionCard: React.FC<QuestionCardProps> = ({
   question,
   onAnswer,
-  hiddenOptions,
   selectedAnswer,
   isCorrect,
   isRevealing,
-  lifelineResult
 }) => {
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
@@ -46,10 +38,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-0">
         {question.options.map((option, index) => {
-          if (hiddenOptions.includes(index)) {
-            return <div key={index} className="invisible h-20" />;
-          }
-
           let buttonStyle = "bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-pink-400/50";
           const isActuallyCorrect = index === question.correctAnswer;
 
@@ -60,6 +48,9 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               buttonStyle = "bg-green-500 border-green-400 text-white shadow-[0_0_30px_rgba(34,197,94,0.6)] z-20 scale-[1.02] md:scale-105";
             } else if (isCorrect === false) {
               buttonStyle = "bg-red-500/80 border-red-500 text-white shadow-[0_0_20px_rgba(239,68,68,0.4)]";
+            } else {
+              // Selected but neutral (Assessment mode)
+              buttonStyle = "bg-purple-500 border-purple-400 text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] scale-[1.02] font-bold";
             }
           } else if (isCorrect !== null && isActuallyCorrect) {
             // Highlight the correct answer if the user failed
@@ -122,51 +113,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           );
         })}
       </div>
-
-      {/* Lifeline Results Visualisation */}
-      <AnimatePresence>
-        {lifelineResult && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            className="mt-8 p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl"
-          >
-            {lifelineResult.type === 'phoneFriend' ? (
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center border border-pink-500/30">
-                  <span className="text-2xl">📞</span>
-                </div>
-                <div>
-                  <h4 className="text-pink-300 font-bold">Consejo del Experto</h4>
-                  <p className="text-white">"Creo que la respuesta correcta es la <span className="text-accent font-bold">{String.fromCharCode(65 + (lifelineResult.suggestion ?? 0))}</span>. Estoy bastante seguro."</p>
-                </div>
-              </div>
-            ) : lifelineResult.type === 'audience' && (
-              <div>
-                <h4 className="text-purple-300 font-bold mb-4 flex items-center gap-2">
-                  <span>📊</span> Resultados del Público
-                </h4>
-                <div className="grid grid-cols-4 gap-4">
-                  {lifelineResult.votes?.map((vote, idx) => (
-                    <div key={idx} className="flex flex-col items-center gap-2">
-                      <div className="w-full bg-white/5 rounded-lg h-24 relative overflow-hidden flex items-end">
-                        <motion.div
-                          initial={{ height: 0 }}
-                          animate={{ height: `${vote}%` }}
-                          className="w-full bg-gradient-to-t from-purple-600 to-pink-500"
-                        />
-                        <span className="absolute top-0 w-full text-center text-[10px] text-white/50 pt-1">{vote}%</span>
-                      </div>
-                      <span className="font-bold text-white/70">{String.fromCharCode(65 + idx)}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
